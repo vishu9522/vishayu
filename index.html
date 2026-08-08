@@ -286,27 +286,29 @@ nav a:hover{
     box-shadow:0 15px 40px rgba(192,145,35,.12);
 }
 
-.product-image{
-    he<img src="vishayu-bottle.png" alt="Vishayu Bottle">
-
-
-    background:
-    radial-gradient(circle,#382b13 0%,#15130f 35%,#090909 70%);
-
-    margin-bottom:22px;
-}
 .product-image {
     background: radial-gradient(circle, #382b13 0%, #15130f 35%, #090909 70%);
     margin-bottom: 22px;
 }
 
 .bottle {
+    position: relative;
     width: 105px;
     height: 170px;
     border: 2px solid #a47b22;
+}
 
-
-.bottle:before{
+.bottle:before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    left: 28px;
+    top: -31px;
+    border: 2px solid #c69b32;
+    background: #14110c;
+    border-radius: 5px 5px 0 0;
+}
     content:"";
     position:absolute;
     width:45px;
