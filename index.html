@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VISHAYU | Luxury Attars</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #0b0b0b;
+      color: #f5f0e6;
+    }
+
+    header {
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 28px;
+      letter-spacing: 5px;
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #f5f0e6;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle, #29210d 0%, #0b0b0b 55%);
+    }
+
+    .hero p {
+      color: #c9b88a;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      letter-spacing: 10px;
+      color: #d4af37;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .section {
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #d4af37;
+      font-size: 30px;
+      margin-bottom: 35px;
+      letter-spacing: 3px;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .card {
+      padding: 35px 15px;
+      border: 1px solid #333;
+      background: #111;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .story {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+      color: #c9c9c9;
+    }
+
+    footer {
+      padding: 35px 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+      color: #888;
+    }
+
+    footer strong {
+      color: #d4af37;
+      letter-spacing: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: 7px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .collections {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">VISHAYU</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+
+    <p>THE ART OF FRAGRANCE</p>
+
+    <h1>VISHAYU</h1>
+
+    <h2>Luxury Attars. Timeless Essence.</h2>
+
+    <a href="#collection" class="btn">EXPLORE COLLECTION</a>
+
+  </section>
+
+  <section class="section" id="collection">
+
+    <h2>OUR COLLECTION</h2>
+
+    <div class="collections">
+
+      <div class="card">
+        <h3>OUD</h3>
+        <p>Deep • Rich • Mysterious</p>
+      </div>
+
+      <div class="card">
+        <h3>MUSK</h3>
+        <p>Soft • Elegant • Sensual</p>
+      </div>
+
+      <div class="card">
+        <h3>ROSE</h3>
+        <p>Floral • Classic • Romantic</p>
+      </div>
+
+      <div class="card">
+        <h3>SANDAL</h3>
+        <p>Warm • Woody • Timeless</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section" id="about">
+
+    <h2>THE VISHAYU STORY</h2>
+
+    <div class="story">
+      VISHAYU is a luxury fragrance house inspired by the timeless
+      tradition of attar and the art of refined perfumery.
+
+      <br><br>
+
+      Crafted for those who believe fragrance is more than a scent —
+      it is an expression of identity.
+    </div>
+
+  </section>
+
+  <footer>
+
+    <strong>VISHAYU</strong>
+
+    <br><br>
+
+    Luxury Attars • Crafted With Elegance
+
+    <br><br>
+
+    © 2026 VISHAYU. All Rights Reserved.
+
+  </footer>
+
+</body>
+</html>
