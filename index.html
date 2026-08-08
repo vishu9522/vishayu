@@ -9,7 +9,6 @@
 <meta name="description" content="Maison Vishayu - Luxury Itra & Parfums. Timeless fragrances crafted for the discerning.">
 
 <style>
-61d5de63-47d2-4925-afc6-eb6050d42bb7.png
 *{
     margin:0;
     padding:0;
@@ -625,7 +624,6 @@ footer p{
     }
 
 }
-
 </style>
 </head>
 
@@ -655,13 +653,9 @@ VISHAYU
 <nav id="nav">
 
 <a href="#home">HOME</a>
-
 <a href="#collection">COLLECTION</a>
-
 <a href="#story">OUR STORY</a>
-
 <a href="#order">ORDER</a>
-
 <a href="#contact">CONTACT</a>
 
 <a href="#collection" class="cart">
@@ -787,6 +781,8 @@ Six distinctive fragrances. Six different personalities.
 <div class="products">
 
 
+<!-- PRODUCT 1 -->
+
 <div class="product">
 
 <div class="product-image">
@@ -815,6 +811,8 @@ ADD TO CART
 
 </div>
 
+
+<!-- PRODUCT 2 -->
 
 <div class="product">
 
@@ -845,6 +843,8 @@ ADD TO CART
 </div>
 
 
+<!-- PRODUCT 3 -->
+
 <div class="product">
 
 <div class="product-image">
@@ -873,6 +873,8 @@ ADD TO CART
 
 </div>
 
+
+<!-- PRODUCT 4 -->
 
 <div class="product">
 
@@ -903,6 +905,8 @@ ADD TO CART
 </div>
 
 
+<!-- PRODUCT 5 -->
+
 <div class="product">
 
 <div class="product-image">
@@ -931,6 +935,8 @@ ADD TO CART
 
 </div>
 
+
+<!-- PRODUCT 6 -->
 
 <div class="product">
 
@@ -1126,11 +1132,8 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 <div class="footer-links">
 
 <a href="#home">Home</a>
-
 <a href="#collection">Collection</a>
-
 <a href="#story">Our Story</a>
-
 <a href="#order">Order</a>
 
 </div>
@@ -1148,28 +1151,46 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 
 let cartCount = 0;
 
-function addToCart(product,price){
+function addToCart(product, price){
 
-cartCount++;
+    cartCount++;
 
-document.getElementById("cartCount").innerText = cartCount;
+    document.getElementById("cartCount").innerText = cartCount;
 
-alert(
-product +
-" added to your cart.\n\nPrice: ₹" +
-price +
-"\n\nCart Items: " +
-cartCount
-);
+    const message =
+    "Hello Vishayu,%0A%0A" +
+    "I want to order:%0A" +
+    product +
+    "%0A%0APrice: ₹" +
+    price +
+    "%0A%0ACart Items: " +
+    cartCount;
+
+    const whatsappURL =
+    "https://wa.me/918889072340?text=" + message;
+
+    if(confirm(
+        product +
+        " added to cart!%0A%0A" +
+        "Price: ₹" +
+        price +
+        "%0A%0ACart Items: " +
+        cartCount +
+        "%0A%0AOpen WhatsApp to order?"
+    )){
+
+        window.open(whatsappURL, "_blank");
+
+    }
 
 }
 
 function toggleMenu(){
 
-document
-.getElementById("nav")
-.classList
-.toggle("active");
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("active");
 
 }
 
