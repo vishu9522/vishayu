@@ -286,29 +286,29 @@ nav a:hover{
     box-shadow:0 15px 40px rgba(192,145,35,.12);
 }
 
-.product-image {
-    background: radial-gradient(circle, #382b13 0%, #15130f 35%, #090909 70%);
-    margin-bottom: 22px;
+.product-image{
+    height:250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    radial-gradient(circle,#382b13 0%,#15130f 35%,#090909 70%);
+
+    margin-bottom:22px;
 }
 
-.bottle {
-    position: relative;
-    width: 105px;
-    height: 170px;
-    border: 2px solid #a47b22;
+.bottle{
+    width:105px;
+    height:170px;
+    border:2px solid #a47b22;
+    border-radius:8px 8px 15px 15px;
+    position:relative;
+    background:linear-gradient(90deg,#080808,#252015,#080808);
+    box-shadow:0 10px 35px rgba(0,0,0,.8);
 }
 
-.bottle:before {
-    content: "";
-    position: absolute;
-    width: 45px;
-    height: 30px;
-    left: 28px;
-    top: -31px;
-    border: 2px solid #c69b32;
-    background: #14110c;
-    border-radius: 5px 5px 0 0;
-}
+.bottle:before{
     content:"";
     position:absolute;
     width:45px;
@@ -1191,6 +1191,368 @@ function toggleMenu(){
     .getElementById("nav")
     .classList
     .toggle("active");
+
+}
+
+</script>
+
+</body>
+</html><section class="section" id="collection">
+
+<div class="section-title">
+<span>THE HOUSE OF VISHAYU</span>
+<h2>Signature Collection</h2>
+<div class="line"></div>
+<p>Six distinctive fragrances. Six different personalities.</p>
+</div>
+
+<div class="products">
+
+<div class="product">
+
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Royal Oud">
+</div>
+</div>
+
+<h3>ROYAL OUD</h3>
+<div class="type">TRADITIONAL ITRA</div>
+
+<p>
+Deep. Rich. Timeless.<br>
+A powerful oud fragrance for a commanding presence.
+</p>
+
+<div class="price">₹1,499</div>
+
+<button class="buy-btn" onclick="addToCart('Royal Oud',1499)">
+ADD TO CART
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Imperial Musk">
+</div>
+</div>
+
+<h3>IMPERIAL MUSK</h3>
+<div class="type">TRADITIONAL ITRA</div>
+
+<p>
+Warm. Sensual. Elegant.<br>
+A sophisticated musk created for evening occasions.
+</p>
+
+<div class="price">₹1,399</div>
+
+<button class="buy-btn" onclick="addToCart('Imperial Musk',1399)">
+ADD TO CART
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Velvet Rose">
+</div>
+</div>
+
+<h3>VELVET ROSE</h3>
+<div class="type">TRADITIONAL ITRA</div>
+
+<p>
+Floral. Romantic. Luxurious.<br>
+A smooth rose composition with an elegant character.
+</p>
+
+<div class="price">₹1,299</div>
+
+<button class="buy-btn" onclick="addToCart('Velvet Rose',1299)">
+ADD TO CART
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Royal Sandal">
+</div>
+</div>
+
+<h3>ROYAL SANDAL</h3>
+<div class="type">TRADITIONAL ITRA</div>
+
+<p>
+Woody. Smooth. Sophisticated.<br>
+A refined sandalwood-inspired fragrance.
+</p>
+
+<div class="price">₹1,299</div>
+
+<button class="buy-btn" onclick="addToCart('Royal Sandal',1299)">
+ADD TO CART
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Mitti Royale">
+</div>
+</div>
+
+<h3>MITTI ROYALE</h3>
+<div class="type">TRADITIONAL ITRA</div>
+
+<p>
+Earthy. Pure. Refreshing.<br>
+Inspired by the beautiful aroma of Indian mitti.
+</p>
+
+<div class="price">₹999</div>
+
+<button class="buy-btn" onclick="addToCart('Mitti Royale',999)">
+ADD TO CART
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Noir Shamama">
+</div>
+</div>
+
+<h3>NOIR SHAMAMA</h3>
+<div class="type">ROYAL ITRA</div>
+
+<p>
+Spicy. Warm. Mysterious.<br>
+A traditional-inspired fragrance with a dark character.
+</p>
+
+<div class="price">₹1,599</div>
+
+<button class="buy-btn" onclick="addToCart('Noir Shamama',1599)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="story" id="story">
+
+<div class="section">
+
+<div class="story-grid">
+
+<div class="story-box">
+
+<span class="eyebrow">OUR PHILOSOPHY</span>
+
+<h2>The House of Vishayu</h2>
+
+<p>
+Maison Vishayu was created with one simple belief:
+fragrance should not merely be worn — it should be remembered.
+</p>
+
+<p>
+Inspired by India's timeless tradition of Itra and modern
+luxury perfumery, Vishayu creates fragrances designed
+for those who appreciate elegance and individuality.
+</p>
+
+<p class="quote">
+"More than a fragrance. It's an identity."
+</p>
+
+</div>
+
+
+<div class="banner">
+
+<div>
+
+<h2>VISHAYU</h2>
+
+<p>THE ART OF FRAGRANCE</p>
+
+<a href="#collection" class="gold-btn">
+DISCOVER
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section order" id="order">
+
+<div class="section-title">
+
+<span>YOUR SIGNATURE AWAITS</span>
+
+<h2>Order Your Fragrance</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="order-box">
+
+<h2>MAISON VISHAYU</h2>
+
+<p>
+Choose your favourite fragrance and place your order
+directly through WhatsApp.
+</p>
+
+<a
+class="whatsapp"
+href="https://wa.me/918889072340?text=Hello%20Vishayu,%20I%20want%20to%20place%20an%20order"
+target="_blank">
+
+💬 ORDER ON WHATSAPP
+
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section" id="contact">
+
+<div class="section-title">
+
+<span>GET IN TOUCH</span>
+
+<h2>Contact Maison Vishayu</h2>
+
+<div class="line"></div>
+
+<p>
+For orders, wholesale enquiries and collaborations,
+connect with us.
+</p>
+
+</div>
+
+
+<div class="contact-info">
+
+<p>
+📧 Email: contact-vishuagnihotri9522@gmail.com
+</p>
+
+<p>
+📱 WhatsApp: +91 8889072340
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-logo">
+VISHAYU
+</div>
+
+<p>
+MAISON VISHAYU — THE HOUSE OF VISHAYU
+</p>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#collection">Collection</a>
+<a href="#story">Our Story</a>
+<a href="#order">Order</a>
+
+</div>
+
+<div class="copyright">
+© 2026 Maison Vishayu. All Rights Reserved.
+</div>
+
+</footer>
+
+
+<script>
+
+let cartCount = 0;
+
+function addToCart(product, price){
+
+cartCount++;
+
+document.getElementById("cartCount").innerText = cartCount;
+
+const message =
+"Hello Vishayu,%0A%0A" +
+"I want to order:%0A" +
+product +
+"%0A%0APrice: ₹" +
+price +
+"%0A%0ACart Items: " +
+cartCount;
+
+const whatsappURL =
+"https://wa.me/918889072340?text=" + message;
+
+if(confirm(
+product +
+" added to cart!%0A%0A" +
+"Price: ₹" +
+price +
+"%0A%0ACart Items: " +
+cartCount +
+"%0A%0AOpen WhatsApp to order?"
+)){
+
+window.open(whatsappURL,"_blank");
+
+}
+
+}
+
+function toggleMenu(){
+
+document
+.getElementById("nav")
+.classList
+.toggle("active");
 
 }
 
