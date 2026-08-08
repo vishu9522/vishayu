@@ -9,6 +9,7 @@
 <meta name="description" content="Maison Vishayu - Luxury Itra & Parfums. Timeless fragrances crafted for the discerning.">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -22,7 +23,7 @@ html{
 body{
     background:#080808;
     color:#f5efe3;
-    font-family:Georgia, "Times New Roman", serif;
+    font-family:Georgia,"Times New Roman",serif;
     line-height:1.6;
 }
 
@@ -36,13 +37,13 @@ button{
     cursor:pointer;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(8,8,8,.95);
+    background:rgba(8,8,8,.96);
     border-bottom:1px solid #3a2b12;
     backdrop-filter:blur(10px);
 }
@@ -50,15 +51,36 @@ header{
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:20px 25px;
+    padding:16px 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
+.brand{
+    display:flex;
+    align-items:center;
+}
+
+.logo-mark{
+    width:50px;
+    height:50px;
+    border:2px solid #d8a928;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#d8a928;
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:-2px;
+    margin-right:12px;
+    box-shadow:0 0 18px rgba(216,169,40,.22);
+}
+
 .logo{
-    font-size:30px;
-    letter-spacing:8px;
+    font-size:27px;
+    letter-spacing:7px;
     color:#d8a928;
     font-weight:bold;
 }
@@ -75,11 +97,11 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:25px;
 }
 
 nav a{
-    font-size:15px;
+    font-size:14px;
     letter-spacing:1px;
     transition:.3s;
 }
@@ -100,16 +122,17 @@ nav a:hover{
     color:#d8a928;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
-    min-height:calc(100vh - 80px);
+    min-height:88vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     position:relative;
     overflow:hidden;
+
     background:
     radial-gradient(circle at center,rgba(154,111,25,.18),transparent 35%),
     linear-gradient(180deg,#080808,#11100d,#080808);
@@ -132,8 +155,8 @@ nav a:hover{
 
 .eyebrow{
     color:#c9a85b;
-    font-size:15px;
-    letter-spacing:8px;
+    font-size:14px;
+    letter-spacing:7px;
     margin-bottom:25px;
 }
 
@@ -173,12 +196,12 @@ nav a:hover{
     color:#080808;
 }
 
-/* ================= INTRO ================= */
+/* SECTIONS */
 
 .section{
     max-width:1200px;
     margin:auto;
-    padding:90px 25px;
+    padding:80px 25px;
 }
 
 .section-title{
@@ -205,7 +228,7 @@ nav a:hover{
     margin:20px auto;
 }
 
-/* ================= FEATURES ================= */
+/* FEATURES */
 
 .features{
     display:grid;
@@ -225,14 +248,14 @@ nav a:hover{
 }
 
 .feature-icon{
-    font-size:35px;
+    font-size:32px;
     color:#d4a62b;
     margin-bottom:12px;
 }
 
 .feature h3{
     color:#d8b55f;
-    font-size:16px;
+    font-size:15px;
     letter-spacing:2px;
 }
 
@@ -242,7 +265,7 @@ nav a:hover{
     margin-top:5px;
 }
 
-/* ================= PRODUCTS ================= */
+/* PRODUCTS */
 
 .products{
     display:grid;
@@ -256,22 +279,23 @@ nav a:hover{
     padding:25px;
     text-align:center;
     transition:.35s;
-    position:relative;
 }
 
 .product:hover{
-    transform:translateY(-8px);
+    transform:translateY(-7px);
     border-color:#c69a2c;
     box-shadow:0 15px 40px rgba(192,145,35,.12);
 }
 
 .product-image{
-    height:260px;
+    height:250px;
     display:flex;
     align-items:center;
     justify-content:center;
+
     background:
     radial-gradient(circle,#382b13 0%,#15130f 35%,#090909 70%);
+
     margin-bottom:22px;
 }
 
@@ -311,7 +335,7 @@ nav a:hover{
 
 .product h3{
     color:#d7ab3a;
-    font-size:21px;
+    font-size:20px;
     letter-spacing:2px;
 }
 
@@ -349,7 +373,7 @@ nav a:hover{
     color:#090909;
 }
 
-/* ================= STORY ================= */
+/* STORY */
 
 .story{
     background:linear-gradient(90deg,#0a0a0a,#17130c,#0a0a0a);
@@ -360,7 +384,7 @@ nav a:hover{
 .story-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:50px;
     align-items:center;
 }
 
@@ -387,18 +411,19 @@ nav a:hover{
     font-style:italic;
 }
 
-/* ================= BANNER ================= */
+/* BANNER */
 
 .banner{
-    margin:40px 0;
     min-height:330px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
+
     background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
     radial-gradient(circle,#473615,#090909 65%);
+
     border:1px solid #4b3918;
 }
 
@@ -413,7 +438,7 @@ nav a:hover{
     margin:10px 0 25px;
 }
 
-/* ================= ORDER ================= */
+/* ORDER */
 
 .order{
     text-align:center;
@@ -448,7 +473,18 @@ nav a:hover{
     font-weight:bold;
 }
 
-/* ================= FOOTER ================= */
+/* CONTACT */
+
+.contact-info{
+    text-align:center;
+    color:#b4a78d;
+}
+
+.contact-info p{
+    margin:10px 0;
+}
+
+/* FOOTER */
 
 footer{
     border-top:1px solid #3a2b12;
@@ -488,23 +524,29 @@ footer p{
     font-size:11px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* MOBILE */
 
 @media(max-width:800px){
 
     .navbar{
-        padding:16px 18px;
+        padding:14px 18px;
     }
 
     .logo{
-        font-size:22px;
+        font-size:21px;
         letter-spacing:5px;
+    }
+
+    .logo-mark{
+        width:44px;
+        height:44px;
+        font-size:17px;
     }
 
     nav{
         display:none;
         position:absolute;
-        top:70px;
+        top:72px;
         left:0;
         width:100%;
         background:#090909;
@@ -522,7 +564,7 @@ footer p{
     }
 
     .hero{
-        min-height:calc(100vh - 70px);
+        min-height:80vh;
     }
 
     .hero:before{
@@ -530,7 +572,7 @@ footer p{
     }
 
     .eyebrow{
-        font-size:11px;
+        font-size:10px;
         letter-spacing:5px;
     }
 
@@ -560,7 +602,6 @@ footer p{
 
     .story-grid{
         grid-template-columns:1fr;
-        gap:20px;
     }
 
     .story h2{
@@ -572,48 +613,69 @@ footer p{
     }
 
     .section{
-        padding:65px 18px;
+        padding:60px 18px;
     }
+
 }
 
 @media(min-width:801px){
+
     .menu{
         display:none;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
+
 <div class="navbar">
 
-<a href="#home">
+<a href="#home" class="brand">
+
+<div class="logo-mark">
+MV
+</div>
+
 <div class="logo">
 VISHAYU
 <small>MAISON</small>
 </div>
+
 </a>
 
 <div class="menu" onclick="toggleMenu()">☰</div>
 
 <nav id="nav">
+
 <a href="#home">HOME</a>
+
 <a href="#collection">COLLECTION</a>
+
 <a href="#story">OUR STORY</a>
+
 <a href="#order">ORDER</a>
+
 <a href="#contact">CONTACT</a>
-<a href="#collection" class="cart">🛍 CART <span id="cartCount">0</span></a>
+
+<a href="#collection" class="cart">
+🛍 CART <span id="cartCount">0</span>
+</a>
+
 </nav>
 
 </div>
+
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -641,34 +703,61 @@ EXPLORE COLLECTION
 </section>
 
 
-<!-- ================= FEATURES ================= -->
+<!-- FEATURES -->
 
 <section class="section">
 
 <div class="features">
 
 <div class="feature">
+
 <div class="feature-icon">✦</div>
+
 <h3>PREMIUM QUALITY</h3>
-<p>Carefully selected fragrance ingredients.</p>
+
+<p>
+Carefully selected fragrance ingredients.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">♕</div>
+
 <h3>TIMELESS</h3>
-<p>Elegant fragrances made to be remembered.</p>
+
+<p>
+Elegant fragrances made to be remembered.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">❖</div>
+
 <h3>LONG LASTING</h3>
-<p>Rich and memorable fragrance experience.</p>
+
+<p>
+Rich and memorable fragrance experience.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">✧</div>
+
 <h3>MADE IN INDIA</h3>
-<p>Inspired by India's rich fragrance heritage.</p>
+
+<p>
+Inspired by India's rich fragrance heritage.
+</p>
+
 </div>
 
 </div>
@@ -676,7 +765,7 @@ EXPLORE COLLECTION
 </section>
 
 
-<!-- ================= COLLECTION ================= -->
+<!-- COLLECTION -->
 
 <section class="section" id="collection">
 
@@ -697,7 +786,6 @@ Six distinctive fragrances. Six different personalities.
 
 <div class="products">
 
-<!-- PRODUCT 1 -->
 
 <div class="product">
 
@@ -707,14 +795,18 @@ Six distinctive fragrances. Six different personalities.
 
 <h3>ROYAL OUD</h3>
 
-<div class="type">EXTRAIT DE PARFUM</div>
+<div class="type">
+TRADITIONAL ITRA
+</div>
 
 <p>
 Deep. Rich. Timeless.
 A powerful oud fragrance for a commanding presence.
 </p>
 
-<div class="price">₹1,499</div>
+<div class="price">
+₹1,499
+</div>
 
 <button class="buy-btn"
 onclick="addToCart('Royal Oud',1499)">
@@ -724,8 +816,6 @@ ADD TO CART
 </div>
 
 
-<!-- PRODUCT 2 -->
-
 <div class="product">
 
 <div class="product-image">
@@ -734,14 +824,18 @@ ADD TO CART
 
 <h3>IMPERIAL MUSK</h3>
 
-<div class="type">EXTRAIT DE PARFUM</div>
+<div class="type">
+TRADITIONAL ITRA
+</div>
 
 <p>
 Warm. Sensual. Elegant.
 A sophisticated musk created for evening occasions.
 </p>
 
-<div class="price">₹1,399</div>
+<div class="price">
+₹1,399
+</div>
 
 <button class="buy-btn"
 onclick="addToCart('Imperial Musk',1399)">
@@ -751,8 +845,6 @@ ADD TO CART
 </div>
 
 
-<!-- PRODUCT 3 -->
-
 <div class="product">
 
 <div class="product-image">
@@ -761,14 +853,18 @@ ADD TO CART
 
 <h3>VELVET ROSE</h3>
 
-<div class="type">EXTRAIT DE PARFUM</div>
+<div class="type">
+TRADITIONAL ITRA
+</div>
 
 <p>
 Floral. Romantic. Luxurious.
 A smooth rose composition with an elegant character.
 </p>
 
-<div class="price">₹1,299</div>
+<div class="price">
+₹1,299
+</div>
 
 <button class="buy-btn"
 onclick="addToCart('Velvet Rose',1299)">
@@ -778,8 +874,6 @@ ADD TO CART
 </div>
 
 
-<!-- PRODUCT 4 -->
-
 <div class="product">
 
 <div class="product-image">
@@ -788,14 +882,18 @@ ADD TO CART
 
 <h3>ROYAL SANDAL</h3>
 
-<div class="type">TRADITIONAL ITRA</div>
+<div class="type">
+TRADITIONAL ITRA
+</div>
 
 <p>
 Woody. Smooth. Sophisticated.
 A refined sandalwood-inspired fragrance.
 </p>
 
-<div class="price">₹1,299</div>
+<div class="price">
+₹1,299
+</div>
 
 <button class="buy-btn"
 onclick="addToCart('Royal Sandal',1299)">
@@ -805,8 +903,6 @@ ADD TO CART
 </div>
 
 
-<!-- PRODUCT 5 -->
-
 <div class="product">
 
 <div class="product-image">
@@ -815,14 +911,18 @@ ADD TO CART
 
 <h3>MITTI ROYALE</h3>
 
-<div class="type">TRADITIONAL ITRA</div>
+<div class="type">
+TRADITIONAL ITRA
+</div>
 
 <p>
 Earthy. Pure. Refreshing.
 Inspired by the beautiful aroma of Indian mitti.
 </p>
 
-<div class="price">₹999</div>
+<div class="price">
+₹999
+</div>
 
 <button class="buy-btn"
 onclick="addToCart('Mitti Royale',999)">
@@ -832,8 +932,6 @@ ADD TO CART
 </div>
 
 
-<!-- PRODUCT 6 -->
-
 <div class="product">
 
 <div class="product-image">
@@ -842,14 +940,18 @@ ADD TO CART
 
 <h3>NOIR SHAMAMA</h3>
 
-<div class="type">ROYAL ITRA</div>
+<div class="type">
+ROYAL ITRA
+</div>
 
 <p>
 Spicy. Warm. Mysterious.
 A traditional-inspired fragrance with a dark character.
 </p>
 
-<div class="price">₹1,599</div>
+<div class="price">
+₹1,599
+</div>
 
 <button class="buy-btn"
 onclick="addToCart('Noir Shamama',1599)">
@@ -863,7 +965,7 @@ ADD TO CART
 </section>
 
 
-<!-- ================= STORY ================= -->
+<!-- STORY -->
 
 <section class="story" id="story">
 
@@ -873,9 +975,13 @@ ADD TO CART
 
 <div class="story-box">
 
-<span class="eyebrow">OUR PHILOSOPHY</span>
+<span class="eyebrow">
+OUR PHILOSOPHY
+</span>
 
-<h2>The House of Vishayu</h2>
+<h2>
+The House of Vishayu
+</h2>
 
 <p>
 Maison Vishayu was created with one simple belief:
@@ -899,7 +1005,9 @@ for those who appreciate elegance and individuality.
 
 <div>
 
-<h2>VISHAYU</h2>
+<h2>
+VISHAYU
+</h2>
 
 <p>
 THE ART OF FRAGRANCE
@@ -920,31 +1028,39 @@ DISCOVER
 </section>
 
 
-<!-- ================= ORDER ================= -->
+<!-- ORDER -->
 
 <section class="section order" id="order">
 
 <div class="section-title">
 
-<span>YOUR SIGNATURE AWAITS</span>
+<span>
+YOUR SIGNATURE AWAITS
+</span>
 
-<h2>Order Your Fragrance</h2>
+<h2>
+Order Your Fragrance
+</h2>
 
 <div class="line"></div>
 
 </div>
 
+
 <div class="order-box">
 
-<h2>MAISON VISHAYU</h2>
+<h2>
+MAISON VISHAYU
+</h2>
 
 <p>
 Choose your favourite fragrance and place your order
 directly through WhatsApp.
 </p>
 
-<a class="whatsapp"
-href="https://wa.me/91XXXXXXXXXX?text=Hello%20Vishayu,%20I%20want%20to%20place%20an%20order."
+<a
+class="whatsapp"
+href="https://wa.me/918889072340?text=Hello%20Vishayu,%20I%20want%20to%20place%20an%20order"
 target="_blank">
 
 💬 ORDER ON WHATSAPP
@@ -956,15 +1072,19 @@ target="_blank">
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
 <div class="section-title">
 
-<span>GET IN TOUCH</span>
+<span>
+GET IN TOUCH
+</span>
 
-<h2>Contact Maison Vishayu</h2>
+<h2>
+Contact Maison Vishayu
+</h2>
 
 <div class="line"></div>
 
@@ -975,11 +1095,14 @@ connect with us.
 
 </div>
 
-<div style="text-align:center;color:#b4a78d;">
 
-<p>📧 Email: contact-vishuagnihotri9522@gmail.com</p>
+<div class="contact-info">
 
-<p style="margin-top:10px;">
+<p>
+📧 Email: contact-vishuagnihotri9522@gmail.com
+</p>
+
+<p>
 📱 WhatsApp: +91 8889072340
 </p>
 
@@ -988,7 +1111,7 @@ connect with us.
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1003,8 +1126,11 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 <div class="footer-links">
 
 <a href="#home">Home</a>
+
 <a href="#collection">Collection</a>
+
 <a href="#story">Our Story</a>
+
 <a href="#order">Order</a>
 
 </div>
@@ -1016,34 +1142,34 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
 let cartCount = 0;
 
-function addToCart(product, price){
+function addToCart(product,price){
 
-    cartCount++;
+cartCount++;
 
-    document.getElementById("cartCount").innerText = cartCount;
+document.getElementById("cartCount").innerText = cartCount;
 
-    alert(
-        product +
-        " added to your cart.\n\nPrice: ₹" +
-        price +
-        "\n\nCart Items: " +
-        cartCount
-    );
+alert(
+product +
+" added to your cart.\n\nPrice: ₹" +
+price +
+"\n\nCart Items: " +
+cartCount
+);
+
 }
-
 
 function toggleMenu(){
 
-    document
-    .getElementById("nav")
-    .classList
-    .toggle("active");
+document
+.getElementById("nav")
+.classList
+.toggle("active");
 
 }
 
