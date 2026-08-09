@@ -1189,7 +1189,107 @@ function addToCart(product, price){
     }
 
 }
+function openCart(){
 
+    document
+    .getElementById("cartPanel")
+    .classList
+    .add("active");
+
+    updateCart();
+
+}
+
+function closeCart(){
+
+    document
+    .getElementById("cartPanel")
+    .classList
+    .remove("active");
+
+}
+
+function updateCart(){
+
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = "<p>Your cart is empty.</p>";
+        cartTotal.innerText = "0";
+        return;
+
+    }
+
+    let total = 0;
+    let html = "";
+
+    cart.forEach(function(item){
+
+        html += `
+            <div class="cart-item">
+                <div class="cart-item-name">
+                    ${item.name}
+                </div>
+
+                <div>
+                    ₹${item.price}
+                </div>
+            </div>
+        `;
+
+        total += item.price;
+
+    });
+
+    cartItems.innerHTML = html;
+    cartTotal.innerText = total;
+
+}
+
+function checkoutCart(){
+
+    if(cart.length === 0){
+
+        alert("Your cart is empty.");
+        return;
+
+    }
+
+    let total = 0;
+    let orderText = "";
+
+    cart.forEach(function(item,index){
+
+        orderText +=
+        (index + 1) +
+        ". " +
+        item.name +
+        " - ₹" +
+        item.price +
+        "\n";
+
+        total += item.price;
+
+    });
+
+    const message =
+        "Hello Vishayu,\n\n" +
+        "I want to place an order:\n\n" +
+        orderText +
+        "\nTotal Items: " +
+        cart.length +
+        "\nTotal Amount: ₹" +
+        total;
+
+    const whatsappURL =
+        "https://wa.me/918889072340?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL,"_blank");
+
+}
 function toggleMenu(){
 
 document
