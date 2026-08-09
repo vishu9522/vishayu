@@ -1044,39 +1044,51 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 
 <script>
 
-let cartCount = 0;
+let cart = [];
 
 function addToCart(product, price){
 
-cartCount++;
+    cart.push({
+        name: product,
+        price: price
+    });
 
-document.getElementById("cartCount").innerText = cartCount;
+    document.getElementById("cartCount").innerText = cart.length;
 
-const message =
-"Hello Vishayu,%0A%0A" +
-"I want to order:%0A" +
-product +
-"%0A%0APrice: ₹" +
-price +
-"%0A%0ACart Items: " +
-cartCount;
+    let total = 0;
+    let orderText = "";
 
-const whatsappURL =
-"https://wa.me/918889072340?text=" + message;
+    cart.forEach(function(item, index){
 
-if(confirm(
-product +
-" added to cart!\n\n" +
-"Price: ₹" +
-price +
-"\n\nCart Items: " +
-cartCount +
-"\n\nOpen WhatsApp to order?"
-)){
+        orderText += (index + 1) + ". " + item.name + " - ₹" + item.price + "\n";
 
-window.open(whatsappURL,"_blank");
+        total += item.price;
 
-}
+    });
+
+    const message =
+        "Hello Vishayu,\n\n" +
+        "I want to place an order:\n\n" +
+        orderText +
+        "\nTotal Amount: ₹" + total +
+        "\nTotal Items: " + cart.length +
+        "\n\nThank you.";
+
+    const whatsappURL =
+        "https://wa.me/918889072340?text=" +
+        encodeURIComponent(message);
+
+    if(confirm(
+        product +
+        " added to cart!\n\n" +
+        "Total Items: " + cart.length +
+        "\nTotal Amount: ₹" + total +
+        "\n\nOpen WhatsApp to order?"
+    )){
+
+        window.open(whatsappURL, "_blank");
+
+    }
 
 }
 
