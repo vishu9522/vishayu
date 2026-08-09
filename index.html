@@ -549,7 +549,102 @@ footer p{
         padding:55px 16px;
     }
 }
+.cart-button{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:9999;
+    background:#0b0b0b;
+    color:#d4af37;
+    border:1px solid #d4af37;
+    padding:10px 16px;
+    font-family:Georgia,serif;
+    letter-spacing:2px;
+    cursor:pointer;
+}
 
+.cart-button span{
+    background:#d4af37;
+    color:#000;
+    border-radius:50%;
+    padding:2px 7px;
+    margin-left:5px;
+    font-size:12px;
+}.cart-panel{
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    width:360px;
+    max-width:90%;
+    height:100vh;
+    background:#0b0b0b;
+    border-left:1px solid #d4af37;
+    z-index:10000;
+    padding:25px;
+    overflow-y:auto;
+    box-shadow:-10px 0 30px rgba(0,0,0,.6);
+}
+
+.cart-panel.active{
+    display:block;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #3a2b12;
+    padding-bottom:15px;
+    margin-bottom:20px;
+}
+
+.cart-header h2{
+    color:#d4af37;
+    letter-spacing:3px;
+    font-weight:normal;
+}
+
+.cart-header button{
+    background:none;
+    border:none;
+    color:#d4af37;
+    font-size:30px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding:15px 0;
+    border-bottom:1px solid #292015;
+    color:#ddd;
+}
+
+.cart-item-name{
+    color:#d4af37;
+}
+
+.cart-total{
+    margin-top:25px;
+    padding:15px 0;
+    border-top:1px solid #3a2b12;
+    color:#f1d68c;
+    font-size:20px;
+}
+
+.checkout-btn{
+    width:100%;
+    padding:14px;
+    margin-top:15px;
+    border:1px solid #d4af37;
+    background:#d4af37;
+    color:#080808;
+    font-family:Georgia,serif;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+}
 </style>
 </head>
 
@@ -587,7 +682,10 @@ VISHAYU
 </nav>
 
 </div>
-
+<div class="cart-button" onclick="openCart()">
+    🛒 CART
+    <span id="cartCount">0</span>
+</div>
 </header>
 
 
@@ -1102,6 +1200,23 @@ document
 }
 
 </script>
+<div id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+        <h2>YOUR CART</h2>
+        <button onclick="closeCart()">×</button>
+    </div>
 
+    <div id="cartItems">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-total">
+        Total: ₹<span id="cartTotal">0</span>
+    </div>
+
+    <button class="checkout-btn" onclick="checkoutCart()">
+        ORDER ON WHATSAPP
+    </button>
+</div>
 </body>
 </html>
