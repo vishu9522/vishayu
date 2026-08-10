@@ -7,748 +7,599 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-
 html{scroll-behavior:smooth}
-
 body{
-    background:#080808;
-    color:#f5efe3;
-    font-family:Georgia,"Times New Roman",serif;
-    line-height:1.6;
+background:#080808;
+color:#f5efe3;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.6;
 }
-
 button,input,textarea{font-family:inherit}
 button{cursor:pointer}
 a{text-decoration:none;color:inherit}
 
-/* HEADER */
-
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#080808;
-    border-bottom:1px solid #3d2d12;
+position:sticky;
+top:0;
+z-index:1000;
+background:#080808;
+border-bottom:1px solid #3d2d12;
 }
-
 .navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:16px 22px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+max-width:1200px;
+margin:auto;
+padding:16px 22px;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
-
 .brand{
-    color:#d8a928;
-    font-size:27px;
-    letter-spacing:6px;
+color:#d8a928;
+font-size:27px;
+letter-spacing:6px;
 }
-
 nav{
-    display:flex;
-    align-items:center;
-    gap:20px;
+display:flex;
+align-items:center;
+gap:20px;
 }
-
 nav a{
-    font-size:13px;
-    letter-spacing:1px;
+font-size:13px;
+letter-spacing:1px;
 }
-
 nav a:hover{color:#d8a928}
-
 .cart-button{
-    border:1px solid #a67d25;
-    padding:8px 12px;
-    color:#d8a928;
+border:1px solid #a67d25;
+padding:8px 12px;
+color:#d8a928;
 }
-
 .menu{
-    display:none;
-    color:#d8a928;
-    font-size:28px;
+display:none;
+color:#d8a928;
+font-size:28px;
 }
-
-/* HERO */
 
 .hero{
-    min-height:85vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:55px;
-    flex-wrap:wrap;
-    text-align:center;
-    padding:40px 20px;
-    background:radial-gradient(circle,#38290f 0%,#080808 55%);
+min-height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:55px;
+flex-wrap:wrap;
+text-align:center;
+padding:40px 20px;
+background:radial-gradient(circle,#38290f 0%,#080808 55%);
 }
-
 .hero-content{max-width:800px}
-
 .hero-bottle{
-    width:320px;
-    height:430px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:radial-gradient(circle,#3a2a10 0%,#080808 72%);
-    border:1px solid #493716;
-    box-shadow:0 0 65px rgba(216,169,40,.13);
-    overflow:hidden;
+width:320px;
+height:430px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle,#3a2a10 0%,#080808 72%);
+border:1px solid #493716;
+box-shadow:0 0 65px rgba(216,169,40,.13);
+overflow:hidden;
 }
-
 .hero-bottle img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    padding:15px;
-    filter:drop-shadow(0 25px 30px #000);
+width:100%;
+height:100%;
+object-fit:contain;
+padding:15px;
+filter:drop-shadow(0 25px 30px #000);
 }
-
 .eyebrow{
-    color:#c8a458;
-    letter-spacing:6px;
-    font-size:13px;
-    margin-bottom:20px;
+color:#c8a458;
+letter-spacing:6px;
+font-size:13px;
+margin-bottom:20px;
 }
-
 .hero h1{
-    font-size:clamp(55px,11vw,105px);
-    color:#d8a928;
-    letter-spacing:12px;
-    line-height:1;
+font-size:clamp(55px,11vw,105px);
+color:#d8a928;
+letter-spacing:12px;
+line-height:1;
 }
-
 .hero h2{
-    margin:25px 0;
-    font-size:clamp(25px,5vw,45px);
-    font-weight:normal;
+margin:25px 0;
+font-size:clamp(25px,5vw,45px);
+font-weight:normal;
 }
-
 .hero p{
-    color:#aaa08c;
-    max-width:600px;
-    margin:0 auto 30px;
+color:#aaa08c;
+max-width:600px;
+margin:0 auto 30px;
 }
-
 .gold-btn{
-    display:inline-block;
-    padding:14px 30px;
-    border:1px solid #d3a22c;
-    color:#d3a22c;
-    letter-spacing:2px;
+display:inline-block;
+padding:14px 30px;
+border:1px solid #d3a22c;
+color:#d3a22c;
+letter-spacing:2px;
 }
-
 .gold-btn:hover{
-    background:#d3a22c;
-    color:#080808;
+background:#d3a22c;
+color:#080808;
 }
-
-/* SECTION */
 
 .section{
-    max-width:1200px;
-    margin:auto;
-    padding:75px 22px;
+max-width:1200px;
+margin:auto;
+padding:75px 22px;
 }
-
 .section-title{
-    text-align:center;
-    margin-bottom:35px;
+text-align:center;
+margin-bottom:35px;
 }
-
 .section-title span{
-    color:#c8a458;
-    letter-spacing:5px;
-    font-size:12px;
+color:#c8a458;
+letter-spacing:5px;
+font-size:12px;
 }
-
 .section-title h2{
-    font-size:40px;
-    font-weight:normal;
+font-size:40px;
+font-weight:normal;
 }
-
 .line{
-    width:75px;
-    height:1px;
-    background:#c99b2c;
-    margin:18px auto;
+width:75px;
+height:1px;
+background:#c99b2c;
+margin:18px auto;
 }
-
-/* SEARCH */
 
 .shop-tools{
-    max-width:900px;
-    margin:0 auto 40px;
+max-width:900px;
+margin:0 auto 40px;
 }
-
 .search-box{
-    display:flex;
-    gap:10px;
-    margin-bottom:18px;
+display:flex;
+gap:10px;
+margin-bottom:18px;
 }
-
 .search-box input{
-    flex:1;
-    padding:15px;
-    background:#11100d;
-    border:1px solid #493716;
-    color:#fff;
-    outline:none;
+flex:1;
+padding:15px;
+background:#11100d;
+border:1px solid #493716;
+color:#fff;
+outline:none;
 }
-
-.search-box input:focus{
-    border-color:#c99b2c;
-}
-
+.search-box input:focus{border-color:#c99b2c}
 .search-btn{
-    padding:0 20px;
-    background:#c99b2c;
-    border:none;
-    color:#080808;
+padding:0 20px;
+background:#c99b2c;
+border:none;
+color:#080808;
 }
-
 .categories{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
 }
-
 .category-btn{
-    padding:9px 16px;
-    background:transparent;
-    color:#c9b98d;
-    border:1px solid #493716;
+padding:9px 16px;
+background:transparent;
+color:#c9b98d;
+border:1px solid #493716;
 }
-
 .category-btn.active,
 .category-btn:hover{
-    background:#c99b2c;
-    color:#080808;
+background:#c99b2c;
+color:#080808;
 }
-
-/* PRODUCTS */
 
 .products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
-
 .product{
-    position:relative;
-    background:#11100d;
-    border:1px solid #3b2c13;
-    padding:22px;
-    text-align:center;
-    transition:.3s;
+position:relative;
+background:#11100d;
+border:1px solid #3b2c13;
+padding:22px;
+text-align:center;
+transition:.3s;
 }
-
 .product:hover{
-    transform:translateY(-5px);
-    border-color:#8d6c25;
+transform:translateY(-5px);
+border-color:#8d6c25;
 }
-
 .delivery-badge{
-    position:absolute;
-    top:12px;
-    left:12px;
-    background:#174d2b;
-    color:#a9e2b6;
-    font-size:10px;
-    padding:5px 8px;
-    letter-spacing:1px;
+position:absolute;
+top:12px;
+left:12px;
+background:#174d2b;
+color:#a9e2b6;
+font-size:10px;
+padding:5px 8px;
+letter-spacing:1px;
 }
-
 .wishlist{
-    position:absolute;
-    top:10px;
-    right:12px;
-    background:none;
-    border:none;
-    font-size:24px;
-    color:#76694f;
+position:absolute;
+top:10px;
+right:12px;
+background:none;
+border:none;
+font-size:24px;
+color:#76694f;
 }
-
-.wishlist.active{
-    color:#d8a928;
-}
-
+.wishlist.active{color:#d8a928}
 .product-image{
-    height:250px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:radial-gradient(circle,#392b12,#0b0b0b 70%);
-    margin-bottom:22px;
+height:250px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle,#392b12,#0b0b0b 70%);
+margin-bottom:22px;
 }
-
 .bottle{
-    width:115px;
-    height:180px;
+width:145px;
+height:210px;
 }
-
 .bottle img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+width:100%;
+height:100%;
+object-fit:contain;
+filter:drop-shadow(0 18px 15px #000);
 }
-
 .product h3{
-    color:#d8aa38;
-    letter-spacing:2px;
+color:#d8aa38;
+letter-spacing:2px;
 }
-
 .type{
-    color:#897b60;
-    font-size:12px;
-    letter-spacing:2px;
-    margin:5px 0 12px;
+color:#897b60;
+font-size:12px;
+letter-spacing:2px;
+margin:5px 0 12px;
 }
-
 .product p{
-    color:#a69c89;
-    font-size:14px;
+color:#a69c89;
+font-size:14px;
 }
-
 .price{
-    color:#efd38b;
-    font-size:22px;
-    margin:15px 0 5px;
+color:#efd38b;
+font-size:22px;
+margin:15px 0 5px;
 }
-
 .stock{
-    color:#7dbb78;
-    font-size:12px;
-    margin-bottom:14px;
+color:#7dbb78;
+font-size:12px;
+margin-bottom:14px;
 }
-
 .product-buttons{
-    display:flex;
-    gap:8px;
+display:flex;
+gap:8px;
 }
-
 .product-buttons button{
-    flex:1;
-    padding:12px 6px;
-    font-size:11px;
-    letter-spacing:1px;
+flex:1;
+padding:12px 6px;
+font-size:11px;
+letter-spacing:1px;
 }
-
-.buy-btn,
-.details-btn{
-    border:1px solid #bd9129;
-    background:transparent;
-    color:#d8a038;
+.buy-btn,.details-btn{
+border:1px solid #bd9129;
+background:transparent;
+color:#d8a038;
 }
-
-.buy-btn:hover,
-.details-btn:hover{
-    background:#c99b2c;
-    color:#080808;
+.buy-btn:hover,.details-btn:hover{
+background:#c99b2c;
+color:#080808;
 }
-
 .no-products{
-    display:none;
-    text-align:center;
-    color:#a69c89;
-    padding:40px;
-    border:1px solid #332711;
+display:none;
+text-align:center;
+color:#a69c89;
+padding:40px;
+border:1px solid #332711;
 }
-
-/* REVIEWS */
 
 .reviews{
-    background:#0d0c0a;
-    border-top:1px solid #332610;
-    border-bottom:1px solid #332610;
+background:#0d0c0a;
+border-top:1px solid #332610;
+border-bottom:1px solid #332610;
 }
-
 .review-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
-
 .review{
-    padding:25px;
-    background:#11100d;
-    border:1px solid #3b2c13;
+padding:25px;
+background:#11100d;
+border:1px solid #3b2c13;
 }
-
 .stars{
-    color:#d8a928;
-    letter-spacing:3px;
-    margin-bottom:12px;
+color:#d8a928;
+letter-spacing:3px;
+margin-bottom:12px;
 }
-
 .review p{
-    color:#aaa08d;
-    font-size:14px;
+color:#aaa08d;
+font-size:14px;
 }
-
 .reviewer{
-    color:#d8a038;
-    margin-top:15px;
-    font-size:13px;
+color:#d8a038;
+margin-top:15px;
+font-size:13px;
 }
 
-/* STORY */
-
-.story{
-    border-bottom:1px solid #332610;
-}
-
+.story{border-bottom:1px solid #332610}
 .story-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
-
 .story-box h2{
-    color:#d8aa38;
-    font-size:40px;
-    font-weight:normal;
-    margin:15px 0;
+color:#d8aa38;
+font-size:40px;
+font-weight:normal;
+margin:15px 0;
 }
-
 .story-box p{
-    color:#aaa08d;
-    margin-bottom:16px;
+color:#aaa08d;
+margin-bottom:16px;
 }
-
-/* CART */
+.order-box{
+text-align:center;
+padding:60px 20px;
+border:1px solid #3b2c13;
+background:radial-gradient(circle,#30230d,#0b0b0b);
+}
+.order-box h2{
+color:#d8a038;
+font-size:45px;
+letter-spacing:8px;
+}
+.order-box p{
+color:#8f8165;
+margin:10px 0 25px;
+}
 
 .cart-panel{
-    position:fixed;
-    top:0;
-    right:-100%;
-    width:390px;
-    max-width:100%;
-    height:100vh;
-    background:#0c0c0b;
-    z-index:2000;
-    border-left:1px solid #4a3715;
-    padding:25px;
-    transition:.3s;
-    overflow-y:auto;
+position:fixed;
+top:0;
+right:-100%;
+width:390px;
+max-width:100%;
+height:100vh;
+background:#0c0c0b;
+z-index:2000;
+border-left:1px solid #4a3715;
+padding:25px;
+transition:.3s;
+overflow-y:auto;
 }
-
 .cart-panel.active{right:0}
-
 .cart-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #392b13;
-    padding-bottom:15px;
-    margin-bottom:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #392b13;
+padding-bottom:15px;
+margin-bottom:20px;
 }
-
 .cart-header h2{color:#d8a038}
-
-.cart-header button,
-.close-popup,
-.close-checkout{
-    background:none;
-    border:none;
-    color:#d8a038;
-    font-size:30px;
+.cart-header button,.close-popup,.close-checkout{
+background:none;
+border:none;
+color:#d8a038;
+font-size:30px;
 }
-
 .cart-item{
-    border-bottom:1px solid #332711;
-    padding:17px 0;
+border-bottom:1px solid #332711;
+padding:17px 0;
 }
-
 .cart-item-top{
-    display:flex;
-    justify-content:space-between;
+display:flex;
+justify-content:space-between;
 }
-
 .cart-item-name{color:#f1dfb1}
 .cart-item-price{color:#d8a038}
-
 .quantity-box{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-top:12px;
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:12px;
 }
-
 .quantity-btn{
-    width:32px;
-    height:32px;
-    background:transparent;
-    color:#d8a038;
-    border:1px solid #8d6c25;
-    font-size:18px;
+width:32px;
+height:32px;
+background:transparent;
+color:#d8a038;
+border:1px solid #8d6c25;
+font-size:18px;
 }
-
 .quantity-number{
-    min-width:25px;
-    text-align:center;
+min-width:25px;
+text-align:center;
 }
-
 .remove-btn{
-    margin-top:12px;
-    padding:7px 12px;
-    background:transparent;
-    color:#d8a038;
-    border:1px solid #8d6c25;
+margin-top:12px;
+padding:7px 12px;
+background:transparent;
+color:#d8a038;
+border:1px solid #8d6c25;
 }
-
 .cart-total{
-    margin-top:25px;
-    padding:18px 0;
-    border-top:1px solid #493716;
-    color:#f0d68e;
-    font-size:21px;
+margin-top:25px;
+padding:18px 0;
+border-top:1px solid #493716;
+color:#f0d68e;
+font-size:21px;
 }
-
 .checkout-btn{
-    width:100%;
-    padding:15px;
-    background:#218c45;
-    color:white;
-    border:none;
+width:100%;
+padding:15px;
+background:#218c45;
+color:white;
+border:none;
 }
 
-/* POPUPS */
-
-.product-modal,
-.checkout-panel{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.94);
-    z-index:2500;
-    display:none;
-    overflow-y:auto;
-    padding:25px 15px;
+.product-modal,.checkout-panel{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.94);
+z-index:2500;
+display:none;
+overflow-y:auto;
+padding:25px 15px;
 }
-
-.product-modal.active,
-.checkout-panel.active{
-    display:block;
+.product-modal.active,.checkout-panel.active{display:block}
+.product-modal-box,.checkout-box{
+max-width:650px;
+margin:30px auto;
+background:#0d0c0a;
+border:1px solid #5a4318;
+padding:28px;
 }
-
-.product-modal-box,
-.checkout-box{
-    max-width:650px;
-    margin:30px auto;
-    background:#0d0c0a;
-    border:1px solid #5a4318;
-    padding:28px;
+.modal-header,.checkout-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-
-.modal-header,
-.checkout-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.modal-header h2,
-.checkout-header h2{
-    color:#d8a038;
-}
-
+.modal-header h2,.checkout-header h2{color:#d8a038}
 .modal-image{
-    height:280px;
-    margin:20px 0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:radial-gradient(circle,#39290f,#080808 70%);
+height:300px;
+margin:20px 0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle,#39290f,#080808 70%);
 }
-
 .modal-image img{
-    height:240px;
-    object-fit:contain;
+height:270px;
+max-width:90%;
+object-fit:contain;
+filter:drop-shadow(0 20px 18px #000);
 }
-
 .modal-type{
-    color:#9e8960;
-    letter-spacing:3px;
-    font-size:12px;
+color:#9e8960;
+letter-spacing:3px;
+font-size:12px;
 }
-
 .modal-description{
-    color:#aaa08d;
-    margin:15px 0;
+color:#aaa08d;
+margin:15px 0;
 }
-
 .notes{
-    border-top:1px solid #392b13;
-    border-bottom:1px solid #392b13;
-    padding:15px 0;
-    color:#c9b991;
+border-top:1px solid #392b13;
+border-bottom:1px solid #392b13;
+padding:15px 0;
+color:#c9b991;
 }
-
 .modal-price{
-    color:#efd38b;
-    font-size:28px;
-    margin:20px 0;
+color:#efd38b;
+font-size:28px;
+margin:20px 0;
 }
-
 .modal-add{
-    width:100%;
-    padding:15px;
-    background:#c99b2c;
-    border:none;
+width:100%;
+padding:15px;
+background:#c99b2c;
+border:none;
 }
-
-/* CHECKOUT */
 
 .checkout-summary{
-    background:#11100d;
-    border:1px solid #332711;
-    padding:15px;
-    margin:25px 0;
+background:#11100d;
+border:1px solid #332711;
+padding:15px;
+margin:25px 0;
 }
-
 .checkout-summary h3{
-    color:#d8a038;
-    margin-bottom:10px;
+color:#d8a038;
+margin-bottom:10px;
 }
-
 .summary-line{
-    display:flex;
-    justify-content:space-between;
-    padding:6px 0;
-    color:#c6b99f;
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+color:#c6b99f;
 }
-
-.form-group{
-    margin-bottom:16px;
-}
-
+.form-group{margin-bottom:16px}
 .form-group label{
-    display:block;
-    color:#d8a038;
-    font-size:13px;
-    margin-bottom:6px;
+display:block;
+color:#d8a038;
+font-size:13px;
+margin-bottom:6px;
 }
-
-.form-group input,
-.form-group textarea{
-    width:100%;
-    padding:13px;
-    background:#080808;
-    border:1px solid #493716;
-    color:white;
-    outline:none;
+.form-group input,.form-group textarea{
+width:100%;
+padding:13px;
+background:#080808;
+border:1px solid #493716;
+color:white;
+outline:none;
 }
-
-.form-group textarea{
-    min-height:90px;
-}
-
+.form-group textarea{min-height:90px}
 .place-order{
-    width:100%;
-    padding:15px;
-    background:#218c45;
-    color:white;
-    border:none;
+width:100%;
+padding:15px;
+background:#218c45;
+color:white;
+border:none;
 }
-
-/* CONTACT */
 
 .contact-info{
-    text-align:center;
-    color:#aaa08d;
+text-align:center;
+color:#aaa08d;
 }
-
 .contact-info p{margin:10px}
 
-/* FOOTER */
-
 footer{
-    text-align:center;
-    padding:45px 20px 25px;
-    background:#050505;
-    border-top:1px solid #35280f;
+text-align:center;
+padding:45px 20px 25px;
+background:#050505;
+border-top:1px solid #35280f;
 }
-
 .footer-logo{
-    color:#d8a038;
-    font-size:32px;
-    letter-spacing:7px;
+color:#d8a038;
+font-size:32px;
+letter-spacing:7px;
 }
-
 .footer-links{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin:20px 0;
+display:flex;
+justify-content:center;
+gap:25px;
+margin:20px 0;
 }
-
 .footer-links a{
-    color:#9e906f;
-    font-size:13px;
+color:#9e906f;
+font-size:13px;
 }
-
 .copyright{
-    color:#514b41;
-    font-size:11px;
+color:#514b41;
+font-size:11px;
 }
-
-/* MOBILE */
 
 @media(max-width:800px){
-
-    .hero{
-        flex-direction:column;
-    }
-
-    .hero-bottle{
-        width:270px;
-        height:370px;
-    }
-
-    nav{
-        display:none;
-        position:absolute;
-        top:65px;
-        left:0;
-        width:100%;
-        background:#080808;
-        flex-direction:column;
-        padding:25px;
-        border-bottom:1px solid #3d2d12;
-    }
-
-    nav.active{display:flex}
-
-    .menu{display:block}
-
-    .products{
-        grid-template-columns:1fr;
-    }
-
-    .review-grid{
-        grid-template-columns:1fr;
-    }
-
-    .story-grid{
-        grid-template-columns:1fr;
-    }
-
-    .search-box{
-        flex-direction:column;
-    }
-
-    .search-btn{
-        padding:12px;
-    }
-
-    .product-buttons{
-        flex-direction:column;
-    }
+.hero{flex-direction:column}
+.hero-bottle{
+width:270px;
+height:370px;
+}
+nav{
+display:none;
+position:absolute;
+top:65px;
+left:0;
+width:100%;
+background:#080808;
+flex-direction:column;
+padding:25px;
+border-bottom:1px solid #3d2d12;
+}
+nav.active{display:flex}
+.menu{display:block}
+.products{grid-template-columns:1fr}
+.review-grid{grid-template-columns:1fr}
+.story-grid{grid-template-columns:1fr}
+.search-box{flex-direction:column}
+.search-btn{padding:12px}
+.product-buttons{flex-direction:column}
 }
 </style>
 </head>
@@ -757,13 +608,10 @@ footer{
 
 <header>
 <div class="navbar">
-
 <a href="#home" class="brand">VISHAYU</a>
-
 <div class="menu" onclick="toggleMenu()">☰</div>
 
 <nav id="nav">
-
 <a href="#home">HOME</a>
 <a href="#collection">COLLECTION</a>
 <a href="#story">OUR STORY</a>
@@ -773,20 +621,15 @@ footer{
 <div class="cart-button" onclick="openCart()">
 🛒 CART <span id="cartCount">0</span>
 </div>
-
 </nav>
 </div>
 </header>
 
-
 <section class="hero" id="home">
 
 <div class="hero-content">
-
 <div class="eyebrow">THE ART OF FRAGRANCE</div>
-
 <h1>VISHAYU</h1>
-
 <h2>Luxury Itra. Timeless Essence.</h2>
 
 <p>
@@ -797,7 +640,6 @@ where traditional Indian perfumery meets modern luxury.
 <a href="#collection" class="gold-btn">
 EXPLORE COLLECTION
 </a>
-
 </div>
 
 <div class="hero-bottle">
@@ -806,26 +648,18 @@ EXPLORE COLLECTION
 
 </section>
 
-
 <section class="section" id="collection">
 
 <div class="section-title">
-
 <span>THE HOUSE OF VISHAYU</span>
-
 <h2>Signature Collection</h2>
-
 <div class="line"></div>
-
 <p>Find the fragrance that matches your personality.</p>
-
 </div>
-
 
 <div class="shop-tools">
 
 <div class="search-box">
-
 <input
 type="search"
 id="searchInput"
@@ -835,48 +669,32 @@ oninput="filterProducts()">
 <button class="search-btn" onclick="filterProducts()">
 SEARCH
 </button>
-
 </div>
-
 
 <div class="categories">
 
 <button class="category-btn active"
-onclick="setCategory('all',this)">
-ALL
-</button>
+onclick="setCategory('all',this)">ALL</button>
 
 <button class="category-btn"
-onclick="setCategory('oud',this)">
-OUD
-</button>
+onclick="setCategory('oud',this)">OUD</button>
 
 <button class="category-btn"
-onclick="setCategory('musk',this)">
-MUSK
-</button>
+onclick="setCategory('musk',this)">MUSK</button>
 
 <button class="category-btn"
-onclick="setCategory('rose',this)">
-ROSE
-</button>
+onclick="setCategory('rose',this)">ROSE</button>
 
 <button class="category-btn"
-onclick="setCategory('sandal',this)">
-SANDAL
-</button>
+onclick="setCategory('sandal',this)">SANDAL</button>
 
 <button class="category-btn"
-onclick="setCategory('earthy',this)">
-EARTHY
-</button>
+onclick="setCategory('earthy',this)">EARTHY</button>
 
 </div>
 </div>
-
 
 <div class="products" id="productGrid">
-
 
 <!-- ROYAL OUD -->
 
@@ -885,18 +703,15 @@ EARTHY
 <div class="delivery-badge">FREE DELIVERY</div>
 
 <button class="wishlist"
-onclick="toggleWishlist(this,'Royal Oud')">
-♡
-</button>
+onclick="toggleWishlist(this,'Royal Oud')">♡</button>
 
 <div class="product-image">
 <div class="bottle">
-<img src="vishayu-bottle.png" alt="Royal Oud">
+<img src="vishayu-oud.png" alt="Royal Oud">
 </div>
 </div>
 
 <h3>ROYAL OUD</h3>
-
 <div class="type">TRADITIONAL ITRA</div>
 
 <p>
@@ -905,7 +720,6 @@ A powerful oud fragrance for a commanding presence.
 </p>
 
 <div class="price">₹1,499</div>
-
 <div class="stock">● IN STOCK</div>
 
 <div class="product-buttons">
@@ -921,14 +735,14 @@ onclick="showDetails(
 1499,
 'TRADITIONAL ITRA',
 'Deep, rich and timeless oud fragrance created for a powerful and commanding presence.',
-'Deep Oud • Warm Woods • Amber'
+'Deep Oud • Warm Woods • Amber',
+'vishayu-oud.png'
 )">
 DETAILS
 </button>
 
 </div>
 </div>
-
 
 <!-- IMPERIAL MUSK -->
 
@@ -937,18 +751,15 @@ DETAILS
 <div class="delivery-badge">FREE DELIVERY</div>
 
 <button class="wishlist"
-onclick="toggleWishlist(this,'Imperial Musk')">
-♡
-</button>
+onclick="toggleWishlist(this,'Imperial Musk')">♡</button>
 
 <div class="product-image">
 <div class="bottle">
-<img src="vishayu-bottle.png" alt="Imperial Musk">
+<img src="vishayu-musk.png" alt="Imperial Musk">
 </div>
 </div>
 
 <h3>IMPERIAL MUSK</h3>
-
 <div class="type">TRADITIONAL ITRA</div>
 
 <p>
@@ -957,7 +768,6 @@ A sophisticated musk created for evening occasions.
 </p>
 
 <div class="price">₹1,399</div>
-
 <div class="stock">● IN STOCK</div>
 
 <div class="product-buttons">
@@ -973,14 +783,14 @@ onclick="showDetails(
 1399,
 'TRADITIONAL ITRA',
 'Warm, sensual and elegant musk fragrance designed for sophisticated evening moments.',
-'Soft Musk • Amber • Warm Woods'
+'Soft Musk • Amber • Warm Woods',
+'vishayu-musk.png'
 )">
 DETAILS
 </button>
 
 </div>
 </div>
-
 
 <!-- VELVET ROSE -->
 
@@ -989,18 +799,15 @@ DETAILS
 <div class="delivery-badge">FREE DELIVERY</div>
 
 <button class="wishlist"
-onclick="toggleWishlist(this,'Velvet Rose')">
-♡
-</button>
+onclick="toggleWishlist(this,'Velvet Rose')">♡</button>
 
 <div class="product-image">
 <div class="bottle">
-<img src="vishayu-bottle.png" alt="Velvet Rose">
+<img src="vishayu-rose.png" alt="Velvet Rose">
 </div>
 </div>
 
 <h3>VELVET ROSE</h3>
-
 <div class="type">TRADITIONAL ITRA</div>
 
 <p>
@@ -1009,7 +816,6 @@ A smooth rose composition with an elegant character.
 </p>
 
 <div class="price">₹1,299</div>
-
 <div class="stock">● IN STOCK</div>
 
 <div class="product-buttons">
@@ -1025,14 +831,14 @@ onclick="showDetails(
 1299,
 'TRADITIONAL ITRA',
 'A luxurious floral rose composition with a romantic and elegant character.',
-'Fresh Rose • Soft Florals • Musk'
+'Fresh Rose • Soft Florals • Musk',
+'vishayu-rose.png'
 )">
 DETAILS
 </button>
 
 </div>
 </div>
-
 
 <!-- ROYAL SANDAL -->
 
@@ -1041,18 +847,15 @@ DETAILS
 <div class="delivery-badge">FREE DELIVERY</div>
 
 <button class="wishlist"
-onclick="toggleWishlist(this,'Royal Sandal')">
-♡
-</button>
+onclick="toggleWishlist(this,'Royal Sandal')">♡</button>
 
 <div class="product-image">
 <div class="bottle">
-<img src="vishayu-bottle.png" alt="Royal Sandal">
+<img src="royal-sandal.png" alt="Royal Sandal">
 </div>
 </div>
 
 <h3>ROYAL SANDAL</h3>
-
 <div class="type">TRADITIONAL ITRA</div>
 
 <p>
@@ -1061,7 +864,6 @@ A refined sandalwood-inspired fragrance.
 </p>
 
 <div class="price">₹1,299</div>
-
 <div class="stock">● IN STOCK</div>
 
 <div class="product-buttons">
@@ -1077,14 +879,14 @@ onclick="showDetails(
 1299,
 'TRADITIONAL ITRA',
 'A smooth woody fragrance inspired by the timeless elegance of sandalwood.',
-'Sandalwood • Creamy Woods • Amber'
+'Sandalwood • Creamy Woods • Amber',
+'royal-sandal.png'
 )">
 DETAILS
 </button>
 
 </div>
 </div>
-
 
 <!-- MITTI ROYALE -->
 
@@ -1093,18 +895,15 @@ DETAILS
 <div class="delivery-badge">FREE DELIVERY</div>
 
 <button class="wishlist"
-onclick="toggleWishlist(this,'Mitti Royale')">
-♡
-</button>
+onclick="toggleWishlist(this,'Mitti Royale')">♡</button>
 
 <div class="product-image">
 <div class="bottle">
-<img src="vishayu-bottle.png" alt="Mitti Royale">
+<img src="mitti-royale.png" alt="Mitti Royale">
 </div>
 </div>
 
 <h3>MITTI ROYALE</h3>
-
 <div class="type">TRADITIONAL ITRA</div>
 
 <p>
@@ -1113,7 +912,6 @@ Inspired by the beautiful aroma of Indian mitti.
 </p>
 
 <div class="price">₹999</div>
-
 <div class="stock">● IN STOCK</div>
 
 <div class="product-buttons">
@@ -1129,14 +927,14 @@ onclick="showDetails(
 999,
 'TRADITIONAL ITRA',
 'Earthy and refreshing fragrance inspired by the nostalgic aroma of Indian rain-soaked earth.',
-'Mitti • Earthy Woods • Fresh Rain'
+'Mitti • Earthy Woods • Fresh Rain',
+'mitti-royale.png'
 )">
 DETAILS
 </button>
 
 </div>
 </div>
-
 
 <!-- NOIR SHAMAMA -->
 
@@ -1145,18 +943,15 @@ DETAILS
 <div class="delivery-badge">FREE DELIVERY</div>
 
 <button class="wishlist"
-onclick="toggleWishlist(this,'Noir Shamama')">
-♡
-</button>
+onclick="toggleWishlist(this,'Noir Shamama')">♡</button>
 
 <div class="product-image">
 <div class="bottle">
-<img src="vishayu-bottle.png" alt="Noir Shamama">
+<img src="vishayu-noir.png" alt="Noir Shamama">
 </div>
 </div>
 
 <h3>NOIR SHAMAMA</h3>
-
 <div class="type">ROYAL ITRA</div>
 
 <p>
@@ -1165,7 +960,6 @@ A traditional-inspired fragrance with a dark character.
 </p>
 
 <div class="price">₹1,599</div>
-
 <div class="stock">● IN STOCK</div>
 
 <div class="product-buttons">
@@ -1181,7 +975,8 @@ onclick="showDetails(
 1599,
 'ROYAL ITRA',
 'A warm, spicy and mysterious fragrance with a rich traditional-inspired character.',
-'Spices • Woods • Amber'
+'Spices • Woods • Amber',
+'vishayu-noir.png'
 )">
 DETAILS
 </button>
@@ -1189,9 +984,7 @@ DETAILS
 </div>
 </div>
 
-
 </div>
-
 
 <div class="no-products" id="noProducts">
 No fragrance found. Try another search.
@@ -1199,80 +992,48 @@ No fragrance found. Try another search.
 
 </section>
 
-
-<!-- REVIEWS -->
-
 <section class="reviews" id="reviews">
 
 <div class="section">
 
 <div class="section-title">
-
 <span>THE VISHAYU EXPERIENCE</span>
-
 <h2>What Our Customers Say</h2>
-
 <div class="line"></div>
-
 </div>
-
 
 <div class="review-grid">
 
 <div class="review">
-
 <div class="stars">★★★★★</div>
-
 <p>
 "Royal Oud has such a rich and elegant character.
 The fragrance feels very premium."
 </p>
-
-<div class="reviewer">
-— Verified Customer
+<div class="reviewer">— Verified Customer</div>
 </div>
-
-</div>
-
 
 <div class="review">
-
 <div class="stars">★★★★★</div>
-
 <p>
 "Velvet Rose is beautiful and sophisticated.
 It has become one of my favourites."
 </p>
-
-<div class="reviewer">
-— Verified Customer
+<div class="reviewer">— Verified Customer</div>
 </div>
-
-</div>
-
 
 <div class="review">
-
 <div class="stars">★★★★★</div>
-
 <p>
 "Mitti Royale has a very unique earthy fragrance.
 Loved the traditional feel."
 </p>
-
-<div class="reviewer">
-— Verified Customer
-</div>
-
+<div class="reviewer">— Verified Customer</div>
 </div>
 
 </div>
 </div>
-
 </section>
-
-
-<!-- STORY -->
 
 <section class="story" id="story">
 
@@ -1300,59 +1061,40 @@ for those who appreciate elegance and individuality.
 </div>
 
 <div class="order-box">
-
 <h2>VISHAYU</h2>
-
 <p>THE ART OF FRAGRANCE</p>
-
-<a href="#collection" class="gold-btn">
-DISCOVER
-</a>
-
+<a href="#collection" class="gold-btn">DISCOVER</a>
 </div>
 
 </div>
-
 </div>
 </section>
-
 
 <section class="section" id="contact">
 
 <div class="section-title">
-
 <span>GET IN TOUCH</span>
-
 <h2>Contact Maison Vishayu</h2>
-
 <div class="line"></div>
-
 </div>
 
 <div class="contact-info">
-
 <p>📧 Email: contact-vishuagnihotri9522@gmail.com</p>
-
 <p>📱 WhatsApp: +91 8889072340</p>
-
 </div>
 
 </section>
 
-
 <footer>
 
 <div class="footer-logo">VISHAYU</div>
-
 <p>MAISON VISHAYU — THE HOUSE OF VISHAYU</p>
 
 <div class="footer-links">
-
 <a href="#home">Home</a>
 <a href="#collection">Collection</a>
 <a href="#story">Our Story</a>
 <a href="#reviews">Reviews</a>
-
 </div>
 
 <div class="copyright">
@@ -1361,17 +1103,13 @@ DISCOVER
 
 </footer>
 
-
 <!-- CART -->
 
 <div id="cartPanel" class="cart-panel">
 
 <div class="cart-header">
-
 <h2>YOUR CART</h2>
-
 <button onclick="closeCart()">×</button>
-
 </div>
 
 <div id="cartItems">
@@ -1382,13 +1120,11 @@ DISCOVER
 Total: ₹<span id="cartTotal">0</span>
 </div>
 
-<button class="checkout-btn"
-onclick="openCheckout()">
+<button class="checkout-btn" onclick="openCheckout()">
 CONTINUE TO CHECKOUT
 </button>
 
 </div>
-
 
 <!-- PRODUCT DETAILS -->
 
@@ -1397,12 +1133,8 @@ CONTINUE TO CHECKOUT
 <div class="product-modal-box">
 
 <div class="modal-header">
-
 <h2 id="modalName">PRODUCT</h2>
-
-<button class="close-popup"
-onclick="closeDetails()">×</button>
-
+<button class="close-popup" onclick="closeDetails()">×</button>
 </div>
 
 <div class="modal-image">
@@ -1414,36 +1146,25 @@ alt="Vishayu Product">
 
 </div>
 
-<div class="modal-type"
-id="modalType">
-</div>
+<div class="modal-type" id="modalType"></div>
 
-<p
-class="modal-description"
-id="modalDescription">
-</p>
+<p class="modal-description" id="modalDescription"></p>
 
 <div class="notes">
-
 <strong>FRAGRANCE NOTES</strong>
-
 <p id="modalNotes"></p>
-
 </div>
 
 <div class="modal-price">
 ₹<span id="modalPrice">0</span>
 </div>
 
-<button
-class="modal-add"
-id="modalAddButton">
+<button class="modal-add" id="modalAddButton">
 ADD TO CART
 </button>
 
 </div>
 </div>
-
 
 <!-- CHECKOUT -->
 
@@ -1452,571 +1173,426 @@ ADD TO CART
 <div class="checkout-box">
 
 <div class="checkout-header">
-
 <h2>CHECKOUT</h2>
-
-<button
-class="close-checkout"
-onclick="closeCheckout()">×</button>
-
+<button class="close-checkout" onclick="closeCheckout()">×</button>
 </div>
 
 <div class="checkout-summary">
 
 <h3>YOUR ORDER</h3>
-
 <div id="checkoutSummary"></div>
 
 </div>
 
 <div class="form-group">
-
 <label>FULL NAME</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="Enter your name">
-
+<input type="text" id="customerName" placeholder="Enter your name">
 </div>
 
 <div class="form-group">
-
 <label>MOBILE NUMBER</label>
-
-<input
-type="tel"
-id="customerPhone"
-placeholder="Enter mobile number">
-
+<input type="tel" id="customerPhone" placeholder="Enter mobile number">
 </div>
 
 <div class="form-group">
-
 <label>FULL ADDRESS</label>
-
-<textarea
-id="customerAddress"
-placeholder="House / Street / Area"></textarea>
-
+<textarea id="customerAddress" placeholder="House / Street / Area"></textarea>
 </div>
 
 <div class="form-group">
-
 <label>CITY</label>
-
-<input
-type="text"
-id="customerCity"
-placeholder="Enter city">
-
+<input type="text" id="customerCity" placeholder="Enter city">
 </div>
 
 <div class="form-group">
-
 <label>PINCODE</label>
-
-<input
-type="number"
-id="customerPincode"
-placeholder="Enter pincode">
-
+<input type="number" id="customerPincode" placeholder="Enter pincode">
 </div>
 
-<button
-class="place-order"
-onclick="placeOrder()">
+<button class="place-order" onclick="placeOrder()">
 💬 PLACE ORDER ON WHATSAPP
 </button>
 
 </div>
 </div>
 
-
 <script>
 
-let cart = [];
-
-let currentCategory = "all";
-
+let cart=[];
+let currentCategory="all";
 
 /* CART */
 
 function addToCart(product,price){
 
-    const existing =
-        cart.find(function(item){
-            return item.name === product;
-        });
+const existing=cart.find(function(item){
+return item.name===product;
+});
 
-    if(existing){
-        existing.quantity++;
-    }else{
-        cart.push({
-            name:product,
-            price:price,
-            quantity:1
-        });
-    }
-
-    updateCart();
-
-    alert(product + " added to cart!");
+if(existing){
+existing.quantity++;
+}else{
+cart.push({
+name:product,
+price:price,
+quantity:1
+});
 }
 
+updateCart();
+alert(product+" added to cart!");
+}
 
 function updateCart(){
 
-    let totalItems = 0;
-    let totalAmount = 0;
+let totalItems=0;
+let totalAmount=0;
 
-    cart.forEach(function(item){
+cart.forEach(function(item){
+totalItems+=item.quantity;
+totalAmount+=item.price*item.quantity;
+});
 
-        totalItems += item.quantity;
+document.getElementById("cartCount").innerText=totalItems;
+document.getElementById("cartTotal").innerText=totalAmount;
 
-        totalAmount +=
-            item.price * item.quantity;
+const cartItems=document.getElementById("cartItems");
 
-    });
-
-    document.getElementById("cartCount")
-    .innerText = totalItems;
-
-    const cartItems =
-        document.getElementById("cartItems");
-
-    document.getElementById("cartTotal")
-    .innerText = totalAmount;
-
-
-    if(cart.length === 0){
-
-        cartItems.innerHTML =
-            "<p>Your cart is empty.</p>";
-
-        return;
-    }
-
-
-    let html = "";
-
-    cart.forEach(function(item,index){
-
-        const amount =
-            item.price * item.quantity;
-
-        html += `
-
-        <div class="cart-item">
-
-        <div class="cart-item-top">
-
-        <span class="cart-item-name">
-        ${item.name}
-        </span>
-
-        <span class="cart-item-price">
-        ₹${amount}
-        </span>
-
-        </div>
-
-        <div class="quantity-box">
-
-        <button
-        class="quantity-btn"
-        onclick="decreaseQuantity(${index})">
-        −
-        </button>
-
-        <span class="quantity-number">
-        ${item.quantity}
-        </span>
-
-        <button
-        class="quantity-btn"
-        onclick="increaseQuantity(${index})">
-        +
-        </button>
-
-        </div>
-
-        <button
-        class="remove-btn"
-        onclick="removeFromCart(${index})">
-        REMOVE
-        </button>
-
-        </div>
-        `;
-    });
-
-    cartItems.innerHTML = html;
+if(cart.length===0){
+cartItems.innerHTML="<p>Your cart is empty.</p>";
+return;
 }
 
+let html="";
+
+cart.forEach(function(item,index){
+
+const amount=item.price*item.quantity;
+
+html+=`
+
+<div class="cart-item">
+
+<div class="cart-item-top">
+
+<span class="cart-item-name">
+${item.name}
+</span>
+
+<span class="cart-item-price">
+₹${amount}
+</span>
+
+</div>
+
+<div class="quantity-box">
+
+<button
+class="quantity-btn"
+onclick="decreaseQuantity(${index})">
+−
+</button>
+
+<span class="quantity-number">
+${item.quantity}
+</span>
+
+<button
+class="quantity-btn"
+onclick="increaseQuantity(${index})">
++
+</button>
+
+</div>
+
+<button
+class="remove-btn"
+onclick="removeFromCart(${index})">
+REMOVE
+</button>
+
+</div>
+`;
+});
+
+cartItems.innerHTML=html;
+}
 
 function increaseQuantity(index){
-
-    cart[index].quantity++;
-
-    updateCart();
+cart[index].quantity++;
+updateCart();
 }
-
 
 function decreaseQuantity(index){
 
-    if(cart[index].quantity > 1){
-        cart[index].quantity--;
-    }else{
-        cart.splice(index,1);
-    }
-
-    updateCart();
+if(cart[index].quantity>1){
+cart[index].quantity--;
+}else{
+cart.splice(index,1);
 }
 
+updateCart();
+}
 
 function removeFromCart(index){
-
-    cart.splice(index,1);
-
-    updateCart();
+cart.splice(index,1);
+updateCart();
 }
-
 
 function openCart(){
-
-    document
-    .getElementById("cartPanel")
-    .classList.add("active");
-
-    updateCart();
+document.getElementById("cartPanel").classList.add("active");
+updateCart();
 }
-
 
 function closeCart(){
-
-    document
-    .getElementById("cartPanel")
-    .classList.remove("active");
+document.getElementById("cartPanel").classList.remove("active");
 }
 
-
-/* SEARCH + CATEGORY */
+/* SEARCH */
 
 function setCategory(category,button){
 
-    currentCategory = category;
+currentCategory=category;
 
-    document
-    .querySelectorAll(".category-btn")
-    .forEach(function(btn){
-        btn.classList.remove("active");
-    });
+document.querySelectorAll(".category-btn").forEach(function(btn){
+btn.classList.remove("active");
+});
 
-    button.classList.add("active");
+button.classList.add("active");
 
-    filterProducts();
+filterProducts();
 }
-
 
 function filterProducts(){
 
-    const search =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
+const search=document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
 
-    const products =
-        document.querySelectorAll(".product");
+const products=document.querySelectorAll(".product");
 
-    let found = 0;
+let found=0;
 
+products.forEach(function(product){
 
-    products.forEach(function(product){
+const name=product.dataset.name;
+const category=product.dataset.category;
 
-        const name =
-            product.dataset.name;
+const searchMatch=name.includes(search);
 
-        const category =
-            product.dataset.category;
+const categoryMatch=
+currentCategory==="all" ||
+category===currentCategory;
 
+if(searchMatch && categoryMatch){
 
-        const searchMatch =
-            name.includes(search);
+product.style.display="";
+found++;
 
-        const categoryMatch =
-            currentCategory === "all" ||
-            category === currentCategory;
+}else{
 
+product.style.display="none";
 
-        if(searchMatch && categoryMatch){
-
-            product.style.display = "";
-
-            found++;
-
-        }else{
-
-            product.style.display = "none";
-
-        }
-
-    });
-
-
-    document.getElementById("noProducts")
-    .style.display =
-        found === 0 ? "block" : "none";
 }
 
+});
+
+document.getElementById("noProducts").style.display=
+found===0?"block":"none";
+}
 
 /* WISHLIST */
 
 function toggleWishlist(button,product){
 
-    button.classList.toggle("active");
+button.classList.toggle("active");
 
-    if(button.classList.contains("active")){
+if(button.classList.contains("active")){
 
-        button.innerText = "♥";
+button.innerText="♥";
+alert(product+" added to wishlist!");
 
-        alert(product + " added to wishlist!");
+}else{
 
-    }else{
+button.innerText="♡";
 
-        button.innerText = "♡";
-
-    }
 }
-
+}
 
 /* PRODUCT DETAILS */
 
 function showDetails(
-    name,
-    price,
-    type,
-    description,
-    notes
+name,
+price,
+type,
+description,
+notes,
+image
 ){
 
-    document.getElementById("modalName")
-    .innerText = name;
+document.getElementById("modalName").innerText=name;
+document.getElementById("modalPrice").innerText=price;
+document.getElementById("modalType").innerText=type;
+document.getElementById("modalDescription").innerText=description;
+document.getElementById("modalNotes").innerText=notes;
 
-    document.getElementById("modalPrice")
-    .innerText = price;
+document.getElementById("modalImage").src=image;
 
-    document.getElementById("modalType")
-    .innerText = type;
+document.getElementById("modalImage").alt=name;
 
-    document.getElementById("modalDescription")
-    .innerText = description;
+document.getElementById("modalAddButton").onclick=function(){
 
-    document.getElementById("modalNotes")
-    .innerText = notes;
+addToCart(name,price);
+closeDetails();
 
+};
 
-    document.getElementById("modalAddButton")
-    .onclick = function(){
-
-        addToCart(name,price);
-
-        closeDetails();
-
-    };
-
-
-    document
-    .getElementById("productModal")
-    .classList.add("active");
+document.getElementById("productModal")
+.classList.add("active");
 }
-
 
 function closeDetails(){
 
-    document
-    .getElementById("productModal")
-    .classList.remove("active");
+document.getElementById("productModal")
+.classList.remove("active");
 }
-
 
 /* CHECKOUT */
 
 function openCheckout(){
 
-    if(cart.length === 0){
+if(cart.length===0){
 
-        alert("Your cart is empty.");
+alert("Your cart is empty.");
+return;
 
-        return;
-    }
-
-
-    let html = "";
-    let total = 0;
-
-
-    cart.forEach(function(item){
-
-        const amount =
-            item.price * item.quantity;
-
-        total += amount;
-
-
-        html += `
-
-        <div class="summary-line">
-
-        <span>
-        ${item.name} × ${item.quantity}
-        </span>
-
-        <span>
-        ₹${amount}
-        </span>
-
-        </div>
-        `;
-    });
-
-
-    html += `
-
-    <div class="summary-line"
-    style="
-    border-top:1px solid #493716;
-    margin-top:10px;
-    padding-top:12px;
-    color:#d8a038;">
-
-    <strong>TOTAL</strong>
-
-    <strong>₹${total}</strong>
-
-    </div>
-
-    `;
-
-
-    document.getElementById("checkoutSummary")
-    .innerHTML = html;
-
-
-    document
-    .getElementById("checkoutPanel")
-    .classList.add("active");
-
-    closeCart();
 }
 
+let html="";
+let total=0;
+
+cart.forEach(function(item){
+
+const amount=item.price*item.quantity;
+
+total+=amount;
+
+html+=`
+
+<div class="summary-line">
+
+<span>
+${item.name} × ${item.quantity}
+</span>
+
+<span>
+₹${amount}
+</span>
+
+</div>
+`;
+});
+
+html+=`
+
+<div class="summary-line"
+style="
+border-top:1px solid #493716;
+margin-top:10px;
+padding-top:12px;
+color:#d8a038;">
+
+<strong>TOTAL</strong>
+<strong>₹${total}</strong>
+
+</div>
+`;
+
+document.getElementById("checkoutSummary").innerHTML=html;
+
+document.getElementById("checkoutPanel")
+.classList.add("active");
+
+closeCart();
+}
 
 function closeCheckout(){
 
-    document
-    .getElementById("checkoutPanel")
-    .classList.remove("active");
+document.getElementById("checkoutPanel")
+.classList.remove("active");
 }
 
+/* WHATSAPP ORDER */
 
 function placeOrder(){
 
-    const name =
-        document.getElementById("customerName")
-        .value.trim();
+const name=document.getElementById("customerName").value.trim();
+const phone=document.getElementById("customerPhone").value.trim();
+const address=document.getElementById("customerAddress").value.trim();
+const city=document.getElementById("customerCity").value.trim();
+const pincode=document.getElementById("customerPincode").value.trim();
 
-    const phone =
-        document.getElementById("customerPhone")
-        .value.trim();
+if(!name || !phone || !address || !city || !pincode){
 
-    const address =
-        document.getElementById("customerAddress")
-        .value.trim();
+alert("Please fill all customer details.");
+return;
 
-    const city =
-        document.getElementById("customerCity")
-        .value.trim();
-
-    const pincode =
-        document.getElementById("customerPincode")
-        .value.trim();
-
-
-    if(
-        !name ||
-        !phone ||
-        !address ||
-        !city ||
-        !pincode
-    ){
-
-        alert("Please fill all customer details.");
-
-        return;
-    }
-
-
-    let orderText = "";
-    let total = 0;
-    let totalItems = 0;
-
-
-    cart.forEach(function(item,index){
-
-        const amount =
-            item.price * item.quantity;
-
-        orderText +=
-            (index + 1) +
-            ". " +
-            item.name +
-            " × " +
-            item.quantity +
-            " = ₹" +
-            amount +
-            "\n";
-
-        total += amount;
-
-        totalItems += item.quantity;
-    });
-
-
-    const message =
-        "Hello Vishayu,\n\n" +
-        "I want to place an order:\n\n" +
-        orderText +
-        "\nTotal Amount: ₹" +
-        total +
-        "\nTotal Items: " +
-        totalItems +
-        "\n\nCUSTOMER DETAILS\n" +
-        "Name: " + name +
-        "\nMobile: " + phone +
-        "\nAddress: " + address +
-        "\nCity: " + city +
-        "\nPincode: " + pincode +
-        "\n\nThank you.";
-
-
-    const whatsappURL =
-        "https://wa.me/918889072340?text=" +
-        encodeURIComponent(message);
-
-
-    window.location.href = whatsappURL;
 }
 
+let orderText="";
+let total=0;
+let totalItems=0;
+
+cart.forEach(function(item,index){
+
+const amount=item.price*item.quantity;
+
+orderText+=
+(index+1)+
+". "+
+item.name+
+" × "+
+item.quantity+
+" = ₹"+
+amount+
+"\n";
+
+total+=amount;
+totalItems+=item.quantity;
+
+});
+
+const message=
+"Hello Vishayu,\n\n"+
+"I want to place an order:\n\n"+
+orderText+
+"\nTotal Amount: ₹"+
+total+
+"\nTotal Items: "+
+totalItems+
+"\n\nCUSTOMER DETAILS\n"+
+"Name: "+name+
+"\nMobile: "+phone+
+"\nAddress: "+address+
+"\nCity: "+city+
+"\nPincode: "+pincode+
+"\n\nThank you.";
+
+const whatsappURL=
+"https://wa.me/918889072340?text="+
+encodeURIComponent(message);
+
+window.location.href=whatsappURL;
+}
 
 /* MENU */
 
 function toggleMenu(){
 
-    document
-    .getElementById("nav")
-    .classList.toggle("active");
+document.getElementById("nav")
+.classList.toggle("active");
 
 }
 
