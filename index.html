@@ -1939,51 +1939,7 @@ function closeCheckout(){
 }
 
 
-function placeOrder(){
 
-    const name =
-        document.getElementById("customerName")
-        .value.trim();
-
-    const phone =
-        document.getElementById("customerPhone")
-        .value.trim();
-
-    const address =
-        document.getElementById("customerAddress")
-        .value.trim();
-
-    const city =
-        document.getElementById("customerCity")
-        .value.trim();
-
-    const pincode =
-        document.getElementById("customerPincode")
-        .value.trim();
-
-    const paymentElement =
-        document.querySelector(
-            'input[name="paymentMethod"]:checked'
-        );
-
-    const paymentMethod =
-        paymentElement
-        ? paymentElement.value
-        : "COD";
-
-
-    if(
-        !name ||
-        !phone ||
-        !address ||
-        !city ||
-        !pincode
-    ){
-
-        alert("Please fill all customer details.");
-
-        return;
-    }
 
 
     let orderText = "";
