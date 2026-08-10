@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Maison Vishayu | Luxury Itra</title>
 
 <style>
-
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
     background:#080808;
@@ -31,17 +26,11 @@ a{
     color:inherit;
 }
 
-button,
-input,
-textarea{
+button,input,textarea{
     font-family:inherit;
 }
 
-button{
-    cursor:pointer;
-}
-
-/* HEADER */
+button{cursor:pointer;}
 
 header{
     position:sticky;
@@ -77,9 +66,7 @@ nav a{
     letter-spacing:1px;
 }
 
-nav a:hover{
-    color:#d8a928;
-}
+nav a:hover{color:#d8a928;}
 
 .cart-button{
     border:1px solid #a67d25;
@@ -94,8 +81,6 @@ nav a:hover{
     color:#d8a928;
 }
 
-/* HERO */
-
 .hero{
     min-height:85vh;
     display:flex;
@@ -106,9 +91,7 @@ nav a:hover{
     background:radial-gradient(circle,#38290f 0%,#080808 55%);
 }
 
-.hero-content{
-    max-width:800px;
-}
+.hero-content{max-width:800px;}
 
 .eyebrow{
     color:#c8a458;
@@ -150,8 +133,6 @@ nav a:hover{
     color:#080808;
 }
 
-/* SECTIONS */
-
 .section{
     max-width:1200px;
     margin:auto;
@@ -180,8 +161,6 @@ nav a:hover{
     background:#c99b2c;
     margin:18px auto;
 }
-
-/* PRODUCTS */
 
 .products{
     display:grid;
@@ -242,21 +221,34 @@ nav a:hover{
     margin:16px 0;
 }
 
-.buy-btn{
-    width:100%;
-    padding:13px;
+.stock{
+    color:#7dbb78;
+    font-size:12px;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
+
+.product-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.buy-btn,
+.details-btn{
+    flex:1;
+    padding:12px 7px;
     border:1px solid #bd9129;
     background:transparent;
     color:#d8aa38;
-    letter-spacing:2px;
+    letter-spacing:1px;
+    font-size:12px;
 }
 
-.buy-btn:hover{
+.buy-btn:hover,
+.details-btn:hover{
     background:#c99b2c;
     color:#080808;
 }
-
-/* STORY */
 
 .story{
     border-top:1px solid #332610;
@@ -289,8 +281,6 @@ nav a:hover{
     font-style:italic;
 }
 
-/* ORDER */
-
 .order-box{
     max-width:700px;
     margin:auto;
@@ -317,8 +307,6 @@ nav a:hover{
     padding:14px 25px;
 }
 
-/* CART */
-
 .cart-panel{
     position:fixed;
     top:0;
@@ -334,9 +322,7 @@ nav a:hover{
     overflow-y:auto;
 }
 
-.cart-panel.active{
-    right:0;
-}
+.cart-panel.active{right:0;}
 
 .cart-header{
     display:flex;
@@ -347,11 +333,11 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-.cart-header h2{
-    color:#d8a038;
-}
+.cart-header h2{color:#d8a038;}
 
-.cart-header button{
+.cart-header button,
+.close-popup,
+.close-checkout{
     background:none;
     border:none;
     color:#d8a038;
@@ -369,13 +355,8 @@ nav a:hover{
     gap:10px;
 }
 
-.cart-item-name{
-    color:#f1dfb1;
-}
-
-.cart-item-price{
-    color:#d8a038;
-}
+.cart-item-name{color:#f1dfb1;}
+.cart-item-price{color:#d8a038;}
 
 .quantity-box{
     display:flex;
@@ -425,7 +406,96 @@ nav a:hover{
     letter-spacing:1px;
 }
 
-/* CHECKOUT FORM */
+/* PRODUCT DETAILS POPUP */
+
+.product-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    z-index:2500;
+    display:none;
+    overflow-y:auto;
+    padding:25px 15px;
+}
+
+.product-modal.active{
+    display:block;
+}
+
+.product-modal-box{
+    max-width:650px;
+    margin:30px auto;
+    background:#0d0c0a;
+    border:1px solid #5a4318;
+    padding:28px;
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.modal-header h2{
+    color:#d8a038;
+    letter-spacing:2px;
+}
+
+.modal-image{
+    height:280px;
+    margin:20px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle,#39290f,#080808 70%);
+}
+
+.modal-image img{
+    height:240px;
+    max-width:90%;
+    object-fit:contain;
+}
+
+.modal-type{
+    color:#9e8960;
+    letter-spacing:3px;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.modal-description{
+    color:#aaa08d;
+    margin-bottom:18px;
+}
+
+.notes{
+    border-top:1px solid #392b13;
+    border-bottom:1px solid #392b13;
+    padding:15px 0;
+    margin-bottom:20px;
+}
+
+.notes p{
+    color:#c9b991;
+    margin:5px 0;
+}
+
+.modal-price{
+    color:#efd38b;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.modal-add{
+    width:100%;
+    padding:15px;
+    background:#c99b2c;
+    color:#080808;
+    border:none;
+    letter-spacing:2px;
+}
+
+/* CHECKOUT */
 
 .checkout-panel{
     position:fixed;
@@ -440,9 +510,7 @@ nav a:hover{
     padding:30px 15px;
 }
 
-.checkout-panel.active{
-    display:block;
-}
+.checkout-panel.active{display:block;}
 
 .checkout-box{
     max-width:550px;
@@ -464,13 +532,6 @@ nav a:hover{
     font-weight:normal;
 }
 
-.close-checkout{
-    background:none;
-    border:none;
-    color:#d8a038;
-    font-size:30px;
-}
-
 .checkout-summary{
     background:#11100d;
     border:1px solid #332711;
@@ -490,9 +551,7 @@ nav a:hover{
     color:#c6b99f;
 }
 
-.form-group{
-    margin-bottom:16px;
-}
+.form-group{margin-bottom:16px;}
 
 .form-group label{
     display:block;
@@ -532,18 +591,12 @@ nav a:hover{
     letter-spacing:1px;
 }
 
-/* CONTACT */
-
 .contact-info{
     text-align:center;
     color:#aaa08d;
 }
 
-.contact-info p{
-    margin:10px 0;
-}
-
-/* FOOTER */
+.contact-info p{margin:10px 0;}
 
 footer{
     text-align:center;
@@ -575,8 +628,6 @@ footer{
     font-size:11px;
 }
 
-/* MOBILE */
-
 @media(max-width:800px){
 
     nav{
@@ -591,34 +642,26 @@ footer{
         border-bottom:1px solid #3d2d12;
     }
 
-    nav.active{
-        display:flex;
-    }
+    nav.active{display:flex;}
 
-    .menu{
-        display:block;
-    }
+    .menu{display:block;}
 
-    .products{
-        grid-template-columns:1fr;
-    }
+    .products{grid-template-columns:1fr;}
 
-    .story-grid{
-        grid-template-columns:1fr;
-    }
+    .story-grid{grid-template-columns:1fr;}
 
-    .section{
-        padding:60px 18px;
-    }
+    .section{padding:60px 18px;}
 
-    .checkout-box{
+    .checkout-box,
+    .product-modal-box{
         padding:22px 17px;
     }
 
+    .product-buttons{
+        flex-direction:column;
+    }
 }
-
 </style>
-
 </head>
 
 <body>
@@ -627,9 +670,7 @@ footer{
 
 <div class="navbar">
 
-<a href="#home" class="brand">
-VISHAYU
-</a>
+<a href="#home" class="brand">VISHAYU</a>
 
 <div class="menu" onclick="toggleMenu()">☰</div>
 
@@ -642,14 +683,11 @@ VISHAYU
 <a href="#contact">CONTACT</a>
 
 <div class="cart-button" onclick="openCart()">
-🛒 CART
-<span id="cartCount">0</span>
+🛒 CART <span id="cartCount">0</span>
 </div>
 
 </nav>
-
 </div>
-
 </header>
 
 
@@ -657,9 +695,7 @@ VISHAYU
 
 <div class="hero-content">
 
-<div class="eyebrow">
-THE ART OF FRAGRANCE
-</div>
+<div class="eyebrow">THE ART OF FRAGRANCE</div>
 
 <h1>VISHAYU</h1>
 
@@ -675,7 +711,6 @@ EXPLORE COLLECTION
 </a>
 
 </div>
-
 </section>
 
 
@@ -700,197 +735,262 @@ EXPLORE COLLECTION
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Royal Oud">
 </div>
-
 </div>
 
 <h3>ROYAL OUD</h3>
 
-<div class="type">
-TRADITIONAL ITRA
-</div>
+<div class="type">TRADITIONAL ITRA</div>
 
 <p>
 Deep. Rich. Timeless.<br>
 A powerful oud fragrance for a commanding presence.
 </p>
 
-<div class="price">
-₹1,499
-</div>
+<div class="price">₹1,499</div>
 
-<button class="buy-btn" onclick="addToCart('Royal Oud',1499)">
+<div class="stock">● IN STOCK</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn"
+onclick="addToCart('Royal Oud',1499)">
 ADD TO CART
 </button>
 
+<button class="details-btn"
+onclick="showDetails(
+'Royal Oud',
+1499,
+'TRADITIONAL ITRA',
+'Deep, rich and timeless oud fragrance created for a powerful and commanding presence.',
+'Deep Oud • Warm Woods • Amber'
+)">
+VIEW DETAILS
+</button>
+
+</div>
 </div>
 
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Imperial Musk">
 </div>
-
 </div>
 
 <h3>IMPERIAL MUSK</h3>
 
-<div class="type">
-TRADITIONAL ITRA
-</div>
+<div class="type">TRADITIONAL ITRA</div>
 
 <p>
 Warm. Sensual. Elegant.<br>
 A sophisticated musk created for evening occasions.
 </p>
 
-<div class="price">
-₹1,399
-</div>
+<div class="price">₹1,399</div>
 
-<button class="buy-btn" onclick="addToCart('Imperial Musk',1399)">
+<div class="stock">● IN STOCK</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn"
+onclick="addToCart('Imperial Musk',1399)">
 ADD TO CART
 </button>
 
+<button class="details-btn"
+onclick="showDetails(
+'Imperial Musk',
+1399,
+'TRADITIONAL ITRA',
+'Warm, sensual and elegant musk fragrance designed for sophisticated evening moments.',
+'Soft Musk • Amber • Warm Woods'
+)">
+VIEW DETAILS
+</button>
+
+</div>
 </div>
 
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Velvet Rose">
 </div>
-
 </div>
 
 <h3>VELVET ROSE</h3>
 
-<div class="type">
-TRADITIONAL ITRA
-</div>
+<div class="type">TRADITIONAL ITRA</div>
 
 <p>
 Floral. Romantic. Luxurious.<br>
 A smooth rose composition with an elegant character.
 </p>
 
-<div class="price">
-₹1,299
-</div>
+<div class="price">₹1,299</div>
 
-<button class="buy-btn" onclick="addToCart('Velvet Rose',1299)">
+<div class="stock">● IN STOCK</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn"
+onclick="addToCart('Velvet Rose',1299)">
 ADD TO CART
 </button>
 
+<button class="details-btn"
+onclick="showDetails(
+'Velvet Rose',
+1299,
+'TRADITIONAL ITRA',
+'A luxurious floral rose composition with a romantic and elegant character.',
+'Fresh Rose • Soft Florals • Musk'
+)">
+VIEW DETAILS
+</button>
+
+</div>
 </div>
 
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Royal Sandal">
 </div>
-
 </div>
 
 <h3>ROYAL SANDAL</h3>
 
-<div class="type">
-TRADITIONAL ITRA
-</div>
+<div class="type">TRADITIONAL ITRA</div>
 
 <p>
 Woody. Smooth. Sophisticated.<br>
 A refined sandalwood-inspired fragrance.
 </p>
 
-<div class="price">
-₹1,299
-</div>
+<div class="price">₹1,299</div>
 
-<button class="buy-btn" onclick="addToCart('Royal Sandal',1299)">
+<div class="stock">● IN STOCK</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn"
+onclick="addToCart('Royal Sandal',1299)">
 ADD TO CART
 </button>
 
+<button class="details-btn"
+onclick="showDetails(
+'Royal Sandal',
+1299,
+'TRADITIONAL ITRA',
+'A smooth woody fragrance inspired by the timeless elegance of sandalwood.',
+'Sandalwood • Creamy Woods • Amber'
+)">
+VIEW DETAILS
+</button>
+
+</div>
 </div>
 
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Mitti Royale">
 </div>
-
 </div>
 
 <h3>MITTI ROYALE</h3>
 
-<div class="type">
-TRADITIONAL ITRA
-</div>
+<div class="type">TRADITIONAL ITRA</div>
 
 <p>
 Earthy. Pure. Refreshing.<br>
 Inspired by the beautiful aroma of Indian mitti.
 </p>
 
-<div class="price">
-₹999
-</div>
+<div class="price">₹999</div>
 
-<button class="buy-btn" onclick="addToCart('Mitti Royale',999)">
+<div class="stock">● IN STOCK</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn"
+onclick="addToCart('Mitti Royale',999)">
 ADD TO CART
 </button>
 
+<button class="details-btn"
+onclick="showDetails(
+'Mitti Royale',
+999,
+'TRADITIONAL ITRA',
+'Earthy and refreshing fragrance inspired by the nostalgic aroma of Indian rain-soaked earth.',
+'Mitti • Earthy Woods • Fresh Rain'
+)">
+VIEW DETAILS
+</button>
+
+</div>
 </div>
 
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Noir Shamama">
 </div>
-
 </div>
 
 <h3>NOIR SHAMAMA</h3>
 
-<div class="type">
-ROYAL ITRA
-</div>
+<div class="type">ROYAL ITRA</div>
 
 <p>
 Spicy. Warm. Mysterious.<br>
 A traditional-inspired fragrance with a dark character.
 </p>
 
-<div class="price">
-₹1,599
-</div>
+<div class="price">₹1,599</div>
 
-<button class="buy-btn" onclick="addToCart('Noir Shamama',1599)">
+<div class="stock">● IN STOCK</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn"
+onclick="addToCart('Noir Shamama',1599)">
 ADD TO CART
 </button>
 
+<button class="details-btn"
+onclick="showDetails(
+'Noir Shamama',
+1599,
+'ROYAL ITRA',
+'A warm, spicy and mysterious fragrance with a rich traditional-inspired character.',
+'Spices • Woods • Amber'
+)">
+VIEW DETAILS
+</button>
+
+</div>
 </div>
 
 
 </div>
-
 </section>
 
 
@@ -902,13 +1002,9 @@ ADD TO CART
 
 <div class="story-box">
 
-<span class="eyebrow">
-OUR PHILOSOPHY
-</span>
+<span class="eyebrow">OUR PHILOSOPHY</span>
 
-<h2>
-The House of Vishayu
-</h2>
+<h2>The House of Vishayu</h2>
 
 <p>
 Maison Vishayu was created with one simple belief:
@@ -927,25 +1023,18 @@ for those who appreciate elegance and individuality.
 
 </div>
 
-
 <div class="order-box">
 
 <h2>VISHAYU</h2>
 
-<p>
-THE ART OF FRAGRANCE
-</p>
+<p>THE ART OF FRAGRANCE</p>
 
-<a href="#collection" class="gold-btn">
-DISCOVER
-</a>
+<a href="#collection" class="gold-btn">DISCOVER</a>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -960,7 +1049,6 @@ DISCOVER
 <div class="line"></div>
 
 </div>
-
 
 <div class="order-box">
 
@@ -981,7 +1069,6 @@ target="_blank">
 </a>
 
 </div>
-
 </section>
 
 
@@ -1004,28 +1091,18 @@ connect with us.
 
 <div class="contact-info">
 
-<p>
-📧 Email: contact-vishuagnihotri9522@gmail.com
-</p>
-
-<p>
-📱 WhatsApp: +91 8889072340
-</p>
+<p>📧 Email: contact-vishuagnihotri9522@gmail.com</p>
+<p>📱 WhatsApp: +91 8889072340</p>
 
 </div>
-
 </section>
 
 
 <footer>
 
-<div class="footer-logo">
-VISHAYU
-</div>
+<div class="footer-logo">VISHAYU</div>
 
-<p>
-MAISON VISHAYU — THE HOUSE OF VISHAYU
-</p>
+<p>MAISON VISHAYU — THE HOUSE OF VISHAYU</p>
 
 <div class="footer-links">
 
@@ -1056,23 +1133,62 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 </div>
 
 <div id="cartItems">
-
 <p>Your cart is empty.</p>
-
 </div>
 
 <div class="cart-total">
-
 Total: ₹<span id="cartTotal">0</span>
-
 </div>
 
 <button class="checkout-btn" onclick="openCheckout()">
-
 CONTINUE TO CHECKOUT
-
 </button>
 
+</div>
+
+
+<!-- PRODUCT DETAILS -->
+
+<div id="productModal" class="product-modal">
+
+<div class="product-modal-box">
+
+<div class="modal-header">
+
+<h2 id="modalName">PRODUCT</h2>
+
+<button class="close-popup"
+onclick="closeDetails()">×</button>
+
+</div>
+
+<div class="modal-image">
+
+<img src="vishayu-bottle.png" id="modalImage" alt="Vishayu Product">
+
+</div>
+
+<div class="modal-type" id="modalType"></div>
+
+<p class="modal-description" id="modalDescription"></p>
+
+<div class="notes">
+
+<p><strong>Fragrance Notes:</strong></p>
+
+<p id="modalNotes"></p>
+
+</div>
+
+<div class="modal-price">
+₹<span id="modalPrice">0</span>
+</div>
+
+<button class="modal-add" id="modalAddButton">
+ADD TO CART
+</button>
+
+</div>
 </div>
 
 
@@ -1088,13 +1204,9 @@ CONTINUE TO CHECKOUT
 
 <button
 class="close-checkout"
-onclick="closeCheckout()">
-
-×
-</button>
+onclick="closeCheckout()">×</button>
 
 </div>
-
 
 <div class="checkout-summary">
 
@@ -1103,7 +1215,6 @@ onclick="closeCheckout()">
 <div id="checkoutSummary"></div>
 
 </div>
-
 
 <div class="form-group">
 
@@ -1116,7 +1227,6 @@ placeholder="Enter your name">
 
 </div>
 
-
 <div class="form-group">
 
 <label>MOBILE NUMBER</label>
@@ -1128,7 +1238,6 @@ placeholder="Enter mobile number">
 
 </div>
 
-
 <div class="form-group">
 
 <label>FULL ADDRESS</label>
@@ -1138,7 +1247,6 @@ id="customerAddress"
 placeholder="House / Street / Area"></textarea>
 
 </div>
-
 
 <div class="form-group">
 
@@ -1151,7 +1259,6 @@ placeholder="Enter city">
 
 </div>
 
-
 <div class="form-group">
 
 <label>PINCODE</label>
@@ -1163,7 +1270,6 @@ placeholder="Enter pincode">
 
 </div>
 
-
 <button
 class="place-order"
 onclick="placeOrder()">
@@ -1173,7 +1279,6 @@ onclick="placeOrder()">
 </button>
 
 </div>
-
 </div>
 
 
@@ -1182,43 +1287,30 @@ onclick="placeOrder()">
 let cart = [];
 
 
-/* ADD TO CART */
+/* CART */
 
 function addToCart(product,price){
 
     const existingItem =
         cart.find(function(item){
-
             return item.name === product;
-
         });
 
-
     if(existingItem){
-
         existingItem.quantity++;
-
     }else{
-
         cart.push({
-
             name:product,
             price:price,
             quantity:1
-
         });
-
     }
-
 
     updateCart();
 
     alert(product + " added to cart!");
-
 }
 
-
-/* UPDATE CART */
 
 function updateCart(){
 
@@ -1231,11 +1323,8 @@ function updateCart(){
     const cartTotal =
         document.getElementById("cartTotal");
 
-
     let totalItems = 0;
-
     let totalAmount = 0;
-
 
     cart.forEach(function(item){
 
@@ -1246,10 +1335,7 @@ function updateCart(){
 
     });
 
-
-    cartCount.innerText =
-        totalItems;
-
+    cartCount.innerText = totalItems;
 
     if(cart.length === 0){
 
@@ -1259,18 +1345,14 @@ function updateCart(){
         cartTotal.innerText = "0";
 
         return;
-
     }
 
-
     let html = "";
-
 
     cart.forEach(function(item,index){
 
         const itemTotal =
             item.price * item.quantity;
-
 
         html += `
 
@@ -1288,102 +1370,70 @@ function updateCart(){
 
             </div>
 
-
             <div class="quantity-box">
 
                 <button
                 class="quantity-btn"
                 onclick="decreaseQuantity(${index})">
-
                 −
-
                 </button>
 
-
                 <span class="quantity-number">
-
                     ${item.quantity}
-
                 </span>
-
 
                 <button
                 class="quantity-btn"
                 onclick="increaseQuantity(${index})">
-
                 +
-
                 </button>
 
             </div>
 
-
             <button
             class="remove-btn"
             onclick="removeFromCart(${index})">
-
             REMOVE
-
             </button>
 
         </div>
 
         `;
-
     });
 
+    cartItems.innerHTML = html;
 
-    cartItems.innerHTML =
-        html;
-
-    cartTotal.innerText =
-        totalAmount;
-
+    cartTotal.innerText = totalAmount;
 }
 
-
-/* QUANTITY PLUS */
 
 function increaseQuantity(index){
 
     cart[index].quantity++;
 
     updateCart();
-
 }
 
-
-/* QUANTITY MINUS */
 
 function decreaseQuantity(index){
 
     if(cart[index].quantity > 1){
-
         cart[index].quantity--;
-
     }else{
-
         cart.splice(index,1);
-
     }
 
     updateCart();
-
 }
 
-
-/* REMOVE */
 
 function removeFromCart(index){
 
     cart.splice(index,1);
 
     updateCart();
-
 }
 
-
-/* OPEN CART */
 
 function openCart(){
 
@@ -1393,11 +1443,8 @@ function openCart(){
     .add("active");
 
     updateCart();
-
 }
 
-
-/* CLOSE CART */
 
 function closeCart(){
 
@@ -1405,11 +1452,62 @@ function closeCart(){
     .getElementById("cartPanel")
     .classList
     .remove("active");
-
 }
 
 
-/* OPEN CHECKOUT */
+/* PRODUCT DETAILS */
+
+function showDetails(
+    name,
+    price,
+    type,
+    description,
+    notes
+){
+
+    document.getElementById("modalName")
+    .innerText = name;
+
+    document.getElementById("modalPrice")
+    .innerText = price;
+
+    document.getElementById("modalType")
+    .innerText = type;
+
+    document.getElementById("modalDescription")
+    .innerText = description;
+
+    document.getElementById("modalNotes")
+    .innerText = notes;
+
+
+    document.getElementById("modalAddButton")
+    .onclick = function(){
+
+        addToCart(name,price);
+
+        closeDetails();
+
+    };
+
+
+    document
+    .getElementById("productModal")
+    .classList
+    .add("active");
+}
+
+
+function closeDetails(){
+
+    document
+    .getElementById("productModal")
+    .classList
+    .remove("active");
+}
+
+
+/* CHECKOUT */
 
 function openCheckout(){
 
@@ -1418,14 +1516,10 @@ function openCheckout(){
         alert("Your cart is empty.");
 
         return;
-
     }
 
-
     let summaryHTML = "";
-
     let total = 0;
-
 
     cart.forEach(function(item){
 
@@ -1433,7 +1527,6 @@ function openCheckout(){
             item.price * item.quantity;
 
         total += itemTotal;
-
 
         summaryHTML += `
 
@@ -1450,14 +1543,14 @@ function openCheckout(){
         </div>
 
         `;
-
     });
 
 
     summaryHTML += `
 
     <div class="summary-line"
-    style="border-top:1px solid #493716;
+    style="
+    border-top:1px solid #493716;
     margin-top:10px;
     padding-top:12px;
     color:#d8a038;">
@@ -1480,13 +1573,9 @@ function openCheckout(){
     .classList
     .add("active");
 
-
     closeCart();
-
 }
 
-
-/* CLOSE CHECKOUT */
 
 function closeCheckout(){
 
@@ -1494,11 +1583,8 @@ function closeCheckout(){
     .getElementById("checkoutPanel")
     .classList
     .remove("active");
-
 }
 
-
-/* PLACE ORDER */
 
 function placeOrder(){
 
@@ -1523,25 +1609,24 @@ function placeOrder(){
         .value.trim();
 
 
-    if(!name ||
-       !phone ||
-       !address ||
-       !city ||
-       !pincode){
+    if(
+        !name ||
+        !phone ||
+        !address ||
+        !city ||
+        !pincode
+    ){
 
         alert(
             "Please fill all customer details."
         );
 
         return;
-
     }
 
 
     let orderText = "";
-
     let total = 0;
-
     let totalItems = 0;
 
 
@@ -1550,9 +1635,7 @@ function placeOrder(){
         const itemTotal =
             item.price * item.quantity;
 
-
         orderText +=
-
             (index + 1) +
             ". " +
             item.name +
@@ -1562,11 +1645,9 @@ function placeOrder(){
             itemTotal +
             "\n";
 
-
         total += itemTotal;
 
-        totalItems +=
-            item.quantity;
+        totalItems += item.quantity;
 
     });
 
@@ -1606,19 +1687,13 @@ function placeOrder(){
 
 
     const whatsappURL =
-
         "https://wa.me/918889072340?text=" +
-
         encodeURIComponent(message);
 
 
-    window.location.href =
-        whatsappURL;
-
+    window.location.href = whatsappURL;
 }
 
-
-/* MENU */
 
 function toggleMenu(){
 
@@ -1632,5 +1707,4 @@ function toggleMenu(){
 </script>
 
 </body>
-
 </html>
