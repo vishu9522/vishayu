@@ -1961,6 +1961,16 @@ function placeOrder(){
         document.getElementById("customerPincode")
         .value.trim();
 
+    const paymentElement =
+        document.querySelector(
+            'input[name="paymentMethod"]:checked'
+        );
+
+    const paymentMethod =
+        paymentElement
+        ? paymentElement.value
+        : "COD";
+
 
     if(
         !name ||
@@ -1974,6 +1984,77 @@ function placeOrder(){
 
         return;
     }
+
+
+    let orderText = "";
+    let total = 0;
+    let totalItems = 0;
+
+
+    cart.forEach(function(item,index){
+
+        const amount =
+            item.price * item.quantity;
+
+        orderText +=
+            (index + 1) +
+            ". " +
+            item.name +
+            " × " +
+            item.quantity +
+            " = ₹" +
+            amount +
+            "\n";
+
+        total += amount;
+
+        totalItems += item.quantity;
+
+    });
+
+
+    let paymentText = "";
+
+    if(paymentMethod === "UPI"){
+
+        paymentText =
+            "\nPAYMENT METHOD: UPI PAYMENT" +
+            "\nUPI ID: vishuagnihotri@ybl";
+
+    }else{
+
+        paymentText =
+            "\nPAYMENT METHOD: CASH ON DELIVERY";
+
+    }
+
+
+    const message =
+        "Hello Vishayu,\n\n" +
+        "I want to place an order:\n\n" +
+        orderText +
+        "\nTotal Amount: ₹" +
+        total +
+        "\nTotal Items: " +
+        totalItems +
+        paymentText +
+        "\n\nCUSTOMER DETAILS\n" +
+        "Name: " + name +
+        "\nMobile: " + phone +
+        "\nAddress: " + address +
+        "\nCity: " + city +
+        "\nPincode: " + pincode +
+        "\n\nThank you.";
+
+
+    const whatsappURL =
+        "https://wa.me/918889072340?text=" +
+        encodeURIComponent(message);
+
+
+    window.location.href = whatsappURL;
+
+}
 
 
     let orderText = "";
