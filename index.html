@@ -1151,8 +1151,11 @@ function addToCart(product, price){
         price: price
     });
 
-    document.getElementById("cartCount").innerText = cart.length;
+    const cartCountElement = document.getElementById("cartCount");
 
+if (cartCountElement) {
+    cartCountElement.innerText = cart.length;
+}
     let total = 0;
     let orderText = "";
 
