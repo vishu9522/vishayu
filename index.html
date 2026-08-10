@@ -78,12 +78,34 @@ nav a:hover{color:#d8a928}
     display:flex;
     justify-content:center;
     align-items:center;
+    gap:55px;
+    flex-wrap:wrap;
     text-align:center;
     padding:40px 20px;
     background:radial-gradient(circle,#38290f 0%,#080808 55%);
 }
 
 .hero-content{max-width:800px}
+
+.hero-bottle{
+    width:320px;
+    height:430px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:radial-gradient(circle,#3a2a10 0%,#080808 72%);
+    border:1px solid #493716;
+    box-shadow:0 0 65px rgba(216,169,40,.13);
+    overflow:hidden;
+}
+
+.hero-bottle img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:15px;
+    filter:drop-shadow(0 25px 30px #000);
+}
 
 .eyebrow{
     color:#c8a458;
@@ -679,6 +701,15 @@ footer{
 
 @media(max-width:800px){
 
+    .hero{
+        flex-direction:column;
+    }
+
+    .hero-bottle{
+        width:270px;
+        height:370px;
+    }
+
     nav{
         display:none;
         position:absolute;
@@ -768,6 +799,11 @@ EXPLORE COLLECTION
 </a>
 
 </div>
+
+<div class="hero-bottle">
+<img src="vishayu-bottle.png" alt="Maison Vishayu Signature Bottle">
+</div>
+
 </section>
 
 
