@@ -1068,27 +1068,134 @@ let cartCount = 0;
 
 let cart = [];
 
-function addToCart(product, price){
+let cart = [];
+
+function addToCart(product, price) {
 
     cart.push({
         name: product,
         price: price
     });
 
-    document.getElementById("cartCount").innerText = cart.length;
+    updateCart();
 
-    showCart();
-
+    alert(product + " added to cart!");
 }
 
-function showCart(){
+function updateCart() {
 
-    let cartMessage = "YOUR CART\n\n";
+    const cartCount = document.getElementById("cartCount");
+
+    if (cartCount) {
+        cartCount.innerText = cart.length;
+    }
+
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+
+    if (!cartItems) {
+        return;
+    }
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = "<p>Your cart is empty.</p>";
+
+        if (cartTotal) {
+            cartTotal.innerText = "0";
+        }
+
+        return;
+    }
+
+    let total = 0;
+    let html = "";
+
+    cart.forEach(function(item, index) {
+
+        total += item.price;
+
+        html += `
+            <div style="
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                gap:10px;
+                padding:12px 0;
+                border-bottom:1px solid #3a2b12;
+            ">
+
+                <div>
+                    <strong>${item.name}</strong>
+                    <br>
+                    <span>₹${item.price}</span>
+                </div>
+
+                <button
+                    onclick="removeFromCart(${index})"
+                    style="
+                        background:transparent;
+                        color:#d8a928;
+                        border:1px solid #9b7625;
+                        padding:7px 10px;
+                        cursor:pointer;
+                    ">
+                    REMOVE
+                </button>
+
+            </div>
+        `;
+    });
+
+    cartItems.innerHTML = html;
+
+    if (cartTotal) {
+        cartTotal.innerText = total;
+    }
+}
+
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
+}
+
+function openCart() {
+
+    const cartPanel = document.getElementById("cartPanel");
+
+    if (cartPanel) {
+        cartPanel.classList.add("active");
+    }
+
+    updateCart();
+}
+
+function closeCart() {
+
+    const cartPanel = document.getElementById("cartPanel");
+
+    if (cartPanel) {
+        cartPanel.classList.remove("active");
+    }
+}
+
+function checkoutCart() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty.");
+
+        return;
+    }
+
+    let orderText = "";
     let total = 0;
 
-    cart.forEach(function(item, index){
+    cart.forEach(function(item, index) {
 
-        cartMessage +=
+        orderText +=
             (index + 1) +
             ". " +
             item.name +
@@ -1097,51 +1204,31 @@ function showCart(){
             "\n";
 
         total += item.price;
-
     });
 
-    cartMessage +=
+    const message =
+        "Hello Vishayu,\n\n" +
+        "I want to place an order:\n\n" +
+        orderText +
         "\nTotal Amount: ₹" +
-        total;
+        total +
+        "\nTotal Items: " +
+        cart.length +
+        "\n\nThank you.";
 
-    if(confirm(
-        cartMessage +
-        "\n\nPress OK to order on WhatsApp."
-    )){
+    const whatsappURL =
+        "https://wa.me/918889072340?text=" +
+        encodeURIComponent(message);
 
-        let orderText = "";
-
-        cart.forEach(function(item, index){
-
-            orderText +=
-                (index + 1) +
-                ". " +
-                item.name +
-                " - ₹" +
-                item.price +
-                "\n";
-
-        });
-
-        const message =
-            "Hello Vishayu,\n\n" +
-            "I want to place an order:\n\n" +
-            orderText +
-            "\nTotal Amount: ₹" +
-            total +
-            "\nTotal Items: " +
-            cart.length +
-            "\n\nThank you.";
-
-        const whatsappURL =
-            "https://wa.me/918889072340?text=" +
-            encodeURIComponent(message);
-
-        window.location.href = whatsappURL;
-    }
-
+    window.location.href = whatsappURL;
 }
 
+function toggleMenu() {
+
+    document
+        .getElementById("nav")
+        .classList
+        .toggle("active");
 }
 
 function toggleMenu(){
