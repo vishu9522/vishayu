@@ -37,8 +37,6 @@ button{
     cursor:pointer;
 }
 
-/* HEADER */
-
 header{
     position:sticky;
     top:0;
@@ -89,8 +87,6 @@ nav a:hover{
     color:#d8a928;
 }
 
-/* HERO */
-
 .hero{
     min-height:85vh;
     display:flex;
@@ -98,7 +94,6 @@ nav a:hover{
     align-items:center;
     text-align:center;
     padding:40px 20px;
-
     background:
     radial-gradient(circle,#38290f 0%,#080808 55%);
 }
@@ -146,8 +141,6 @@ nav a:hover{
     color:#080808;
 }
 
-/* SECTION */
-
 .section{
     max-width:1200px;
     margin:auto;
@@ -176,8 +169,6 @@ nav a:hover{
     background:#c99b2c;
     margin:18px auto;
 }
-
-/* PRODUCTS */
 
 .products{
     display:grid;
@@ -252,8 +243,6 @@ nav a:hover{
     color:#080808;
 }
 
-/* STORY */
-
 .story{
     border-top:1px solid #332610;
     border-bottom:1px solid #332610;
@@ -285,8 +274,6 @@ nav a:hover{
     font-style:italic;
 }
 
-/* ORDER */
-
 .order-box{
     max-width:700px;
     margin:auto;
@@ -313,13 +300,11 @@ nav a:hover{
     padding:14px 25px;
 }
 
-/* CART PANEL */
-
 .cart-panel{
     position:fixed;
     top:0;
     right:-100%;
-    width:380px;
+    width:390px;
     max-width:100%;
     height:100vh;
     background:#0c0c0b;
@@ -356,7 +341,7 @@ nav a:hover{
 
 .cart-item{
     border-bottom:1px solid #332711;
-    padding:15px 0;
+    padding:17px 0;
 }
 
 .cart-item-top{
@@ -373,11 +358,33 @@ nav a:hover{
     color:#d8aa38;
 }
 
-.remove-btn{
-    margin-top:10px;
-    padding:7px 12px;
+.quantity-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:12px;
+}
+
+.quantity-btn{
+    width:32px;
+    height:32px;
     background:transparent;
     color:#d8aa38;
+    border:1px solid #8d6c25;
+    font-size:18px;
+}
+
+.quantity-number{
+    min-width:25px;
+    text-align:center;
+    color:#fff;
+}
+
+.remove-btn{
+    margin-top:12px;
+    padding:7px 12px;
+    background:transparent;
+    color:#d8a928;
     border:1px solid #8d6c25;
 }
 
@@ -399,8 +406,6 @@ nav a:hover{
     letter-spacing:1px;
 }
 
-/* CONTACT */
-
 .contact-info{
     text-align:center;
     color:#aaa08d;
@@ -409,8 +414,6 @@ nav a:hover{
 .contact-info p{
     margin:10px 0;
 }
-
-/* FOOTER */
 
 footer{
     text-align:center;
@@ -441,8 +444,6 @@ footer{
     color:#514b41;
     font-size:11px;
 }
-
-/* MOBILE */
 
 @media(max-width:800px){
 
@@ -499,13 +500,9 @@ VISHAYU
 <nav id="nav">
 
 <a href="#home">HOME</a>
-
 <a href="#collection">COLLECTION</a>
-
 <a href="#story">OUR STORY</a>
-
 <a href="#order">ORDER</a>
-
 <a href="#contact">CONTACT</a>
 
 <div class="cart-button" onclick="openCart()">
@@ -909,11 +906,8 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 <div class="footer-links">
 
 <a href="#home">Home</a>
-
 <a href="#collection">Collection</a>
-
 <a href="#story">Our Story</a>
-
 <a href="#order">Order</a>
 
 </div>
@@ -924,8 +918,6 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 
 </footer>
 
-
-<!-- CART -->
 
 <div id="cartPanel" class="cart-panel">
 
@@ -965,10 +957,29 @@ let cart = [];
 
 function addToCart(product, price){
 
-    cart.push({
-        name: product,
-        price: price
+    const existingItem = cart.find(function(item){
+
+        return item.name === product;
+
     });
+
+
+    if(existingItem){
+
+        existingItem.quantity++;
+
+    }else{
+
+        cart.push({
+
+            name: product,
+            price: price,
+            quantity: 1
+
+        });
+
+    }
+
 
     updateCart();
 
@@ -979,13 +990,32 @@ function addToCart(product, price){
 
 function updateCart(){
 
-    document.getElementById("cartCount").innerText = cart.length;
+    const cartCount =
+        document.getElementById("cartCount");
 
     const cartItems =
         document.getElementById("cartItems");
 
     const cartTotal =
         document.getElementById("cartTotal");
+
+
+    let totalItems = 0;
+    let totalAmount = 0;
+
+
+    cart.forEach(function(item){
+
+        totalItems += item.quantity;
+
+        totalAmount +=
+            item.price * item.quantity;
+
+    });
+
+
+    cartCount.innerText = totalItems;
+
 
     if(cart.length === 0){
 
@@ -995,17 +1025,17 @@ function updateCart(){
         cartTotal.innerText = "0";
 
         return;
+
     }
 
-
-    let total = 0;
 
     let html = "";
 
 
     cart.forEach(function(item,index){
 
-        total += item.price;
+        const itemTotal =
+            item.price * item.quantity;
 
 
         html += `
@@ -1019,10 +1049,40 @@ function updateCart(){
                 </span>
 
                 <span class="cart-item-price">
-                    ₹${item.price}
+                    ₹${itemTotal}
                 </span>
 
             </div>
+
+
+            <div class="quantity-box">
+
+                <button
+                    class="quantity-btn"
+                    onclick="decreaseQuantity(${index})">
+
+                    −
+
+                </button>
+
+
+                <span class="quantity-number">
+
+                    ${item.quantity}
+
+                </span>
+
+
+                <button
+                    class="quantity-btn"
+                    onclick="increaseQuantity(${index})">
+
+                    +
+
+                </button>
+
+            </div>
+
 
             <button
                 class="remove-btn"
@@ -1041,7 +1101,33 @@ function updateCart(){
 
     cartItems.innerHTML = html;
 
-    cartTotal.innerText = total;
+    cartTotal.innerText = totalAmount;
+
+}
+
+
+function increaseQuantity(index){
+
+    cart[index].quantity++;
+
+    updateCart();
+
+}
+
+
+function decreaseQuantity(index){
+
+    if(cart[index].quantity > 1){
+
+        cart[index].quantity--;
+
+    }else{
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
 
 }
 
@@ -1084,25 +1170,36 @@ function checkoutCart(){
         alert("Your cart is empty.");
 
         return;
+
     }
 
 
     let orderText = "";
-
     let total = 0;
+    let totalItems = 0;
 
 
     cart.forEach(function(item,index){
 
+        const itemTotal =
+            item.price * item.quantity;
+
+
         orderText +=
+
             (index + 1) +
             ". " +
             item.name +
-            " - ₹" +
-            item.price +
+            " × " +
+            item.quantity +
+            " = ₹" +
+            itemTotal +
             "\n";
 
-        total += item.price;
+
+        total += itemTotal;
+
+        totalItems += item.quantity;
 
     });
 
@@ -1119,7 +1216,7 @@ function checkoutCart(){
         total +
 
         "\nTotal Items: " +
-        cart.length +
+        totalItems +
 
         "\n\nThank you.";
 
@@ -1130,8 +1227,6 @@ function checkoutCart(){
 
         encodeURIComponent(message);
 
-
-    /* MOBILE WHATSAPP */
 
     window.location.href = whatsappURL;
 
