@@ -1066,38 +1066,82 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 
 let cartCount = 0;
 
+let cart = [];
+
 function addToCart(product, price){
 
-    cartCount++;
+    cart.push({
+        name: product,
+        price: price
+    });
 
-    document.getElementById("cartCount").innerText = cartCount;
+    document.getElementById("cartCount").innerText = cart.length;
 
-    const message =
-        "Hello Vishayu,\n\n" +
-        "I want to order:\n" +
-        product +
-        "\n\nPrice: ₹" +
-        price +
-        "\n\nCart Items: " +
-        cartCount;
+    showCart();
 
-    const whatsappURL =
-        "https://wa.me/918889072340?text=" +
-        encodeURIComponent(message);
+}
+
+function showCart(){
+
+    let cartMessage = "YOUR CART\n\n";
+    let total = 0;
+
+    cart.forEach(function(item, index){
+
+        cartMessage +=
+            (index + 1) +
+            ". " +
+            item.name +
+            " - ₹" +
+            item.price +
+            "\n";
+
+        total += item.price;
+
+    });
+
+    cartMessage +=
+        "\nTotal Amount: ₹" +
+        total;
 
     if(confirm(
-        product +
-        " added to cart!\n\n" +
-        "Price: ₹" +
-        price +
-        "\nCart Items: " +
-        cartCount +
-        "\n\nOpen WhatsApp to order?"
+        cartMessage +
+        "\n\nPress OK to order on WhatsApp."
     )){
+
+        let orderText = "";
+
+        cart.forEach(function(item, index){
+
+            orderText +=
+                (index + 1) +
+                ". " +
+                item.name +
+                " - ₹" +
+                item.price +
+                "\n";
+
+        });
+
+        const message =
+            "Hello Vishayu,\n\n" +
+            "I want to place an order:\n\n" +
+            orderText +
+            "\nTotal Amount: ₹" +
+            total +
+            "\nTotal Items: " +
+            cart.length +
+            "\n\nThank you.";
+
+        const whatsappURL =
+            "https://wa.me/918889072340?text=" +
+            encodeURIComponent(message);
 
         window.open(whatsappURL,"_blank");
 
     }
+
+}
 
 }
 
