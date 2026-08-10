@@ -1156,6 +1156,13 @@ function addToCart(product, price){
 if (cartCountElement) {
     cartCountElement.innerText = cart.length;
 }
+
+document.querySelectorAll("#cartCount").forEach(function(el){
+    el.textContent = cart.length;
+});
+
+let total = 0;
+let orderText = "";
     let total = 0;
     let orderText = "";
 
