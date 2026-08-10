@@ -6,7 +6,10 @@
 
 <title>MAISON VISHAYU | Luxury Itra & Parfums</title>
 
+<meta name="description" content="Maison Vishayu - Luxury Itra & Parfums. Timeless fragrances crafted for the discerning.">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -40,14 +43,15 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(8,8,8,.97);
+    background:rgba(8,8,8,.96);
     border-bottom:1px solid #3a2b12;
+    backdrop-filter:blur(10px);
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:15px 20px;
+    padding:16px 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -59,22 +63,23 @@ header{
 }
 
 .logo-mark{
-    width:48px;
-    height:48px;
+    width:50px;
+    height:50px;
     border:2px solid #d8a928;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     color:#d8a928;
-    font-size:19px;
+    font-size:20px;
     font-weight:bold;
+    letter-spacing:-2px;
     margin-right:12px;
 }
 
 .logo{
-    font-size:25px;
-    letter-spacing:6px;
+    font-size:27px;
+    letter-spacing:7px;
     color:#d8a928;
     font-weight:bold;
 }
@@ -85,22 +90,27 @@ header{
     letter-spacing:4px;
     text-align:center;
     color:#bca66d;
+    margin-top:-5px;
 }
 
 nav{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:25px;
 }
 
 nav a{
-    font-size:13px;
+    font-size:14px;
     letter-spacing:1px;
+}
+
+nav a:hover{
+    color:#d8a928;
 }
 
 .cart{
     border:1px solid #9b7625;
-    padding:8px 12px;
+    padding:8px 14px;
     color:#d8a928;
 }
 
@@ -113,13 +123,14 @@ nav a{
 /* HERO */
 
 .hero{
-    min-height:85vh;
+    min-height:88vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     position:relative;
     overflow:hidden;
+
     background:
     radial-gradient(circle at center,rgba(154,111,25,.18),transparent 35%),
     linear-gradient(180deg,#080808,#11100d,#080808);
@@ -128,7 +139,7 @@ nav a{
 .hero:before{
     content:"";
     position:absolute;
-    inset:25px;
+    inset:30px;
     border:1px solid rgba(202,157,48,.35);
 }
 
@@ -141,60 +152,67 @@ nav a{
 
 .eyebrow{
     color:#c9a85b;
-    font-size:13px;
-    letter-spacing:6px;
-    margin-bottom:22px;
+    font-size:14px;
+    letter-spacing:7px;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(55px,10vw,105px);
-    letter-spacing:10px;
+    font-size:clamp(55px,10vw,110px);
+    letter-spacing:12px;
     color:#d9aa2d;
     line-height:1;
     margin-bottom:25px;
 }
 
 .hero h2{
-    font-size:clamp(25px,4vw,45px);
+    font-size:clamp(25px,4vw,48px);
     font-weight:normal;
-    margin-bottom:22px;
+    margin-bottom:25px;
 }
 
 .hero p{
     color:#b9ad96;
     max-width:600px;
-    margin:0 auto 32px;
+    margin:0 auto 35px;
+    font-size:16px;
 }
 
 .gold-btn{
     display:inline-block;
-    padding:15px 32px;
+    padding:16px 35px;
     border:1px solid #d5a52a;
     color:#d5a52a;
     letter-spacing:3px;
+    background:transparent;
 }
 
-/* GENERAL */
+.gold-btn:hover{
+    background:#d5a52a;
+    color:#080808;
+}
+
+/* SECTIONS */
 
 .section{
     max-width:1200px;
     margin:auto;
-    padding:75px 20px;
+    padding:80px 25px;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:50px;
 }
 
 .section-title span{
     color:#c9a85b;
-    letter-spacing:4px;
-    font-size:12px;
+    letter-spacing:5px;
+    font-size:13px;
 }
 
 .section-title h2{
-    font-size:40px;
+    font-size:42px;
     font-weight:normal;
     margin-top:8px;
 }
@@ -203,7 +221,7 @@ nav a{
     width:80px;
     height:1px;
     background:#c99d32;
-    margin:18px auto;
+    margin:20px auto;
 }
 
 /* FEATURES */
@@ -217,7 +235,7 @@ nav a{
 
 .feature{
     text-align:center;
-    padding:30px 15px;
+    padding:35px 20px;
     border-right:1px solid #3b2c14;
 }
 
@@ -226,19 +244,21 @@ nav a{
 }
 
 .feature-icon{
-    font-size:30px;
+    font-size:32px;
     color:#d4a62b;
+    margin-bottom:12px;
 }
 
 .feature h3{
     color:#d8b55f;
-    font-size:14px;
-    letter-spacing:1px;
+    font-size:15px;
+    letter-spacing:2px;
 }
 
 .feature p{
     color:#8e8575;
-    font-size:12px;
+    font-size:13px;
+    margin-top:5px;
 }
 
 /* PRODUCTS */
@@ -246,14 +266,20 @@ nav a{
 .products{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:24px;
+    gap:25px;
 }
 
 .product{
     background:linear-gradient(145deg,#15130f,#090909);
     border:1px solid #403015;
-    padding:20px;
+    padding:25px;
     text-align:center;
+    transition:.35s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+    border-color:#c69a2c;
 }
 
 .product-image{
@@ -261,21 +287,26 @@ nav a{
     display:flex;
     align-items:center;
     justify-content:center;
+
     background:
     radial-gradient(circle,#382b13 0%,#15130f 35%,#090909 70%);
-    margin-bottom:20px;
-    overflow:hidden;
+
+    margin-bottom:22px;
 }
 
-/* BOTTLE */
-
 .bottle{
-    width:120px;
-    height:190px;
+    width:105px;
+    height:170px;
+    border:2px solid #a47b22;
+    border-radius:8px 8px 15px 15px;
+    position:relative;
+    background:linear-gradient(90deg,#080808,#252015,#080808);
+    box-shadow:0 10px 35px rgba(0,0,0,.8);
+
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:auto;
+    overflow:hidden;
 }
 
 .bottle img{
@@ -287,32 +318,32 @@ nav a{
 
 .product h3{
     color:#d7ab3a;
-    font-size:19px;
+    font-size:20px;
     letter-spacing:2px;
 }
 
 .product .type{
     color:#8e8066;
-    font-size:11px;
+    font-size:12px;
     letter-spacing:2px;
-    margin:5px 0 10px;
+    margin:5px 0 12px;
 }
 
 .product p{
     color:#aaa08d;
-    font-size:13px;
-    min-height:55px;
+    font-size:14px;
+    min-height:50px;
 }
 
 .price{
     color:#f1d68c;
-    font-size:21px;
-    margin:16px 0;
+    font-size:22px;
+    margin:18px 0;
 }
 
 .buy-btn{
     width:100%;
-    padding:12px;
+    padding:13px;
     border:1px solid #bd922b;
     background:transparent;
     color:#d9ad3b;
@@ -335,15 +366,19 @@ nav a{
 .story-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:45px;
+    gap:50px;
     align-items:center;
 }
 
+.story-box{
+    padding:20px;
+}
+
 .story h2{
-    font-size:40px;
+    font-size:42px;
     color:#d6aa3c;
     font-weight:normal;
-    margin:12px 0 18px;
+    margin:15px 0;
 }
 
 .story p{
@@ -353,25 +388,29 @@ nav a{
 
 .quote{
     border-left:2px solid #c99b2d;
-    padding-left:18px;
+    padding-left:20px;
     color:#d6c19a!important;
     font-style:italic;
 }
 
+/* BANNER */
+
 .banner{
-    min-height:300px;
+    min-height:330px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
+
     background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
     radial-gradient(circle,#473615,#090909 65%);
+
     border:1px solid #4b3918;
 }
 
 .banner h2{
-    font-size:42px;
+    font-size:45px;
     color:#d6aa38;
     letter-spacing:5px;
 }
@@ -391,26 +430,26 @@ nav a{
     max-width:700px;
     margin:auto;
     border:1px solid #493817;
-    padding:40px 20px;
+    padding:45px 25px;
     background:#0d0c0a;
 }
 
 .order-box h2{
     color:#d7aa3b;
-    font-size:32px;
-    margin-bottom:12px;
+    font-size:35px;
+    margin-bottom:15px;
 }
 
 .order-box p{
     color:#a59b89;
-    margin-bottom:22px;
+    margin-bottom:25px;
 }
 
 .whatsapp{
     display:inline-block;
     background:#1f8f45;
     color:white;
-    padding:14px 28px;
+    padding:15px 30px;
     border-radius:3px;
     font-weight:bold;
 }
@@ -430,40 +469,40 @@ nav a{
 
 footer{
     border-top:1px solid #3a2b12;
-    padding:45px 20px 20px;
+    padding:50px 25px 25px;
     text-align:center;
     background:#050505;
 }
 
 .footer-logo{
-    font-size:30px;
-    letter-spacing:7px;
+    font-size:32px;
+    letter-spacing:8px;
     color:#d6a92f;
 }
 
 footer p{
     color:#756e61;
-    margin:14px 0;
-    font-size:12px;
+    margin:15px 0;
+    font-size:13px;
 }
 
 .footer-links{
     display:flex;
     justify-content:center;
-    gap:22px;
-    margin:22px 0;
+    gap:25px;
+    margin:25px 0;
 }
 
 .footer-links a{
     color:#a9956d;
-    font-size:12px;
+    font-size:13px;
 }
 
 .copyright{
     border-top:1px solid #211c13;
-    padding-top:18px;
+    padding-top:20px;
     color:#514c43;
-    font-size:10px;
+    font-size:11px;
 }
 
 /* MOBILE */
@@ -471,29 +510,29 @@ footer p{
 @media(max-width:800px){
 
     .navbar{
-        padding:13px 16px;
+        padding:14px 18px;
     }
 
     .logo{
-        font-size:20px;
-        letter-spacing:4px;
+        font-size:21px;
+        letter-spacing:5px;
     }
 
     .logo-mark{
-        width:43px;
-        height:43px;
+        width:44px;
+        height:44px;
         font-size:17px;
     }
 
     nav{
         display:none;
         position:absolute;
-        top:70px;
+        top:72px;
         left:0;
         width:100%;
         background:#090909;
         flex-direction:column;
-        padding:22px;
+        padding:25px;
         border-bottom:1px solid #392b14;
     }
 
@@ -506,15 +545,24 @@ footer p{
     }
 
     .hero{
-        min-height:78vh;
+        min-height:80vh;
     }
 
     .hero:before{
-        inset:14px;
+        inset:15px;
+    }
+
+    .eyebrow{
+        font-size:10px;
+        letter-spacing:5px;
     }
 
     .hero h1{
-        letter-spacing:6px;
+        letter-spacing:7px;
+    }
+
+    .hero h2{
+        font-size:27px;
     }
 
     .features{
@@ -546,105 +594,10 @@ footer p{
     }
 
     .section{
-        padding:55px 16px;
+        padding:60px 18px;
     }
 }
-.cart-button{
-    position:fixed;
-    top:20px;
-    right:20px;
-    z-index:9999;
-    background:#0b0b0b;
-    color:#d4af37;
-    border:1px solid #d4af37;
-    padding:10px 16px;
-    font-family:Georgia,serif;
-    letter-spacing:2px;
-    cursor:pointer;
-}
 
-.cart-button span{
-    background:#d4af37;
-    color:#000;
-    border-radius:50%;
-    padding:2px 7px;
-    margin-left:5px;
-    font-size:12px;
-}.cart-panel{
-    display:none;
-    position:fixed;
-    top:0;
-    right:0;
-    width:360px;
-    max-width:90%;
-    height:100vh;
-    background:#0b0b0b;
-    border-left:1px solid #d4af37;
-    z-index:10000;
-    padding:25px;
-    overflow-y:auto;
-    box-shadow:-10px 0 30px rgba(0,0,0,.6);
-}
-
-.cart-panel.active{
-    display:block;
-}
-
-.cart-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #3a2b12;
-    padding-bottom:15px;
-    margin-bottom:20px;
-}
-
-.cart-header h2{
-    color:#d4af37;
-    letter-spacing:3px;
-    font-weight:normal;
-}
-
-.cart-header button{
-    background:none;
-    border:none;
-    color:#d4af37;
-    font-size:30px;
-}
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    padding:15px 0;
-    border-bottom:1px solid #292015;
-    color:#ddd;
-}
-
-.cart-item-name{
-    color:#d4af37;
-}
-
-.cart-total{
-    margin-top:25px;
-    padding:15px 0;
-    border-top:1px solid #3a2b12;
-    color:#f1d68c;
-    font-size:20px;
-}
-
-.checkout-btn{
-    width:100%;
-    padding:14px;
-    margin-top:15px;
-    border:1px solid #d4af37;
-    background:#d4af37;
-    color:#080808;
-    font-family:Georgia,serif;
-    font-weight:bold;
-    letter-spacing:1px;
-    cursor:pointer;
-}
 </style>
 </head>
 
@@ -656,7 +609,9 @@ footer p{
 
 <a href="#home" class="brand">
 
-<div class="logo-mark">MV</div>
+<div class="logo-mark">
+MV
+</div>
 
 <div class="logo">
 VISHAYU
@@ -682,12 +637,8 @@ VISHAYU
 </nav>
 
 </div>
-<div class="cart-button" onclick="openCart()">
-    🛒 CART
-    <span id="cartCount">0</span>
-</div>
-</header>
 
+</header>
 
 <section class="hero" id="home">
 
@@ -713,7 +664,6 @@ EXPLORE COLLECTION
 </div>
 
 </section>
-
 
 <section class="section">
 
@@ -747,7 +697,6 @@ EXPLORE COLLECTION
 
 </section>
 
-
 <section class="section" id="collection">
 
 <div class="section-title">
@@ -758,58 +707,51 @@ EXPLORE COLLECTION
 
 <div class="line"></div>
 
-<p>
-Six distinctive fragrances. Six different personalities.
-</p>
+<p>Six distinctive fragrances. Six different personalities.</p>
 
 </div>
 
-
 <div class="products">
-
 
 <!-- PRODUCT 1 -->
 
 <div class="product">
 
-    <div class="product-image">
-        <div class="bottle">
-            <img src="vishayu-bottle.png" alt="Royal Oud">
-        </div>
-    </div>
-
-    <h3>ROYAL OUD</h3>
-
-    <div class="type">
-        TRADITIONAL ITRA
-    </div>
-
-    <p>
-        Deep. Rich. Timeless.<br>
-        A powerful oud fragrance for a commanding presence.
-    </p>
-
-    <div class="price">
-        ₹1,499
-    </div>
-
-    <button class="buy-btn" onclick="addToCart('Royal Oud',1499)">
-        ADD TO CART
-    </button>
-
+<div class="product-image">
+<div class="bottle">
+<img src="vishayu-bottle.png" alt="Royal Oud">
+</div>
 </div>
 
+<h3>ROYAL OUD</h3>
+
+<div class="type">
+TRADITIONAL ITRA
+</div>
+
+<p>
+Deep. Rich. Timeless.<br>
+A powerful oud fragrance for a commanding presence.
+</p>
+
+<div class="price">
+₹1,499
+</div>
+
+<button class="buy-btn" onclick="addToCart('Royal Oud',1499)">
+ADD TO CART
+</button>
+
+</div>
 
 <!-- PRODUCT 2 -->
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Imperial Musk">
 </div>
-
 </div>
 
 <h3>IMPERIAL MUSK</h3>
@@ -833,17 +775,14 @@ ADD TO CART
 
 </div>
 
-
 <!-- PRODUCT 3 -->
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Velvet Rose">
 </div>
-
 </div>
 
 <h3>VELVET ROSE</h3>
@@ -867,17 +806,14 @@ ADD TO CART
 
 </div>
 
-
 <!-- PRODUCT 4 -->
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Royal Sandal">
 </div>
-
 </div>
 
 <h3>ROYAL SANDAL</h3>
@@ -901,17 +837,14 @@ ADD TO CART
 
 </div>
 
-
 <!-- PRODUCT 5 -->
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Mitti Royale">
 </div>
-
 </div>
 
 <h3>MITTI ROYALE</h3>
@@ -935,17 +868,14 @@ ADD TO CART
 
 </div>
 
-
 <!-- PRODUCT 6 -->
 
 <div class="product">
 
 <div class="product-image">
-
 <div class="bottle">
 <img src="vishayu-bottle.png" alt="Noir Shamama">
 </div>
-
 </div>
 
 <h3>NOIR SHAMAMA</h3>
@@ -972,7 +902,6 @@ ADD TO CART
 </div>
 
 </section>
-
 
 <section class="story" id="story">
 
@@ -1007,7 +936,6 @@ for those who appreciate elegance and individuality.
 
 </div>
 
-
 <div class="banner">
 
 <div>
@@ -1034,7 +962,6 @@ DISCOVER
 
 </section>
 
-
 <section class="section order" id="order">
 
 <div class="section-title">
@@ -1050,7 +977,6 @@ Order Your Fragrance
 <div class="line"></div>
 
 </div>
-
 
 <div class="order-box">
 
@@ -1076,7 +1002,6 @@ target="_blank">
 
 </section>
 
-
 <section class="section" id="contact">
 
 <div class="section-title">
@@ -1098,7 +1023,6 @@ connect with us.
 
 </div>
 
-
 <div class="contact-info">
 
 <p>
@@ -1112,7 +1036,6 @@ connect with us.
 </div>
 
 </section>
-
 
 <footer>
 
@@ -1139,195 +1062,55 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 
 </footer>
 
-
 <script>
 
-let cart = [];
+let cartCount = 0;
 
 function addToCart(product, price){
 
-    cart.push({
-        name: product,
-        price: price
-    });
+    cartCount++;
 
-    const cartCountElement = document.getElementById("cartCount");
-
-if (cartCountElement) {
-    cartCountElement.innerText = cart.length;
-}
-
-document.querySelectorAll("#cartCount").forEach(function(el){
-    el.textContent = cart.length;
-});
-
-let total = 0;
-let orderText = "";
-    let total = 0;
-    let orderText = "";
-
-    cart.forEach(function(item, index){
-
-        orderText += (index + 1) + ". " + item.name + " - ₹" + item.price + "\n";
-
-        total += item.price;
-
-    });
+    document.getElementById("cartCount").innerText = cartCount;
 
     const message =
         "Hello Vishayu,\n\n" +
-        "I want to place an order:\n\n" +
-        orderText +
-        "\nTotal Amount: ₹" + total +
-        "\nTotal Items: " + cart.length +
-        "\n\nThank you.";
+        "I want to order:\n" +
+        product +
+        "\n\nPrice: ₹" +
+        price +
+        "\n\nCart Items: " +
+        cartCount;
 
     const whatsappURL =
         "https://wa.me/918889072340?text=" +
         encodeURIComponent(message);
-
 
     if(confirm(
         product +
         " added to cart!\n\n" +
-        "Total Items: " + cart.length +
-        "\nTotal Amount: ₹" + total +
+        "Price: ₹" +
+        price +
+        "\nCart Items: " +
+        cartCount +
         "\n\nOpen WhatsApp to order?"
     )){
 
-        window.open(whatsappURL, "_blank");
+        window.open(whatsappURL,"_blank");
 
     }
 
 }
-function openCart(){
 
-    document
-    .getElementById("cartPanel")
-    .classList
-    .add("active");
-
-    updateCart();
-
-}
-
-function closeCart(){
-
-    document
-    .getElementById("cartPanel")
-    .classList
-    .remove("active");
-
-}
-
-function updateCart(){
-
-    const cartItems = document.getElementById("cartItems");
-    const cartTotal = document.getElementById("cartTotal");
-
-    if(cart.length === 0){
-
-        cartItems.innerHTML = "<p>Your cart is empty.</p>";
-        cartTotal.innerText = "0";
-        return;
-
-    }
-
-    let total = 0;
-    let html = "";
-
-    cart.forEach(function(item){
-
-        html += `
-            <div class="cart-item">
-                <div class="cart-item-name">
-                    ${item.name}
-                </div>
-
-                <div>
-                    ₹${item.price}
-                </div>
-            </div>
-        `;
-
-        total += item.price;
-
-    });
-
-    cartItems.innerHTML = html;
-    cartTotal.innerText = total;
-
-}
-
-function checkoutCart(){
-
-    if(cart.length === 0){
-
-        alert("Your cart is empty.");
-        return;
-
-    }
-
-    let total = 0;
-    let orderText = "";
-
-    cart.forEach(function(item,index){
-
-        orderText +=
-        (index + 1) +
-        ". " +
-        item.name +
-        " - ₹" +
-        item.price +
-        "\n";
-
-        total += item.price;
-
-    });
-
-    const message =
-        "Hello Vishayu,\n\n" +
-        "I want to place an order:\n\n" +
-        orderText +
-        "\nTotal Items: " +
-        cart.length +
-        "\nTotal Amount: ₹" +
-        total;
-
-    const whatsappURL =
-        "https://wa.me/918889072340?text=" +
-        encodeURIComponent(message);
-
-    window.open(whatsappURL,"_blank");
-
-}
 function toggleMenu(){
 
-document
-.getElementById("nav")
-.classList
-.toggle("active");
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("active");
 
 }
 
 </script>
-<div id="cartPanel" class="cart-panel">
-    <div class="cart-header">
-        <h2>YOUR CART</h2>
-        <button onclick="closeCart()">×</button>
-    </div>
 
-    <div id="cartItems">
-        <p>Your cart is empty.</p>
-    </div>
-
-    <div class="cart-total">
-        Total: ₹<span id="cartTotal">0</span>
-    </div>
-
-    <button class="checkout-btn" onclick="checkoutCart()">
-        ORDER ON WHATSAPP
-    </button>
-</div>
 </body>
 </html>
