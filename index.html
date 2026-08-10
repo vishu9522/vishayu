@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,10 +31,17 @@ a{
     color:inherit;
 }
 
-button{
+button,
+input,
+textarea{
     font-family:inherit;
+}
+
+button{
     cursor:pointer;
 }
+
+/* HEADER */
 
 header{
     position:sticky;
@@ -79,6 +85,7 @@ nav a:hover{
     border:1px solid #a67d25;
     padding:8px 12px;
     color:#d8a928;
+    cursor:pointer;
 }
 
 .menu{
@@ -87,6 +94,8 @@ nav a:hover{
     color:#d8a928;
 }
 
+/* HERO */
+
 .hero{
     min-height:85vh;
     display:flex;
@@ -94,8 +103,7 @@ nav a:hover{
     align-items:center;
     text-align:center;
     padding:40px 20px;
-    background:
-    radial-gradient(circle,#38290f 0%,#080808 55%);
+    background:radial-gradient(circle,#38290f 0%,#080808 55%);
 }
 
 .hero-content{
@@ -134,12 +142,15 @@ nav a:hover{
     border:1px solid #d3a22c;
     color:#d3a22c;
     letter-spacing:2px;
+    background:transparent;
 }
 
 .gold-btn:hover{
     background:#d3a22c;
     color:#080808;
 }
+
+/* SECTIONS */
 
 .section{
     max-width:1200px;
@@ -169,6 +180,8 @@ nav a:hover{
     background:#c99b2c;
     margin:18px auto;
 }
+
+/* PRODUCTS */
 
 .products{
     display:grid;
@@ -243,6 +256,8 @@ nav a:hover{
     color:#080808;
 }
 
+/* STORY */
+
 .story{
     border-top:1px solid #332610;
     border-bottom:1px solid #332610;
@@ -274,6 +289,8 @@ nav a:hover{
     font-style:italic;
 }
 
+/* ORDER */
+
 .order-box{
     max-width:700px;
     margin:auto;
@@ -284,7 +301,7 @@ nav a:hover{
 }
 
 .order-box h2{
-    color:#d8aa38;
+    color:#d8a038;
     margin-bottom:12px;
 }
 
@@ -299,6 +316,8 @@ nav a:hover{
     color:white;
     padding:14px 25px;
 }
+
+/* CART */
 
 .cart-panel{
     position:fixed;
@@ -329,13 +348,13 @@ nav a:hover{
 }
 
 .cart-header h2{
-    color:#d8aa38;
+    color:#d8a038;
 }
 
 .cart-header button{
     background:none;
     border:none;
-    color:#d8aa38;
+    color:#d8a038;
     font-size:30px;
 }
 
@@ -355,7 +374,7 @@ nav a:hover{
 }
 
 .cart-item-price{
-    color:#d8aa38;
+    color:#d8a038;
 }
 
 .quantity-box{
@@ -369,7 +388,7 @@ nav a:hover{
     width:32px;
     height:32px;
     background:transparent;
-    color:#d8aa38;
+    color:#d8a038;
     border:1px solid #8d6c25;
     font-size:18px;
 }
@@ -384,7 +403,7 @@ nav a:hover{
     margin-top:12px;
     padding:7px 12px;
     background:transparent;
-    color:#d8a928;
+    color:#d8a038;
     border:1px solid #8d6c25;
 }
 
@@ -406,6 +425,115 @@ nav a:hover{
     letter-spacing:1px;
 }
 
+/* CHECKOUT FORM */
+
+.checkout-panel{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.92);
+    z-index:3000;
+    display:none;
+    overflow-y:auto;
+    padding:30px 15px;
+}
+
+.checkout-panel.active{
+    display:block;
+}
+
+.checkout-box{
+    max-width:550px;
+    margin:20px auto;
+    background:#0d0c0a;
+    border:1px solid #5a4318;
+    padding:28px;
+}
+
+.checkout-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.checkout-header h2{
+    color:#d8a038;
+    font-weight:normal;
+}
+
+.close-checkout{
+    background:none;
+    border:none;
+    color:#d8a038;
+    font-size:30px;
+}
+
+.checkout-summary{
+    background:#11100d;
+    border:1px solid #332711;
+    padding:15px;
+    margin-bottom:22px;
+}
+
+.checkout-summary h3{
+    color:#d8a038;
+    margin-bottom:10px;
+}
+
+.summary-line{
+    display:flex;
+    justify-content:space-between;
+    padding:6px 0;
+    color:#c6b99f;
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    color:#d8a038;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:13px;
+    background:#080808;
+    border:1px solid #493716;
+    color:#fff;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#c99b2c;
+}
+
+.form-group textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.place-order{
+    width:100%;
+    padding:15px;
+    background:#218c45;
+    color:white;
+    border:none;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+/* CONTACT */
+
 .contact-info{
     text-align:center;
     color:#aaa08d;
@@ -415,6 +543,8 @@ nav a:hover{
     margin:10px 0;
 }
 
+/* FOOTER */
+
 footer{
     text-align:center;
     padding:45px 20px 25px;
@@ -423,7 +553,7 @@ footer{
 }
 
 .footer-logo{
-    color:#d8aa38;
+    color:#d8a038;
     font-size:32px;
     letter-spacing:7px;
 }
@@ -444,6 +574,8 @@ footer{
     color:#514b41;
     font-size:11px;
 }
+
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -477,6 +609,10 @@ footer{
 
     .section{
         padding:60px 18px;
+    }
+
+    .checkout-box{
+        padding:22px 17px;
     }
 
 }
@@ -566,9 +702,7 @@ EXPLORE COLLECTION
 <div class="product-image">
 
 <div class="bottle">
-
 <img src="vishayu-bottle.png" alt="Royal Oud">
-
 </div>
 
 </div>
@@ -600,9 +734,7 @@ ADD TO CART
 <div class="product-image">
 
 <div class="bottle">
-
 <img src="vishayu-bottle.png" alt="Imperial Musk">
-
 </div>
 
 </div>
@@ -634,9 +766,7 @@ ADD TO CART
 <div class="product-image">
 
 <div class="bottle">
-
 <img src="vishayu-bottle.png" alt="Velvet Rose">
-
 </div>
 
 </div>
@@ -668,9 +798,7 @@ ADD TO CART
 <div class="product-image">
 
 <div class="bottle">
-
 <img src="vishayu-bottle.png" alt="Royal Sandal">
-
 </div>
 
 </div>
@@ -702,9 +830,7 @@ ADD TO CART
 <div class="product-image">
 
 <div class="bottle">
-
 <img src="vishayu-bottle.png" alt="Mitti Royale">
-
 </div>
 
 </div>
@@ -736,9 +862,7 @@ ADD TO CART
 <div class="product-image">
 
 <div class="bottle">
-
 <img src="vishayu-bottle.png" alt="Noir Shamama">
-
 </div>
 
 </div>
@@ -919,6 +1043,8 @@ MAISON VISHAYU — THE HOUSE OF VISHAYU
 </footer>
 
 
+<!-- CART -->
+
 <div id="cartPanel" class="cart-panel">
 
 <div class="cart-header">
@@ -941,11 +1067,112 @@ Total: ₹<span id="cartTotal">0</span>
 
 </div>
 
-<button class="checkout-btn" onclick="checkoutCart()">
+<button class="checkout-btn" onclick="openCheckout()">
 
-ORDER ON WHATSAPP
+CONTINUE TO CHECKOUT
 
 </button>
+
+</div>
+
+
+<!-- CHECKOUT -->
+
+<div id="checkoutPanel" class="checkout-panel">
+
+<div class="checkout-box">
+
+<div class="checkout-header">
+
+<h2>CHECKOUT</h2>
+
+<button
+class="close-checkout"
+onclick="closeCheckout()">
+
+×
+</button>
+
+</div>
+
+
+<div class="checkout-summary">
+
+<h3>YOUR ORDER</h3>
+
+<div id="checkoutSummary"></div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>FULL NAME</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Enter your name">
+
+</div>
+
+
+<div class="form-group">
+
+<label>MOBILE NUMBER</label>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Enter mobile number">
+
+</div>
+
+
+<div class="form-group">
+
+<label>FULL ADDRESS</label>
+
+<textarea
+id="customerAddress"
+placeholder="House / Street / Area"></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>CITY</label>
+
+<input
+type="text"
+id="customerCity"
+placeholder="Enter city">
+
+</div>
+
+
+<div class="form-group">
+
+<label>PINCODE</label>
+
+<input
+type="number"
+id="customerPincode"
+placeholder="Enter pincode">
+
+</div>
+
+
+<button
+class="place-order"
+onclick="placeOrder()">
+
+💬 PLACE ORDER ON WHATSAPP
+
+</button>
+
+</div>
 
 </div>
 
@@ -955,13 +1182,16 @@ ORDER ON WHATSAPP
 let cart = [];
 
 
-function addToCart(product, price){
+/* ADD TO CART */
 
-    const existingItem = cart.find(function(item){
+function addToCart(product,price){
 
-        return item.name === product;
+    const existingItem =
+        cart.find(function(item){
 
-    });
+            return item.name === product;
+
+        });
 
 
     if(existingItem){
@@ -972,9 +1202,9 @@ function addToCart(product, price){
 
         cart.push({
 
-            name: product,
-            price: price,
-            quantity: 1
+            name:product,
+            price:price,
+            quantity:1
 
         });
 
@@ -987,6 +1217,8 @@ function addToCart(product, price){
 
 }
 
+
+/* UPDATE CART */
 
 function updateCart(){
 
@@ -1001,6 +1233,7 @@ function updateCart(){
 
 
     let totalItems = 0;
+
     let totalAmount = 0;
 
 
@@ -1014,7 +1247,8 @@ function updateCart(){
     });
 
 
-    cartCount.innerText = totalItems;
+    cartCount.innerText =
+        totalItems;
 
 
     if(cart.length === 0){
@@ -1058,10 +1292,10 @@ function updateCart(){
             <div class="quantity-box">
 
                 <button
-                    class="quantity-btn"
-                    onclick="decreaseQuantity(${index})">
+                class="quantity-btn"
+                onclick="decreaseQuantity(${index})">
 
-                    −
+                −
 
                 </button>
 
@@ -1074,10 +1308,10 @@ function updateCart(){
 
 
                 <button
-                    class="quantity-btn"
-                    onclick="increaseQuantity(${index})">
+                class="quantity-btn"
+                onclick="increaseQuantity(${index})">
 
-                    +
+                +
 
                 </button>
 
@@ -1085,10 +1319,10 @@ function updateCart(){
 
 
             <button
-                class="remove-btn"
-                onclick="removeFromCart(${index})">
+            class="remove-btn"
+            onclick="removeFromCart(${index})">
 
-                REMOVE
+            REMOVE
 
             </button>
 
@@ -1099,12 +1333,16 @@ function updateCart(){
     });
 
 
-    cartItems.innerHTML = html;
+    cartItems.innerHTML =
+        html;
 
-    cartTotal.innerText = totalAmount;
+    cartTotal.innerText =
+        totalAmount;
 
 }
 
+
+/* QUANTITY PLUS */
 
 function increaseQuantity(index){
 
@@ -1114,6 +1352,8 @@ function increaseQuantity(index){
 
 }
 
+
+/* QUANTITY MINUS */
 
 function decreaseQuantity(index){
 
@@ -1132,6 +1372,8 @@ function decreaseQuantity(index){
 }
 
 
+/* REMOVE */
+
 function removeFromCart(index){
 
     cart.splice(index,1);
@@ -1140,6 +1382,8 @@ function removeFromCart(index){
 
 }
 
+
+/* OPEN CART */
 
 function openCart(){
 
@@ -1153,6 +1397,8 @@ function openCart(){
 }
 
 
+/* CLOSE CART */
+
 function closeCart(){
 
     document
@@ -1163,7 +1409,9 @@ function closeCart(){
 }
 
 
-function checkoutCart(){
+/* OPEN CHECKOUT */
+
+function openCheckout(){
 
     if(cart.length === 0){
 
@@ -1174,8 +1422,126 @@ function checkoutCart(){
     }
 
 
-    let orderText = "";
+    let summaryHTML = "";
+
     let total = 0;
+
+
+    cart.forEach(function(item){
+
+        const itemTotal =
+            item.price * item.quantity;
+
+        total += itemTotal;
+
+
+        summaryHTML += `
+
+        <div class="summary-line">
+
+            <span>
+                ${item.name} × ${item.quantity}
+            </span>
+
+            <span>
+                ₹${itemTotal}
+            </span>
+
+        </div>
+
+        `;
+
+    });
+
+
+    summaryHTML += `
+
+    <div class="summary-line"
+    style="border-top:1px solid #493716;
+    margin-top:10px;
+    padding-top:12px;
+    color:#d8a038;">
+
+        <strong>TOTAL</strong>
+
+        <strong>₹${total}</strong>
+
+    </div>
+
+    `;
+
+
+    document.getElementById("checkoutSummary")
+    .innerHTML = summaryHTML;
+
+
+    document
+    .getElementById("checkoutPanel")
+    .classList
+    .add("active");
+
+
+    closeCart();
+
+}
+
+
+/* CLOSE CHECKOUT */
+
+function closeCheckout(){
+
+    document
+    .getElementById("checkoutPanel")
+    .classList
+    .remove("active");
+
+}
+
+
+/* PLACE ORDER */
+
+function placeOrder(){
+
+    const name =
+        document.getElementById("customerName")
+        .value.trim();
+
+    const phone =
+        document.getElementById("customerPhone")
+        .value.trim();
+
+    const address =
+        document.getElementById("customerAddress")
+        .value.trim();
+
+    const city =
+        document.getElementById("customerCity")
+        .value.trim();
+
+    const pincode =
+        document.getElementById("customerPincode")
+        .value.trim();
+
+
+    if(!name ||
+       !phone ||
+       !address ||
+       !city ||
+       !pincode){
+
+        alert(
+            "Please fill all customer details."
+        );
+
+        return;
+
+    }
+
+
+    let orderText = "";
+
+    let total = 0;
+
     let totalItems = 0;
 
 
@@ -1199,7 +1565,8 @@ function checkoutCart(){
 
         total += itemTotal;
 
-        totalItems += item.quantity;
+        totalItems +=
+            item.quantity;
 
     });
 
@@ -1218,6 +1585,23 @@ function checkoutCart(){
         "\nTotal Items: " +
         totalItems +
 
+        "\n\nCUSTOMER DETAILS\n" +
+
+        "Name: " +
+        name +
+
+        "\nMobile: " +
+        phone +
+
+        "\nAddress: " +
+        address +
+
+        "\nCity: " +
+        city +
+
+        "\nPincode: " +
+        pincode +
+
         "\n\nThank you.";
 
 
@@ -1228,10 +1612,13 @@ function checkoutCart(){
         encodeURIComponent(message);
 
 
-    window.location.href = whatsappURL;
+    window.location.href =
+        whatsappURL;
 
 }
 
+
+/* MENU */
 
 function toggleMenu(){
 
@@ -1243,7 +1630,6 @@ function toggleMenu(){
 }
 
 </script>
-
 
 </body>
 
