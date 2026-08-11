@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Maison Vishayu | Luxury Itra</title>
 
 <style>
@@ -28,7 +28,7 @@ backdrop-filter:blur(10px);
 .nav{
 max-width:1200px;
 margin:auto;
-padding:18px 20px;
+padding:17px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -40,7 +40,7 @@ display:flex;
 align-items:center;
 gap:10px;
 color:#d8a928;
-font-size:22px;
+font-size:20px;
 letter-spacing:3px;
 font-weight:bold;
 }
@@ -49,10 +49,10 @@ font-weight:bold;
 width:38px;
 height:38px;
 border:1px solid #d8a928;
+border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:50%;
 }
 
 .navlinks{
@@ -76,7 +76,6 @@ border:0;
 padding:10px 15px;
 font-weight:bold;
 cursor:pointer;
-border-radius:3px;
 }
 
 .hero{
@@ -104,7 +103,6 @@ margin-bottom:20px;
 font-size:clamp(42px,8vw,82px);
 letter-spacing:5px;
 font-weight:normal;
-margin-bottom:15px;
 }
 
 .hero h1 span{color:#d8a928}
@@ -112,7 +110,7 @@ margin-bottom:15px;
 .hero p{
 color:#bbb;
 font-size:18px;
-margin-bottom:30px;
+margin:15px 0 30px;
 }
 
 .goldBtn{
@@ -125,7 +123,6 @@ text-decoration:none;
 font-weight:bold;
 letter-spacing:1px;
 cursor:pointer;
-border-radius:2px;
 }
 
 .section{
@@ -151,10 +148,7 @@ font-weight:normal;
 margin-top:8px;
 }
 
-.sectionTitle p{
-color:#999;
-margin-top:8px;
-}
+.sectionTitle p{color:#999}
 
 .filters{
 display:flex;
@@ -171,7 +165,6 @@ color:#aaa;
 padding:9px 15px;
 cursor:pointer;
 font-size:11px;
-letter-spacing:1px;
 }
 
 .filter.active,
@@ -275,7 +268,6 @@ color:#ddd;
 .cardActions .buy{
 background:#d8a928;
 color:#080808;
-border-color:#d8a928;
 font-weight:bold;
 }
 
@@ -283,7 +275,6 @@ font-weight:bold;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:35px;
-align-items:center;
 }
 
 .storyBox{
@@ -443,7 +434,6 @@ background:#d8a928;
 border:0;
 font-weight:bold;
 cursor:pointer;
-font-size:15px;
 }
 
 /* CHECKOUT */
@@ -452,7 +442,7 @@ font-size:15px;
 position:fixed;
 inset:0;
 z-index:3000;
-background:rgba(0,0,0,.86);
+background:rgba(0,0,0,.88);
 display:none;
 align-items:center;
 justify-content:center;
@@ -527,12 +517,10 @@ background:#111;
 .paymentBox h3{
 font-weight:normal;
 color:#d8a928;
-margin-bottom:5px;
 }
 
 .upiId{
 font-size:18px;
-letter-spacing:1px;
 margin:5px 0;
 }
 
@@ -571,28 +559,85 @@ margin-top:10px;
 cursor:pointer;
 }
 
+/* SUCCESS */
+
 .success{
 display:none;
 text-align:center;
-padding:25px 5px;
+padding:10px 5px 20px;
 }
 
 .success.show{display:block}
 
 .successIcon{
-font-size:50px;
+width:70px;
+height:70px;
+border:2px solid #d8a928;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:38px;
 color:#d8a928;
-margin-bottom:10px;
+margin:10px auto 18px;
 }
 
-.success h2{font-size:28px}
+.success h2{
+font-size:30px;
+font-weight:normal;
+color:#d8a928;
+}
+
+.orderIdBox{
+border:1px solid #3d301b;
+background:#111;
+padding:15px;
+margin:20px 0;
+}
+
+.orderIdLabel{
+font-size:10px;
+letter-spacing:2px;
+color:#888;
+}
+
+.orderId{
+font-size:24px;
+letter-spacing:2px;
+color:#fff;
+margin-top:4px;
+}
+
+.status{
+display:inline-block;
+padding:7px 12px;
+font-size:11px;
+letter-spacing:1px;
+background:#332a17;
+color:#d8a928;
+margin-bottom:15px;
+}
 
 .success p{
 color:#999;
-margin:10px 0 20px;
+font-size:13px;
+margin-bottom:20px;
 }
 
-/* RESPONSIVE */
+.successButtons{
+display:flex;
+gap:10px;
+flex-direction:column;
+}
+
+.copyBtn{
+width:100%;
+background:#171717;
+color:#eee;
+border:1px solid #3b3b3b;
+padding:13px;
+cursor:pointer;
+}
 
 @media(max-width:800px){
 .navlinks{display:none}
@@ -646,7 +691,9 @@ CART (<span id="cartCount">0</span>)
 
 <p>Luxury Itra. Timeless Essence.</p>
 
-<a href="#collection" class="goldBtn">DISCOVER COLLECTION</a>
+<a href="#collection" class="goldBtn">
+DISCOVER COLLECTION
+</a>
 
 </div>
 </section>
@@ -709,7 +756,11 @@ different moods together under one luxury house.
 <div class="orderBox">
 <h2>Ready to Find Your Essence?</h2>
 <p>Select your fragrance, add it to your cart and complete your order.</p>
-<button class="goldBtn" onclick="openCart()">VIEW CART & ORDER</button>
+
+<button class="goldBtn" onclick="openCart()">
+VIEW CART & ORDER
+</button>
+
 </div>
 
 </section>
@@ -719,6 +770,8 @@ different moods together under one luxury house.
 © 2026 Maison Vishayu. Luxury Itra & Parfums.
 </footer>
 
+
+<!-- CART -->
 
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
 
@@ -743,9 +796,10 @@ PROCEED TO CHECKOUT
 </button>
 
 </div>
-
 </div>
 
+
+<!-- CHECKOUT -->
 
 <div class="checkoutModal" id="checkoutModal">
 
@@ -753,14 +807,16 @@ PROCEED TO CHECKOUT
 
 <button class="close"
 onclick="closeCheckout()"
-style="position:absolute;right:18px;top:12px">×</button>
+style="position:absolute;right:18px;top:12px">
+×
+</button>
 
 <div id="checkoutForm">
 
 <h2>Complete Your Order</h2>
 
 <div class="checkoutSub">
-Enter your delivery details and continue with UPI payment.
+Enter your delivery details before payment.
 </div>
 
 <div class="formGrid">
@@ -802,7 +858,7 @@ vishuagnihotri@ybl
 </div>
 
 <div class="paymentNote">
-UPI payment will be initiated with your order amount.
+Order amount will be sent to your UPI app.
 </div>
 
 </div>
@@ -823,19 +879,47 @@ SEND ORDER DETAILS ON WHATSAPP
 </div>
 
 
+<!-- SUCCESS -->
+
 <div class="success" id="successBox">
 
 <div class="successIcon">✓</div>
 
-<h2>Order Details Ready</h2>
+<h2>Order Created</h2>
+
+<div class="orderIdBox">
+
+<div class="orderIdLabel">
+YOUR ORDER ID
+</div>
+
+<div class="orderId" id="finalOrderId">
+MV-000000
+</div>
+
+</div>
+
+<div class="status">
+PAYMENT INITIATED
+</div>
 
 <p>
-Payment ke baad WhatsApp par payment confirmation
-ya screenshot bhej dena.
+Your order details are ready. Complete the UPI payment,
+then send the payment confirmation on WhatsApp.
 </p>
 
+<div class="successButtons">
+
 <button class="goldBtn" onclick="sendWhatsAppAfterPayment()">
-SEND PAYMENT CONFIRMATION
+SEND ORDER ON WHATSAPP
+</button>
+
+<button class="copyBtn" onclick="copyOrderId()">
+COPY ORDER ID
+</button>
+
+<button class="copyBtn" onclick="finishOrder()">
+CONTINUE SHOPPING
 </button>
 
 </div>
@@ -843,13 +927,13 @@ SEND PAYMENT CONFIRMATION
 </div>
 
 </div>
+</div>
 
 
 <script>
 
 const UPI_ID = "vishuagnihotri@ybl";
 
-/* YOUR WHATSAPP NUMBER */
 const WHATSAPP_NUMBER = "918889072340";
 
 
@@ -921,6 +1005,10 @@ desc:"Dark, mysterious and luxurious traditional Shamama."
 let cart =
 JSON.parse(localStorage.getItem("vishayuCart")) || [];
 
+let currentOrderId = "";
+
+
+/* PRODUCTS */
 
 function renderProducts(list=products){
 
@@ -952,7 +1040,9 @@ onerror="this.style.display='none'"
 ₹${p.price.toLocaleString("en-IN")}
 </div>
 
-<div class="stock">● IN STOCK</div>
+<div class="stock">
+● IN STOCK
+</div>
 
 <div class="cardActions">
 
@@ -973,6 +1063,8 @@ BUY NOW
 }
 
 
+/* FILTER */
+
 function filterProducts(category,button){
 
 document.querySelectorAll(".filter")
@@ -990,6 +1082,8 @@ products.filter(p=>p.category===category)
 
 }
 
+
+/* CART */
 
 function addToCart(id){
 
@@ -1012,12 +1106,13 @@ openCart();
 
 function buyNow(id){
 
+const product=products.find(p=>p.id===id);
+
 const existing=cart.find(item=>item.id===id);
 
 if(existing){
 existing.qty++;
 }else{
-const product=products.find(p=>p.id===id);
 cart.push({...product,qty:1});
 }
 
@@ -1029,10 +1124,12 @@ openCheckout();
 
 
 function saveCart(){
+
 localStorage.setItem(
 "vishayuCart",
 JSON.stringify(cart)
 );
+
 }
 
 
@@ -1066,7 +1163,9 @@ container.innerHTML=cart.map(item=>`
 
 <h4>${item.name}</h4>
 
-<p>₹${item.price.toLocaleString("en-IN")}</p>
+<p>
+₹${item.price.toLocaleString("en-IN")}
+</p>
 
 <div class="qty">
 
@@ -1139,6 +1238,8 @@ return cart.reduce(
 }
 
 
+/* CART PANEL */
+
 function openCart(){
 
 document.getElementById("cartPanel")
@@ -1160,6 +1261,8 @@ document.getElementById("overlay")
 
 }
 
+
+/* CHECKOUT */
 
 function openCheckout(){
 
@@ -1189,6 +1292,8 @@ document.getElementById("checkoutModal")
 
 }
 
+
+/* CUSTOMER */
 
 function getCustomer(){
 
@@ -1244,7 +1349,7 @@ return false;
 }
 
 if(!/^[0-9]{6}$/.test(c.pincode)){
-alert("Please enter a valid pincode.");
+alert("Please enter a valid 6 digit pincode.");
 return false;
 }
 
@@ -1253,28 +1358,84 @@ return true;
 }
 
 
-/* UPI PAYMENT */
+/* ORDER ID */
+
+function generateOrderId(){
+
+const now=new Date();
+
+const date =
+now.getFullYear().toString().slice(-2)+
+String(now.getMonth()+1).padStart(2,"0")+
+String(now.getDate()).padStart(2,"0");
+
+const random =
+Math.floor(1000+Math.random()*9000);
+
+return "MV-"+date+"-"+random;
+
+}
+
+
+/* CREATE ORDER */
+
+function createOrder(){
+
+if(!validateCustomer())return false;
+
+currentOrderId=generateOrderId();
+
+document.getElementById("finalOrderId")
+.textContent=currentOrderId;
+
+return true;
+
+}
+
+
+/* UPI */
 
 function payNow(){
 
-if(!validateCustomer())return;
+if(!createOrder())return;
 
 const amount=getTotal();
 
-const upiURL =
+const upiURL=
 "upi://pay"+
 "?pa="+encodeURIComponent(UPI_ID)+
 "&pn="+encodeURIComponent("Maison Vishayu")+
 "&am="+encodeURIComponent(amount.toFixed(2))+
 "&cu=INR"+
-"&tn="+encodeURIComponent("Maison Vishayu Order");
+"&tn="+encodeURIComponent(
+"Maison Vishayu "+currentOrderId
+);
 
 window.location.href=upiURL;
+
+
+/*
+After the UPI app opens, the customer can return
+to the website and use the WhatsApp confirmation button.
+*/
+
+showSuccess();
 
 }
 
 
-/* WHATSAPP ORDER MESSAGE */
+function showSuccess(){
+
+document.getElementById("checkoutForm")
+.style.display="none";
+
+document.getElementById("successBox")
+.classList.add("show");
+
+}
+
+
+/* WHATSAPP MESSAGE */
 
 function createOrderMessage(){
 
@@ -1284,7 +1445,7 @@ let items="";
 
 cart.forEach(item=>{
 
-items +=
+items+=
 "• "+item.name+
 " x "+item.qty+
 " = ₹"+
@@ -1294,7 +1455,11 @@ items +=
 });
 
 
-return `*MAISON VISHAYU - NEW ORDER*
+return `*MAISON VISHAYU*
+
+*NEW ORDER*
+
+*Order ID:* ${currentOrderId || "To be generated"}
 
 *Customer:* ${c.name}
 *Mobile:* ${c.phone}
@@ -1308,20 +1473,23 @@ ${items}
 
 *TOTAL: ₹${getTotal().toLocaleString("en-IN")}*
 
-*UPI ID:* ${UPI_ID}
+*UPI:* ${UPI_ID}
 
 Please confirm my order.`;
 
+
 }
 
+
+/* WHATSAPP BEFORE PAYMENT */
 
 function sendWhatsAppBeforePayment(){
 
-if(!validateCustomer())return;
+if(!createOrder())return;
 
 const message=createOrderMessage();
 
-const url =
+const url=
 "https://wa.me/"+
 WHATSAPP_NUMBER+
 "?text="+
@@ -1332,22 +1500,76 @@ window.open(url,"_blank");
 }
 
 
+/* WHATSAPP AFTER PAYMENT */
+
 function sendWhatsAppAfterPayment(){
 
-if(!validateCustomer())return;
+if(!currentOrderId){
 
-const message =
+if(!createOrder())return;
+
+}
+
+const message=
 createOrderMessage()+
-"\n\n*PAYMENT COMPLETED*"+
-"\nPayment confirmation/screenshot attached.";
+"\n\n*PAYMENT STATUS:* PAYMENT COMPLETED / CONFIRMATION ATTACHED";
 
-const url =
+const url=
 "https://wa.me/"+
 WHATSAPP_NUMBER+
 "?text="+
 encodeURIComponent(message);
 
 window.open(url,"_blank");
+
+}
+
+
+/* COPY ORDER ID */
+
+function copyOrderId(){
+
+if(!currentOrderId)return;
+
+navigator.clipboard.writeText(currentOrderId)
+.then(()=>{
+alert("Order ID copied: "+currentOrderId);
+})
+.catch(()=>{
+alert("Your Order ID: "+currentOrderId);
+});
+
+}
+
+
+/* FINISH */
+
+function finishOrder(){
+
+cart=[];
+
+saveCart();
+updateCart();
+
+document.getElementById("checkoutModal")
+.classList.remove("show");
+
+document.getElementById("checkoutForm")
+.style.display="block";
+
+document.getElementById("successBox")
+.classList.remove("show");
+
+currentOrderId="";
+
+document.getElementById("customerName").value="";
+document.getElementById("customerPhone").value="";
+document.getElementById("customerAddress").value="";
+document.getElementById("customerCity").value="";
+document.getElementById("customerPincode").value="";
+
+document.getElementById("collection")
+.scrollIntoView();
 
 }
 
