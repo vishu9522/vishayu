@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Maison Vishayu | Luxury Itra & Parfums</title>
 
@@ -12,464 +12,476 @@
 html{scroll-behavior:smooth}
 
 body{
-  background:#f7f3eb;
-  color:#252018;
-  font-family:Georgia,"Times New Roman",serif;
-  overflow-x:hidden;
+background:#f7f3eb;
+color:#252018;
+font-family:Georgia,"Times New Roman",serif;
+overflow-x:hidden
 }
 
-button,input,select,textarea{font-family:inherit}
+button,input,textarea{font-family:inherit}
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(250,247,240,.96);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid #dfd2b9;
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(250,247,240,.94);
+backdrop-filter:blur(18px);
+border-bottom:1px solid #dfd2b9
 }
 
 .nav{
-  max-width:1400px;
-  margin:auto;
-  min-height:78px;
-  padding:12px 5%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+max-width:1400px;
+margin:auto;
+min-height:78px;
+padding:12px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  color:#3c2d17;
-  text-decoration:none;
+display:flex;
+align-items:center;
+gap:12px;
+color:#3c2d17;
+text-decoration:none
 }
 
 .logo-mark{
-  width:43px;
-  height:43px;
-  border:1px solid #b99552;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-  letter-spacing:1px;
+width:43px;
+height:43px;
+border:1px solid #b99552;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+letter-spacing:1px
 }
 
 .logo-text{
-  font-size:18px;
-  letter-spacing:3px;
+font-size:18px;
+letter-spacing:3px
 }
 
 .logo-text small{
-  display:block;
-  font-size:8px;
-  letter-spacing:3px;
-  color:#9b7940;
-  margin-top:4px;
+display:block;
+font-size:8px;
+letter-spacing:3px;
+color:#9b7940;
+margin-top:4px
 }
 
 .nav-links{
-  display:flex;
-  gap:28px;
+display:flex;
+gap:28px
 }
 
 .nav-links a{
-  text-decoration:none;
-  color:#51432d;
-  font-size:11px;
-  letter-spacing:2px;
-  transition:.25s;
+text-decoration:none;
+color:#51432d;
+font-size:11px;
+letter-spacing:2px;
+transition:.25s
 }
 
 .nav-links a:hover{color:#aa813d}
 
 .nav-actions{
-  display:flex;
-  align-items:center;
-  gap:10px;
+display:flex;
+align-items:center;
+gap:10px
 }
 
 .icon-btn{
-  min-width:42px;
-  height:42px;
-  border:1px solid #dac8a6;
-  background:#fffdf8;
-  color:#4b3b21;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  font-size:19px;
+min-width:44px;
+height:44px;
+border:1px solid #dac8a6;
+background:#fffdf8;
+color:#4b3b21;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+font-size:18px;
+transition:.25s
+}
+
+.icon-btn:hover{
+background:#a9854b;
+color:#fff;
+border-color:#a9854b
 }
 
 .count{
-  position:absolute;
-  top:-6px;
-  right:-6px;
-  width:19px;
-  height:19px;
-  border-radius:50%;
-  background:#9e783c;
-  color:#fff;
-  font-size:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+position:absolute;
+top:-6px;
+right:-6px;
+width:19px;
+height:19px;
+border-radius:50%;
+background:#9e783c;
+color:#fff;
+font-size:10px;
+display:flex;
+align-items:center;
+justify-content:center
 }
 
 /* SEARCH */
 
 .search-wrap{
-  max-width:1200px;
-  margin:25px auto 0;
-  padding:0 5%;
+max-width:1200px;
+margin:25px auto 0;
+padding:0 5%
 }
 
 .search{
-  width:100%;
-  height:50px;
-  border:1px solid #dfd1b5;
-  background:#fffdf8;
-  outline:none;
-  padding:0 20px;
-  font-size:14px;
-  color:#332a1d;
-  box-shadow:0 8px 30px rgba(70,50,20,.05);
+width:100%;
+height:50px;
+border:1px solid #dfd1b5;
+background:#fffdf8;
+outline:none;
+padding:0 20px;
+font-size:14px;
+color:#332a1d;
+box-shadow:0 8px 30px rgba(70,50,20,.05);
+transition:.3s
 }
 
-.search:focus{border-color:#b18a4c}
+.search:focus{
+border-color:#b18a4c;
+box-shadow:0 10px 30px rgba(70,50,20,.09)
+}
 
 /* HERO */
 
 .hero{
-  max-width:1400px;
-  min-height:690px;
-  margin:auto;
-  padding:60px 7%;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:40px;
+max-width:1400px;
+min-height:690px;
+margin:auto;
+padding:60px 7%;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:40px
 }
 
 .hero-copy .eyebrow{
-  color:#a27a3c;
-  font-size:11px;
-  letter-spacing:5px;
-  margin-bottom:22px;
+color:#a27a3c;
+font-size:11px;
+letter-spacing:5px;
+margin-bottom:22px
 }
 
 .hero-copy h1{
-  font-size:clamp(42px,6vw,82px);
-  line-height:1;
-  font-weight:normal;
-  color:#302617;
+font-size:clamp(42px,6vw,82px);
+line-height:1;
+font-weight:normal;
+color:#302617
 }
 
 .hero-copy h1 span{color:#a27b3d}
 
 .hero-copy p{
-  max-width:550px;
-  margin:25px 0;
-  line-height:1.9;
-  color:#766a57;
-  font-size:15px;
+max-width:550px;
+margin:25px 0;
+line-height:1.9;
+color:#766a57;
+font-size:15px
 }
 
 .hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+display:flex;
+gap:12px;
+flex-wrap:wrap
 }
 
 .btn{
-  border:1px solid #a9854b;
-  background:#a9854b;
-  color:#fff;
-  padding:15px 26px;
-  cursor:pointer;
-  letter-spacing:2px;
-  font-size:11px;
-  text-decoration:none;
-  display:inline-block;
-  transition:.3s;
+border:1px solid #a9854b;
+background:#a9854b;
+color:#fff;
+padding:15px 26px;
+cursor:pointer;
+letter-spacing:2px;
+font-size:11px;
+text-decoration:none;
+display:inline-block;
+transition:.3s
 }
 
 .btn:hover{
-  background:#81622f;
-  border-color:#81622f;
+background:#81622f;
+border-color:#81622f;
+transform:translateY(-2px)
 }
 
 .btn.light{
-  background:transparent;
-  color:#80602e;
+background:transparent;
+color:#80602e
 }
 
 .btn.light:hover{
-  background:#a9854b;
-  color:#fff;
+background:#a9854b;
+color:#fff
 }
 
 .hero-visual{
-  min-height:540px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
+min-height:540px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative
 }
 
 .hero-circle{
-  width:min(90%,500px);
-  aspect-ratio:1;
-  border-radius:50%;
-  background:
-    radial-gradient(circle,#fffdf8 0%,#eee3cd 58%,#ddc89d 100%);
-  box-shadow:
-    0 35px 80px rgba(92,65,24,.16),
-    inset 0 0 60px rgba(255,255,255,.8);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+width:min(90%,500px);
+aspect-ratio:1;
+border-radius:50%;
+background:
+radial-gradient(circle,#fffdf8 0%,#eee3cd 58%,#ddc89d 100%);
+box-shadow:
+0 35px 80px rgba(92,65,24,.16),
+inset 0 0 60px rgba(255,255,255,.8);
+display:flex;
+align-items:center;
+justify-content:center;
+animation:floatBottle 5s ease-in-out infinite
 }
 
 .hero-circle img{
-  width:72%;
-  max-height:470px;
-  object-fit:contain;
-  filter:drop-shadow(0 25px 25px rgba(50,35,15,.25));
+width:72%;
+max-height:470px;
+object-fit:contain;
+filter:drop-shadow(0 25px 25px rgba(50,35,15,.25))
+}
+
+@keyframes floatBottle{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
 }
 
 /* BANNER */
 
 .banner{
-  max-width:1400px;
-  margin:10px auto 0;
-  padding:0 6%;
+max-width:1400px;
+margin:10px auto 0;
+padding:0 6%
 }
 
 .banner-box{
-  min-height:250px;
-  position:relative;
-  overflow:hidden;
-  border:1px solid #d8c49b;
-  background:#e9dfce;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+min-height:250px;
+position:relative;
+overflow:hidden;
+border:1px solid #d8c49b;
+background:#e9dfce
 }
 
 .banner-box img{
-  width:100%;
-  height:100%;
-  min-height:250px;
-  object-fit:cover;
-  display:block;
-  position:relative;
-  z-index:2;
+width:100%;
+height:100%;
+min-height:250px;
+object-fit:cover;
+display:block;
+position:relative;
+z-index:2
 }
 
 .banner-fallback{
-  position:absolute;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#eee4d2,#d8c39c);
-  color:#4d3b21;
-  text-align:center;
-  z-index:1;
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#eee4d2,#d8c39c);
+color:#4d3b21;
+text-align:center
 }
 
 .banner-fallback small{
-  letter-spacing:5px;
-  color:#96713b;
+letter-spacing:5px;
+color:#96713b
 }
 
 .banner-fallback h2{
-  font-size:42px;
-  font-weight:normal;
-  margin:10px;
+font-size:42px;
+font-weight:normal;
+margin:10px
 }
 
 /* SECTIONS */
 
 .section{
-  max-width:1400px;
-  margin:auto;
-  padding:90px 6%;
+max-width:1400px;
+margin:auto;
+padding:90px 6%
 }
 
 .section-head{
-  text-align:center;
-  margin-bottom:45px;
+text-align:center;
+margin-bottom:45px
 }
 
 .kicker{
-  font-size:10px;
-  letter-spacing:4px;
-  color:#a17b3f;
-  margin-bottom:12px;
+font-size:10px;
+letter-spacing:4px;
+color:#a17b3f;
+margin-bottom:12px
 }
 
 .section-head h2{
-  font-size:42px;
-  font-weight:normal;
-  color:#302718;
+font-size:42px;
+font-weight:normal;
+color:#302718
 }
 
 .section-head p{
-  color:#81745f;
-  margin-top:12px;
+color:#81745f;
+margin-top:12px
 }
 
 /* FILTERS */
 
 .filters{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-bottom:40px;
+display:flex;
+justify-content:center;
+gap:8px;
+flex-wrap:wrap;
+margin-bottom:40px
 }
 
 .filter{
-  padding:11px 18px;
-  border:1px solid #ded0b5;
-  background:#fffdf8;
-  color:#655438;
-  cursor:pointer;
-  font-size:10px;
-  letter-spacing:2px;
+padding:11px 18px;
+border:1px solid #ded0b5;
+background:#fffdf8;
+color:#655438;
+cursor:pointer;
+font-size:10px;
+letter-spacing:2px;
+transition:.25s
 }
 
 .filter.active,
 .filter:hover{
-  background:#a9854b;
-  border-color:#a9854b;
-  color:white;
+background:#a9854b;
+border-color:#a9854b;
+color:white
 }
 
 /* PRODUCTS */
 
 .products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px
 }
 
 .product{
-  background:#fffdf8;
-  border:1px solid #e4d8c1;
-  position:relative;
-  overflow:hidden;
-  transition:.4s;
-  box-shadow:0 12px 35px rgba(70,48,15,.06);
+background:#fffdf8;
+border:1px solid #e4d8c1;
+position:relative;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 12px 35px rgba(70,48,15,.06)
 }
 
 .product:hover{
-  transform:translateY(-7px);
-  box-shadow:0 25px 55px rgba(70,48,15,.13);
+transform:translateY(-7px);
+box-shadow:0 25px 55px rgba(70,48,15,.13)
 }
 
 .product.hidden{display:none!important}
 
 .product-image{
-  height:370px;
-  background:linear-gradient(145deg,#f5efe4,#e9dcc4);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
+height:370px;
+background:linear-gradient(145deg,#f5efe4,#e9dcc4);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden
 }
 
 .product-image img{
-  width:75%;
-  height:88%;
-  object-fit:contain;
-  filter:drop-shadow(0 20px 20px rgba(50,35,15,.2));
-  transition:.5s;
+width:75%;
+height:88%;
+object-fit:contain;
+filter:drop-shadow(0 20px 20px rgba(50,35,15,.2));
+transition:.5s
 }
 
-.product:hover .product-image img{transform:scale(1.04)}
+.product:hover .product-image img{
+transform:scale(1.04)
+}
 
 .badge{
-  position:absolute;
-  left:15px;
-  top:15px;
-  background:#9e783c;
-  color:#fff;
-  padding:7px 10px;
-  font-size:8px;
-  letter-spacing:1px;
-  z-index:3;
+position:absolute;
+left:15px;
+top:15px;
+background:#9e783c;
+color:#fff;
+padding:7px 10px;
+font-size:8px;
+letter-spacing:1px;
+z-index:3
 }
 
 .product-info{padding:25px}
 
 .product-info .category{
-  font-size:9px;
-  color:#a07a3d;
-  letter-spacing:3px;
+font-size:9px;
+color:#a07a3d;
+letter-spacing:3px
 }
 
 .product-info h3{
-  font-size:24px;
-  font-weight:normal;
-  margin:9px 0;
+font-size:24px;
+font-weight:normal;
+margin:9px 0
 }
 
 .product-info p{
-  color:#81745f;
-  font-size:13px;
-  line-height:1.6;
-  min-height:42px;
+color:#81745f;
+font-size:13px;
+line-height:1.6;
+min-height:42px
 }
 
 .price{
-  margin:18px 0;
-  font-size:20px;
-  color:#8b6832;
+margin:18px 0;
+font-size:20px;
+color:#8b6832
 }
 
 .product-actions{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px
 }
 
 .action{
-  padding:12px 8px;
-  border:1px solid #cdb991;
-  background:transparent;
-  color:#775b2f;
-  cursor:pointer;
-  font-size:10px;
-  letter-spacing:1px;
-  transition:.25s;
+padding:12px 8px;
+border:1px solid #cdb991;
+background:transparent;
+color:#775b2f;
+cursor:pointer;
+font-size:10px;
+letter-spacing:1px;
+transition:.25s
 }
 
 .action:hover{
-  background:#f2eadc;
+background:#f2eadc
 }
 
 .action.primary{
-  background:#a9854b;
-  border-color:#a9854b;
-  color:white;
-}
-
-.action.favourite.active{
-  background:#8f3030;
-  border-color:#8f3030;
-  color:white;
+background:#a9854b;
+border-color:#a9854b;
+color:white;
+grid-column:1/-1
 }
 
 /* HOUSE */
@@ -477,285 +489,299 @@ header{
 .house{background:#eee6d8}
 
 .house-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px
 }
 
 .house-card{
-  background:#fffdf8;
-  padding:55px;
-  border:1px solid #dfd0b3;
+background:#fffdf8;
+padding:55px;
+border:1px solid #dfd0b3;
+transition:.3s
+}
+
+.house-card:hover{
+transform:translateY(-4px)
 }
 
 .house-card h3{
-  font-size:30px;
-  font-weight:normal;
-  margin-bottom:20px;
+font-size:30px;
+font-weight:normal;
+margin-bottom:20px
 }
 
 .house-card p{
-  line-height:2;
-  color:#756953;
-  font-size:14px;
+line-height:2;
+color:#756953;
+font-size:14px
 }
 
 /* REVIEWS */
 
 .reviews{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
 
 .review{
-  background:#fffdf8;
-  border:1px solid #e0d4bd;
-  padding:32px;
+background:#fffdf8;
+border:1px solid #e0d4bd;
+padding:32px;
+transition:.3s
+}
+
+.review:hover{
+transform:translateY(-5px)
 }
 
 .stars{
-  color:#b38b4c;
-  letter-spacing:4px;
-  margin-bottom:16px;
+color:#b38b4c;
+letter-spacing:4px;
+margin-bottom:16px
 }
 
 .review p{
-  line-height:1.8;
-  color:#716550;
-  font-size:14px;
+line-height:1.8;
+color:#716550;
+font-size:14px
 }
 
 .review strong{
-  display:block;
-  margin-top:20px;
-  color:#382d1c;
+display:block;
+margin-top:20px;
+color:#382d1c
 }
 
 /* GIFT */
 
 .gift-section{
-  text-align:center;
-  background:linear-gradient(135deg,#f1e7d3,#fffdf8);
+text-align:center;
+background:linear-gradient(135deg,#f1e7d3,#fffdf8)
 }
 
 .gift-box{
-  width:115px;
-  height:100px;
-  margin:0 auto 25px;
-  position:relative;
-  cursor:pointer;
-  transition:.4s;
+width:115px;
+height:100px;
+margin:0 auto 25px;
+position:relative;
+cursor:pointer;
+transition:.4s
 }
 
 .gift-box:hover{
-  transform:translateY(-8px) rotate(-2deg);
+transform:translateY(-8px) rotate(-2deg)
 }
 
 .gift-body{
-  position:absolute;
-  left:10px;
-  right:10px;
-  bottom:0;
-  height:72px;
-  background:linear-gradient(145deg,#b18a4d,#7d5b2d);
-  border:2px solid #e3c77e;
+position:absolute;
+left:10px;
+right:10px;
+bottom:0;
+height:72px;
+background:linear-gradient(145deg,#b18a4d,#7d5b2d);
+border:2px solid #e3c77e
 }
 
 .gift-lid{
-  position:absolute;
-  top:12px;
-  left:0;
-  right:0;
-  height:25px;
-  background:#a77d3d;
-  border:2px solid #e3c77e;
+position:absolute;
+top:12px;
+left:0;
+right:0;
+height:25px;
+background:#a77d3d;
+border:2px solid #e3c77e
 }
 
 .gift-ribbon{
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:50%;
-  width:17px;
-  transform:translateX(-50%);
-  background:#e4c97f;
+position:absolute;
+top:0;
+bottom:0;
+left:50%;
+width:17px;
+transform:translateX(-50%);
+background:#e4c97f
 }
 
 .gift-section h2{
-  font-size:35px;
-  font-weight:normal;
+font-size:35px;
+font-weight:normal
 }
 
 .gift-section p{
-  margin:12px 0 22px;
-  color:#786c58;
+margin:12px 0 22px;
+color:#786c58
 }
 
 /* FOOTER */
 
 footer{
-  background:#e8dfd0;
-  padding:60px 6% 30px;
-  color:#50442e;
+background:#e8dfd0;
+padding:60px 6% 30px;
+color:#50442e
 }
 
 .footer-grid{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:40px;
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px
 }
 
 footer h3{
-  font-weight:normal;
-  letter-spacing:2px;
-  margin-bottom:18px;
+font-weight:normal;
+letter-spacing:2px;
+margin-bottom:18px
 }
 
 footer p,
 footer a{
-  color:#746750;
-  line-height:1.9;
-  font-size:13px;
-  text-decoration:none;
+color:#746750;
+line-height:1.9;
+font-size:13px;
+text-decoration:none
 }
+
+footer a:hover{color:#a17b3f}
 
 .copyright{
-  max-width:1200px;
-  margin:40px auto 0;
-  padding-top:20px;
-  border-top:1px solid #d0c1a5;
-  text-align:center;
-  font-size:11px;
+max-width:1200px;
+margin:40px auto 0;
+padding-top:20px;
+border-top:1px solid #d0c1a5;
+text-align:center;
+font-size:11px
 }
 
-/* PANELS */
+/* BAG PANEL */
 
 .panel{
-  position:fixed;
-  right:-430px;
-  top:0;
-  width:min(430px,100%);
-  height:100vh;
-  background:#fffdf8;
-  z-index:3000;
-  box-shadow:-15px 0 50px rgba(30,20,5,.18);
-  transition:.45s;
-  display:flex;
-  flex-direction:column;
+position:fixed;
+right:-430px;
+top:0;
+width:min(430px,100%);
+height:100vh;
+background:#fffdf8;
+z-index:3000;
+box-shadow:-15px 0 50px rgba(30,20,5,.18);
+transition:.45s;
+display:flex;
+flex-direction:column
 }
 
 .panel.open{right:0}
 
 .panel-head{
-  padding:25px;
-  border-bottom:1px solid #e1d5bf;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+padding:25px;
+border-bottom:1px solid #e1d5bf;
+display:flex;
+align-items:center;
+justify-content:space-between
 }
 
 .panel-head h2{font-weight:normal}
 
 .close{
-  border:0;
-  background:none;
-  font-size:25px;
-  cursor:pointer;
-  color:#67553a;
+border:0;
+background:none;
+font-size:25px;
+cursor:pointer;
+color:#67553a
 }
 
 .bag-items{
-  flex:1;
-  overflow:auto;
-  padding:20px;
+flex:1;
+overflow:auto;
+padding:20px
 }
 
 .bag-item{
-  display:flex;
-  gap:12px;
-  border-bottom:1px solid #eee5d5;
-  padding:15px 0;
+display:flex;
+gap:12px;
+border-bottom:1px solid #eee5d5;
+padding:15px 0;
+align-items:center
 }
 
 .bag-item img{
-  width:65px;
-  height:75px;
-  object-fit:contain;
-  background:#f3ebde;
+width:65px;
+height:75px;
+object-fit:contain;
+background:#f3ebde
 }
 
 .bag-item h4{
-  font-size:14px;
-  margin-bottom:8px;
+font-size:14px;
+margin-bottom:8px
 }
 
 .bag-item p{color:#8d6b38}
 
 .remove{
-  margin-left:auto;
-  border:0;
-  background:none;
-  color:#a77a3c;
-  cursor:pointer;
+margin-left:auto;
+border:0;
+background:none;
+color:#a77a3c;
+cursor:pointer;
+font-size:20px
 }
 
 .bag-bottom{
-  padding:22px;
-  border-top:1px solid #e1d5bf;
+padding:22px;
+border-top:1px solid #e1d5bf
 }
 
 .total{
-  display:flex;
-  justify-content:space-between;
-  font-size:19px;
-  margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+font-size:19px;
+margin-bottom:15px
 }
 
 /* CHECKOUT */
 
 .checkout-overlay{
-  position:fixed;
-  inset:0;
-  z-index:6000;
-  background:rgba(38,28,14,.68);
-  backdrop-filter:blur(8px);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:18px;
+position:fixed;
+inset:0;
+z-index:6000;
+background:rgba(38,28,14,.68);
+backdrop-filter:blur(8px);
+display:none;
+align-items:center;
+justify-content:center;
+padding:18px
 }
 
 .checkout-overlay.show{display:flex}
 
 .checkout-box{
-  width:min(650px,100%);
-  max-height:94vh;
-  overflow:auto;
-  background:#fffdf8;
-  border:1px solid #d5bd91;
-  padding:32px;
-  position:relative;
+width:min(650px,100%);
+max-height:94vh;
+overflow:auto;
+background:#fffdf8;
+border:1px solid #d5bd91;
+padding:32px;
+position:relative
 }
 
 .checkout-box h2{
-  font-weight:normal;
-  font-size:32px;
-  margin-bottom:8px;
+font-weight:normal;
+font-size:32px;
+margin-bottom:8px
 }
 
 .checkout-sub{
-  color:#81745f;
-  font-size:13px;
-  margin-bottom:25px;
+color:#81745f;
+font-size:13px;
+margin-bottom:25px
 }
 
 .form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px
 }
 
 .form-group{margin-bottom:14px}
@@ -763,76 +789,75 @@ footer a{
 .form-group.full{grid-column:1/-1}
 
 .form-group label{
-  display:block;
-  font-size:10px;
-  letter-spacing:1.5px;
-  color:#725a34;
-  margin-bottom:7px;
+display:block;
+font-size:10px;
+letter-spacing:1.5px;
+color:#725a34;
+margin-bottom:7px
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select{
-  width:100%;
-  border:1px solid #ddceb1;
-  background:#fff;
-  padding:13px;
-  outline:none;
-  color:#332a1d;
+.form-group textarea{
+width:100%;
+border:1px solid #ddceb1;
+background:#fff;
+padding:13px;
+outline:none;
+color:#332a1d
 }
 
 .form-group textarea{
-  min-height:90px;
-  resize:vertical;
+min-height:90px;
+resize:vertical
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus{
-  border-color:#aa8141;
+.form-group textarea:focus{
+border-color:#aa8141
 }
 
 .payment-box{
-  margin:15px 0 20px;
-  padding:18px;
-  border:1px solid #dfd0b4;
-  background:#f8f1e5;
+margin:15px 0 20px;
+padding:18px;
+border:1px solid #dfd0b4;
+background:#f8f1e5
 }
 
 .payment-title{
-  font-size:11px;
-  letter-spacing:2px;
-  color:#715630;
-  margin-bottom:13px;
+font-size:11px;
+letter-spacing:2px;
+color:#715630;
+margin-bottom:13px
 }
 
 .payment-options{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+display:flex;
+gap:10px;
+flex-wrap:wrap
 }
 
 .payment-option{
-  border:1px solid #d4c09b;
-  background:#fffdf8;
-  padding:12px 15px;
-  cursor:pointer;
-  font-size:11px;
-  color:#604a27;
+border:1px solid #d4c09b;
+background:#fffdf8;
+padding:12px 15px;
+cursor:pointer;
+font-size:11px;
+color:#604a27
 }
 
 .payment-option.active{
-  background:#a9854b;
-  border-color:#a9854b;
-  color:white;
+background:#a9854b;
+border-color:#a9854b;
+color:white
 }
 
 .upi-box{
-  margin-top:14px;
-  padding:14px;
-  background:#fffdf8;
-  border:1px dashed #b99455;
-  display:none;
+margin-top:14px;
+padding:14px;
+background:#fffdf8;
+border:1px dashed #b99455;
+display:none;
+line-height:1.7
 }
 
 .upi-box.show{display:block}
@@ -840,296 +865,289 @@ footer a{
 .upi-box strong{color:#8b6832}
 
 .order-summary{
-  padding:16px;
-  background:#f3ebde;
-  margin:15px 0;
+padding:16px;
+background:#f3ebde;
+margin:15px 0
 }
 
 .summary-row{
-  display:flex;
-  justify-content:space-between;
-  padding:6px 0;
-  font-size:13px;
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+font-size:13px
 }
 
 .summary-total{
-  border-top:1px solid #d8c9ae;
-  margin-top:8px;
-  padding-top:12px;
-  font-size:18px;
-  color:#8b6832;
+border-top:1px solid #d8c9ae;
+margin-top:8px;
+padding-top:12px;
+font-size:18px;
+color:#8b6832
 }
 
 .email-note{
-  font-size:11px;
-  color:#87785f;
-  margin-top:5px;
+font-size:11px;
+color:#87785f;
+margin-top:5px
 }
 
 /* MODALS */
 
 .modal,
 .offer{
-  position:fixed;
-  inset:0;
-  z-index:4000;
-  background:rgba(38,28,14,.65);
-  backdrop-filter:blur(8px);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+position:fixed;
+inset:0;
+z-index:4000;
+background:rgba(38,28,14,.65);
+backdrop-filter:blur(8px);
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px
 }
 
 .modal.show,
 .offer.show{display:flex}
 
 .modal-box{
-  width:min(850px,100%);
-  max-height:90vh;
-  overflow:auto;
-  background:#fffdf8;
-  border:1px solid #d5bd91;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  position:relative;
+width:min(850px,100%);
+max-height:90vh;
+overflow:auto;
+background:#fffdf8;
+border:1px solid #d5bd91;
+display:grid;
+grid-template-columns:1fr 1fr;
+position:relative
 }
 
 .modal-img{
-  min-height:500px;
-  background:#f1e8da;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+min-height:500px;
+background:#f1e8da;
+display:flex;
+align-items:center;
+justify-content:center
 }
 
 .modal-img img{
-  width:80%;
-  height:90%;
-  object-fit:contain;
+width:80%;
+height:90%;
+object-fit:contain
 }
 
 .modal-info{padding:50px}
 
 .modal-info .category{
-  color:#a17b3f;
-  font-size:10px;
-  letter-spacing:3px;
+color:#a17b3f;
+font-size:10px;
+letter-spacing:3px
 }
 
 .modal-info h2{
-  font-size:38px;
-  font-weight:normal;
-  margin:12px 0;
+font-size:38px;
+font-weight:normal;
+margin:12px 0
 }
 
 .modal-price{
-  font-size:22px;
-  color:#9b7338;
-  margin:20px 0;
+font-size:22px;
+color:#9b7338;
+margin:20px 0
 }
 
 .modal-info p{
-  line-height:1.9;
-  color:#766a57;
-  font-size:14px;
+line-height:1.9;
+color:#766a57;
+font-size:14px
 }
 
 .modal-close{
-  position:absolute;
-  right:15px;
-  top:10px;
-  z-index:3;
-  border:0;
-  background:none;
-  font-size:28px;
-  cursor:pointer;
+position:absolute;
+right:15px;
+top:10px;
+z-index:3;
+border:0;
+background:none;
+font-size:28px;
+cursor:pointer
 }
 
 .offer-card{
-  width:min(450px,100%);
-  background:#fffdf8;
-  border:1px solid #c9a55f;
-  padding:45px 30px;
-  text-align:center;
+width:min(450px,100%);
+background:#fffdf8;
+border:1px solid #c9a55f;
+padding:45px 30px;
+text-align:center
 }
 
 .offer-card h2{
-  font-size:38px;
-  font-weight:normal;
-  color:#8d6935;
+font-size:38px;
+font-weight:normal;
+color:#8d6935
 }
 
 .offer-card p{
-  margin:15px 0 25px;
-  color:#716550;
-  line-height:1.7;
+margin:15px 0 25px;
+color:#716550;
+line-height:1.7
 }
 
 .offer-code{
-  background:#f0e5d2;
-  border:1px dashed #b28a4b;
-  padding:15px;
-  letter-spacing:3px;
-  margin-bottom:20px;
-  font-weight:bold;
-}
-
-/* FAVOURITES PANEL */
-
-.favourite-item{
-  display:flex;
-  gap:12px;
-  padding:15px 0;
-  border-bottom:1px solid #eee5d5;
-  align-items:center;
-}
-
-.favourite-item img{
-  width:65px;
-  height:75px;
-  object-fit:contain;
-  background:#f3ebde;
-}
-
-.favourite-item h4{
-  font-size:14px;
-  margin-bottom:6px;
-}
-
-.favourite-item p{
-  color:#8d6b38;
-  font-size:13px;
-}
-
-.fav-empty{
-  text-align:center;
-  color:#87785f;
-  margin-top:50px;
-  line-height:1.8;
+background:#f0e5d2;
+border:1px dashed #b28a4b;
+padding:15px;
+letter-spacing:3px;
+margin-bottom:20px;
+font-weight:bold
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
 
-  .nav-links{display:none}
+.nav-links{display:none}
 
-  .hero{
-    grid-template-columns:1fr;
-    text-align:center;
-    padding-top:45px;
-  }
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+padding-top:45px
+}
 
-  .hero-copy p{
-    margin-left:auto;
-    margin-right:auto;
-  }
+.hero-copy p{
+margin-left:auto;
+margin-right:auto
+}
 
-  .hero-buttons{justify-content:center}
+.hero-buttons{justify-content:center}
 
-  .products{grid-template-columns:repeat(2,1fr)}
+.products{grid-template-columns:repeat(2,1fr)}
 
-  .reviews{grid-template-columns:1fr}
+.reviews{grid-template-columns:1fr}
 
-  .house-grid{grid-template-columns:1fr}
+.house-grid{grid-template-columns:1fr}
 
-  .footer-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:600px){
 
-  .nav{padding:10px 4%}
+.nav{padding:10px 4%}
 
-  .logo-text{font-size:14px}
+.logo-text{font-size:14px}
 
-  .logo-text small{font-size:7px}
+.logo-text small{font-size:7px}
 
-  .hero{
-    min-height:auto;
-    padding:50px 5%;
-  }
+.hero{
+min-height:auto;
+padding:50px 5%
+}
 
-  .hero-visual{min-height:380px}
+.hero-visual{min-height:380px}
 
-  .section{padding:65px 5%}
+.section{padding:65px 5%}
 
-  .section-head h2{font-size:32px}
+.section-head h2{font-size:32px}
 
-  .products{grid-template-columns:1fr}
+.products{grid-template-columns:1fr}
 
-  .product-image{height:400px}
+.product-image{height:400px}
 
-  .house-card{padding:30px}
+.house-card{padding:30px}
 
-  .modal-box{grid-template-columns:1fr}
+.modal-box{grid-template-columns:1fr}
 
-  .modal-img{min-height:320px}
+.modal-img{min-height:320px}
 
-  .modal-info{padding:30px}
+.modal-info{padding:30px}
 
-  .modal-info h2{font-size:30px}
+.modal-info h2{font-size:30px}
 
-  .form-grid{grid-template-columns:1fr}
+.form-grid{grid-template-columns:1fr}
 
-  .form-group.full{grid-column:auto}
+.form-group.full{grid-column:auto}
 
-  .checkout-box{padding:24px 18px}
+.checkout-box{padding:24px 18px}
+
+.banner-box,
+.banner-box img{
+min-height:190px
+}
+
+.banner-fallback h2{
+font-size:28px
+}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <nav class="nav">
 
 <a href="#home" class="logo">
+
 <div class="logo-mark">MV</div>
+
 <div class="logo-text">
 MAISON VISHAYU
 <small>LUXURY ITRA & PARFUMS</small>
 </div>
+
 </a>
 
 <div class="nav-links">
+
 <a href="#home">HOME</a>
 <a href="#collection">COLLECTION</a>
 <a href="#story">OUR STORY</a>
 <a href="#reviews">WHAT THEY SAY</a>
 <a href="#contact">CONTACT</a>
+
 </div>
 
 <div class="nav-actions">
 
-<button class="icon-btn" onclick="openFavourites()" title="My Favourites">
-♡
-<span class="count" id="favCount">0</span>
-</button>
+<button class="icon-btn"
+onclick="openBag()"
+title="My Bag">
 
-<button class="icon-btn" onclick="openBag()" title="My Bag">
 🛍
+
 <span class="count" id="bagCount">0</span>
+
 </button>
 
 </div>
+
 </nav>
 </header>
 
+
+<!-- SEARCH -->
+
 <div class="search-wrap">
+
 <input
 type="search"
 id="search"
 class="search"
 placeholder="Search your fragrance..."
 oninput="searchProducts()">
+
 </div>
+
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="hero-copy">
 
-<div class="eyebrow">THE ART OF FRAGRANCE</div>
+<div class="eyebrow">
+THE ART OF FRAGRANCE
+</div>
 
 <h1>
 Luxury Itra.<br>
@@ -1153,15 +1171,25 @@ OPEN GIFT BOX
 </button>
 
 </div>
+
 </div>
 
 <div class="hero-visual">
+
 <div class="hero-circle">
-<img src="vishayu-bottle.png" alt="Maison Vishayu">
+
+<img
+src="vishayu-bottle.png"
+alt="Maison Vishayu">
+
 </div>
+
 </div>
 
 </section>
+
+
+<!-- BANNER -->
 
 <section class="banner">
 
@@ -1170,23 +1198,33 @@ OPEN GIFT BOX
 <img
 src="vishayu-banner.png"
 alt="Maison Vishayu"
-onload="this.nextElementSibling.style.display='none';"
-onerror="this.style.display='none';">
+onload="this.nextElementSibling.style.display='none'"
+onerror="this.style.display='none'">
 
 <div class="banner-fallback">
+
 <small>MAISON VISHAYU</small>
+
 <h2>THE ART OF FRAGRANCE</h2>
+
 <p>Luxury Itra • Timeless Essence</p>
+
 </div>
 
 </div>
+
 </section>
+
+
+<!-- COLLECTION -->
 
 <section class="section" id="collection">
 
 <div class="section-head">
 
-<div class="kicker">SIGNATURE COLLECTION</div>
+<div class="kicker">
+SIGNATURE COLLECTION
+</div>
 
 <h2>Find Your Essence</h2>
 
@@ -1196,44 +1234,63 @@ Six distinctive fragrances. Six different personalities.
 
 </div>
 
+
 <div class="filters">
 
-<button class="filter active" onclick="filterProducts('all',this)">
+<button class="filter active"
+onclick="filterProducts('all',this)">
 ALL
 </button>
 
-<button class="filter" onclick="filterProducts('oud',this)">
+<button class="filter"
+onclick="filterProducts('oud',this)">
 OUD
 </button>
 
-<button class="filter" onclick="filterProducts('musk',this)">
+<button class="filter"
+onclick="filterProducts('musk',this)">
 MUSK
 </button>
 
-<button class="filter" onclick="filterProducts('rose',this)">
+<button class="filter"
+onclick="filterProducts('rose',this)">
 ROSE
 </button>
 
-<button class="filter" onclick="filterProducts('sandal',this)">
+<button class="filter"
+onclick="filterProducts('sandal',this)">
 SANDAL
 </button>
 
 </div>
 
+
 <div class="products" id="productGrid">
+
 
 <!-- ROYAL OUD -->
 
-<article class="product" data-category="oud" data-name="ROYAL OUD">
+<article class="product"
+data-category="oud"
+data-name="ROYAL OUD">
 
 <div class="product-image">
-<span class="badge">FREE DELIVERY</span>
-<img src="vishayu-oud.png" alt="Royal Oud">
+
+<span class="badge">
+FREE DELIVERY
+</span>
+
+<img
+src="vishayu-oud.png"
+alt="Royal Oud">
+
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>ROYAL OUD</h3>
 
@@ -1257,20 +1314,7 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button
-class="action favourite"
-data-fav="ROYAL OUD"
-onclick="toggleFavourite(
-'ROYAL OUD',
-'₹1,499',
-'vishayu-oud.png',
-this
-)">
-♡ FAVOURITE
-</button>
-
-<button
-class="action primary"
+<button class="action primary"
 onclick="addToBag(
 'ROYAL OUD',
 '₹1,499',
@@ -1280,22 +1324,35 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- IMPERIAL MUSK -->
 
-<article class="product" data-category="musk" data-name="IMPERIAL MUSK">
+<article class="product"
+data-category="musk"
+data-name="IMPERIAL MUSK">
 
 <div class="product-image">
-<span class="badge">FREE DELIVERY</span>
-<img src="vishayu-musk.png" alt="Imperial Musk">
+
+<span class="badge">
+FREE DELIVERY
+</span>
+
+<img
+src="vishayu-musk.png"
+alt="Imperial Musk">
+
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>IMPERIAL MUSK</h3>
 
@@ -1319,20 +1376,7 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button
-class="action favourite"
-data-fav="IMPERIAL MUSK"
-onclick="toggleFavourite(
-'IMPERIAL MUSK',
-'₹1,399',
-'vishayu-musk.png',
-this
-)">
-♡ FAVOURITE
-</button>
-
-<button
-class="action primary"
+<button class="action primary"
 onclick="addToBag(
 'IMPERIAL MUSK',
 '₹1,399',
@@ -1342,22 +1386,35 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- VELVET ROSE -->
 
-<article class="product" data-category="rose" data-name="VELVET ROSE">
+<article class="product"
+data-category="rose"
+data-name="VELVET ROSE">
 
 <div class="product-image">
-<span class="badge">FREE DELIVERY</span>
-<img src="vishayu-rose.png" alt="Velvet Rose">
+
+<span class="badge">
+FREE DELIVERY
+</span>
+
+<img
+src="vishayu-rose.png"
+alt="Velvet Rose">
+
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>VELVET ROSE</h3>
 
@@ -1381,20 +1438,7 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button
-class="action favourite"
-data-fav="VELVET ROSE"
-onclick="toggleFavourite(
-'VELVET ROSE',
-'₹1,299',
-'vishayu-rose.png',
-this
-)">
-♡ FAVOURITE
-</button>
-
-<button
-class="action primary"
+<button class="action primary"
 onclick="addToBag(
 'VELVET ROSE',
 '₹1,299',
@@ -1404,22 +1448,35 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- ROYAL SANDAL -->
 
-<article class="product" data-category="sandal" data-name="ROYAL SANDAL">
+<article class="product"
+data-category="sandal"
+data-name="ROYAL SANDAL">
 
 <div class="product-image">
-<span class="badge">FREE DELIVERY</span>
-<img src="royal-sandal.png" alt="Royal Sandal">
+
+<span class="badge">
+FREE DELIVERY
+</span>
+
+<img
+src="royal-sandal.png"
+alt="Royal Sandal">
+
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>ROYAL SANDAL</h3>
 
@@ -1443,20 +1500,7 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button
-class="action favourite"
-data-fav="ROYAL SANDAL"
-onclick="toggleFavourite(
-'ROYAL SANDAL',
-'₹1,299',
-'royal-sandal.png',
-this
-)">
-♡ FAVOURITE
-</button>
-
-<button
-class="action primary"
+<button class="action primary"
 onclick="addToBag(
 'ROYAL SANDAL',
 '₹1,299',
@@ -1466,22 +1510,35 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- MITTI ROYALE -->
 
-<article class="product" data-category="mitti" data-name="MITTI ROYALE">
+<article class="product"
+data-category="mitti"
+data-name="MITTI ROYALE">
 
 <div class="product-image">
-<span class="badge">FREE DELIVERY</span>
-<img src="mitti-royale.png" alt="Mitti Royale">
+
+<span class="badge">
+FREE DELIVERY
+</span>
+
+<img
+src="mitti-royale.png"
+alt="Mitti Royale">
+
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>MITTI ROYALE</h3>
 
@@ -1505,20 +1562,7 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button
-class="action favourite"
-data-fav="MITTI ROYALE"
-onclick="toggleFavourite(
-'MITTI ROYALE',
-'₹999',
-'mitti-royale.png',
-this
-)">
-♡ FAVOURITE
-</button>
-
-<button
-class="action primary"
+<button class="action primary"
 onclick="addToBag(
 'MITTI ROYALE',
 '₹999',
@@ -1528,22 +1572,35 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- NOIR SHAMAMA -->
 
-<article class="product" data-category="oud" data-name="NOIR SHAMAMA">
+<article class="product"
+data-category="oud"
+data-name="NOIR SHAMAMA">
 
 <div class="product-image">
-<span class="badge">FREE DELIVERY</span>
-<img src="vishayu-noir.png" alt="Noir Shamama">
+
+<span class="badge">
+FREE DELIVERY
+</span>
+
+<img
+src="vishayu-noir.png"
+alt="Noir Shamama">
+
 </div>
 
 <div class="product-info">
 
-<span class="category">ROYAL ITRA</span>
+<span class="category">
+ROYAL ITRA
+</span>
 
 <h3>NOIR SHAMAMA</h3>
 
@@ -1567,20 +1624,7 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button
-class="action favourite"
-data-fav="NOIR SHAMAMA"
-onclick="toggleFavourite(
-'NOIR SHAMAMA',
-'₹1,599',
-'vishayu-noir.png',
-this
-)">
-♡ FAVOURITE
-</button>
-
-<button
-class="action primary"
+<button class="action primary"
 onclick="addToBag(
 'NOIR SHAMAMA',
 '₹1,599',
@@ -1590,10 +1634,13 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 </div>
+
 </section>
 
 
@@ -1603,7 +1650,9 @@ ADD TO BAG
 
 <div class="section-head">
 
-<div class="kicker">THE HOUSE OF VISHAYU</div>
+<div class="kicker">
+THE HOUSE OF VISHAYU
+</div>
 
 <h2>Our Philosophy</h2>
 
@@ -1637,6 +1686,7 @@ contemporary luxury experience.
 </div>
 
 </div>
+
 </section>
 
 
@@ -1646,7 +1696,9 @@ contemporary luxury experience.
 
 <div class="section-head">
 
-<div class="kicker">WHAT THEY SAY</div>
+<div class="kicker">
+WHAT THEY SAY
+</div>
 
 <h2>Words From Our Patrons</h2>
 
@@ -1655,33 +1707,46 @@ contemporary luxury experience.
 <div class="reviews">
 
 <div class="review">
+
 <div class="stars">★★★★★</div>
+
 <p>
 “A beautiful fragrance experience. The oud has such
 a rich and premium character.”
 </p>
+
 <strong>— VISHAYU PATRON</strong>
+
 </div>
 
 <div class="review">
+
 <div class="stars">★★★★★</div>
+
 <p>
 “The presentation feels elegant and the fragrance
 lasts beautifully.”
 </p>
+
 <strong>— VISHAYU PATRON</strong>
+
 </div>
 
 <div class="review">
+
 <div class="stars">★★★★★</div>
+
 <p>
 “A modern take on traditional Indian itra.
 Truly feels special.”
 </p>
+
 <strong>— VISHAYU PATRON</strong>
+
 </div>
 
 </div>
+
 </section>
 
 
@@ -1689,12 +1754,15 @@ Truly feels special.”
 
 <section class="section gift-section">
 
-<div class="gift-box" onclick="openGift()">
+<div class="gift-box"
+onclick="openGift()">
 
 <div class="gift-lid"></div>
 
 <div class="gift-body">
+
 <div class="gift-ribbon"></div>
+
 </div>
 
 </div>
@@ -1705,7 +1773,8 @@ Truly feels special.”
 Open the Maison Vishayu gift box for a surprise.
 </p>
 
-<button class="btn" onclick="openGift()">
+<button class="btn"
+onclick="openGift()">
 OPEN GIFT BOX
 </button>
 
@@ -1719,12 +1788,14 @@ OPEN GIFT BOX
 <div class="footer-grid">
 
 <div>
+
 <h3>MAISON VISHAYU</h3>
 
 <p>
 Luxury Itra. Timeless Essence.<br>
 The Art of Fragrance.
 </p>
+
 </div>
 
 <div>
@@ -1746,7 +1817,8 @@ The Art of Fragrance.
 
 <p>
 WhatsApp: 8889072340<br>
-Email: Contact Maison Vishayu
+Email: Contact Maison Vishayu<br>
+UPI: 8889072340@ybl
 </p>
 
 </div>
@@ -1754,7 +1826,9 @@ Email: Contact Maison Vishayu
 </div>
 
 <div class="copyright">
+
 © 2026 MAISON VISHAYU. ALL RIGHTS RESERVED.
+
 </div>
 
 </footer>
@@ -1768,11 +1842,13 @@ Email: Contact Maison Vishayu
 
 <h2>MY BAG</h2>
 
-<button class="close" onclick="closeBag()">×</button>
+<button class="close"
+onclick="closeBag()">×</button>
 
 </div>
 
-<div class="bag-items" id="bagItems"></div>
+<div class="bag-items"
+id="bagItems"></div>
 
 <div class="bag-bottom">
 
@@ -1784,112 +1860,127 @@ Email: Contact Maison Vishayu
 
 </div>
 
-<button
-class="btn"
-style="width:100%;"
+<button class="btn"
+style="width:100%"
 onclick="checkout()">
+
 PROCEED TO ORDER
+
 </button>
 
 </div>
-</div>
-
-
-<!-- FAVOURITES -->
-
-<div class="panel" id="favouritePanel">
-
-<div class="panel-head">
-
-<h2>MY FAVOURITES</h2>
-
-<button class="close" onclick="closeFavourites()">×</button>
-
-</div>
-
-<div class="bag-items" id="favouriteItems"></div>
 
 </div>
 
 
 <!-- DETAILS -->
 
-<div class="modal" id="detailsModal">
+<div class="modal"
+id="detailsModal">
 
 <div class="modal-box">
 
-<button class="modal-close" onclick="closeDetails()">×</button>
+<button class="modal-close"
+onclick="closeDetails()">×</button>
 
 <div class="modal-img">
 
-<img id="detailImage" src="" alt="">
+<img
+id="detailImage"
+src=""
+alt="">
 
 </div>
 
 <div class="modal-info">
 
-<span class="category" id="detailCategory"></span>
+<span class="category"
+id="detailCategory">
+</span>
 
 <h2 id="detailName"></h2>
 
-<div class="modal-price" id="detailPrice"></div>
+<div class="modal-price"
+id="detailPrice">
+</div>
 
 <p id="detailDescription"></p>
 
 <br>
 
-<button class="btn" id="detailBagButton">
+<button class="btn"
+id="detailBagButton">
+
 ADD TO BAG
+
 </button>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- GIFT OFFER -->
 
-<div class="offer" id="offerPopup">
+<div class="offer"
+id="offerPopup">
 
 <div class="offer-card">
 
-<button class="modal-close" onclick="closeGift()">×</button>
+<button class="modal-close"
+onclick="closeGift()">×</button>
 
-<div class="kicker">A GIFT FROM VISHAYU</div>
+<div class="kicker">
+A GIFT FROM VISHAYU
+</div>
 
-<h2 id="discountText">20% OFF</h2>
+<h2 id="discountText">
+20% OFF
+</h2>
 
 <p>
 Congratulations. Your mystery gift has been revealed.
 </p>
 
-<div class="offer-code" id="offerCode">
+<div class="offer-code"
+id="offerCode">
 VISHAYU20
 </div>
 
-<button class="btn" onclick="applyOffer()">
+<button class="btn"
+onclick="applyOffer()">
+
 APPLY OFFER
+
 </button>
 
 </div>
+
 </div>
 
 
 <!-- CHECKOUT -->
 
-<div class="checkout-overlay" id="checkoutOverlay">
+<div class="checkout-overlay"
+id="checkoutOverlay">
 
 <div class="checkout-box">
 
-<button class="modal-close" onclick="closeCheckout()">×</button>
+<button class="modal-close"
+onclick="closeCheckout()">×</button>
 
-<div class="kicker">MAISON VISHAYU</div>
+<div class="kicker">
+MAISON VISHAYU
+</div>
 
 <h2>Complete Your Order</h2>
 
 <p class="checkout-sub">
 Please fill your delivery details before placing the order.
 </p>
+
 
 <div class="form-grid">
 
@@ -1904,6 +1995,7 @@ placeholder="Your name">
 
 </div>
 
+
 <div class="form-group">
 
 <label>MOBILE NUMBER</label>
@@ -1915,6 +2007,7 @@ placeholder="Your mobile number">
 
 </div>
 
+
 <div class="form-group full">
 
 <label>EMAIL ADDRESS</label>
@@ -1925,10 +2018,11 @@ type="email"
 placeholder="Your email address">
 
 <div class="email-note">
-Your order information will be prepared using this email.
+Your order information will be included in the WhatsApp order.
 </div>
 
 </div>
+
 
 <div class="form-group full">
 
@@ -1940,6 +2034,7 @@ placeholder="House / Flat, Street, Area, Landmark"></textarea>
 
 </div>
 
+
 <div class="form-group">
 
 <label>CITY</label>
@@ -1950,6 +2045,7 @@ type="text"
 placeholder="City">
 
 </div>
+
 
 <div class="form-group">
 
@@ -1976,26 +2072,33 @@ SELECT PAYMENT METHOD
 <button
 class="payment-option active"
 onclick="selectPayment('COD',this)">
+
 CASH ON DELIVERY
+
 </button>
 
 <button
 class="payment-option"
 onclick="selectPayment('UPI',this)">
+
 UPI
+
 </button>
 
 </div>
 
-<div class="upi-box" id="upiBox">
 
-UPI ID:
-<strong>8889072340</strong>
+<div class="upi-box"
+id="upiBox">
+
+UPI ID:<br>
+
+<strong>8889072340@ybl</strong>
 
 <br><br>
 
-Please use your UPI app to complete payment.
-The final order will still be sent through WhatsApp.
+Please complete your payment using your UPI app.
+After payment, your order details will be sent through WhatsApp.
 
 </div>
 
@@ -2012,6 +2115,22 @@ The final order will still be sent through WhatsApp.
 
 </div>
 
+<div class="summary-row">
+
+<span>Subtotal</span>
+
+<strong id="checkoutSubtotal">₹0</strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>Discount</span>
+
+<strong id="checkoutDiscount">₹0</strong>
+
+</div>
+
 <div class="summary-row summary-total">
 
 <span>Total</span>
@@ -2022,14 +2141,17 @@ The final order will still be sent through WhatsApp.
 
 </div>
 
-<button
-class="btn"
-style="width:100%;"
+
+<button class="btn"
+style="width:100%"
 onclick="placeOrder()">
+
 PLACE ORDER ON WHATSAPP
+
 </button>
 
 </div>
+
 </div>
 
 
@@ -2042,6 +2164,7 @@ PLACE ORDER ON WHATSAPP
 let bag =
 JSON.parse(localStorage.getItem("vishayuBag")) || [];
 
+
 function saveBag(){
 
 localStorage.setItem(
@@ -2052,6 +2175,7 @@ JSON.stringify(bag)
 updateBag();
 
 }
+
 
 function addToBag(name,price,image){
 
@@ -2067,21 +2191,36 @@ openBag();
 
 }
 
+
+function getAmount(price){
+
+return parseInt(
+String(price).replace(/[₹,]/g,"")
+) || 0;
+
+}
+
+
 function updateBag(){
 
-document.getElementById("bagCount").textContent=bag.length;
+document.getElementById("bagCount").textContent =
+bag.length;
 
-const container=document.getElementById("bagItems");
+const container =
+document.getElementById("bagItems");
 
-if(bag.length===0){
 
-container.innerHTML=`
+if(!bag.length){
+
+container.innerHTML = `
 <p style="
 text-align:center;
 color:#87785f;
 margin-top:50px;
+line-height:1.8;
 ">
-Your bag is empty.
+Your bag is empty.<br>
+Discover your signature fragrance.
 </p>
 `;
 
@@ -2091,7 +2230,7 @@ container.innerHTML="";
 
 bag.forEach(function(item,index){
 
-container.innerHTML+=`
+container.innerHTML += `
 
 <div class="bag-item">
 
@@ -2114,27 +2253,29 @@ onclick="removeFromBag(${index})">
 </button>
 
 </div>
+
 `;
 
 });
 
 }
 
+
 let total=0;
 
 bag.forEach(function(item){
 
-total += parseInt(
-item.price.replace(/[₹,]/g,"")
-);
+total += getAmount(item.price);
 
 });
 
+
 document.getElementById("bagTotal")
-.textContent=
+.textContent =
 "₹"+total.toLocaleString("en-IN");
 
 }
+
 
 function removeFromBag(index){
 
@@ -2144,6 +2285,7 @@ saveBag();
 
 }
 
+
 function openBag(){
 
 document
@@ -2151,6 +2293,7 @@ document
 .classList.add("open");
 
 }
+
 
 function closeBag(){
 
@@ -2160,180 +2303,8 @@ document
 
 }
 
+
 updateBag();
-
-
-/* =====================================================
-   FAVOURITES
-===================================================== */
-
-let favourites =
-JSON.parse(localStorage.getItem("vishayuFavourites")) || [];
-
-function saveFavourites(){
-
-localStorage.setItem(
-"vishayuFavourites",
-JSON.stringify(favourites)
-);
-
-updateFavouriteCount();
-updateFavouriteButtons();
-
-}
-
-function isFavourite(name){
-
-return favourites.some(function(item){
-return item.name===name;
-});
-
-}
-
-function toggleFavourite(name,price,image,button){
-
-const existing=
-favourites.findIndex(function(item){
-return item.name===name;
-});
-
-if(existing!==-1){
-
-favourites.splice(existing,1);
-
-button.classList.remove("active");
-button.innerHTML="♡ FAVOURITE";
-
-}else{
-
-favourites.push({
-name:name,
-price:price,
-image:image
-});
-
-button.classList.add("active");
-button.innerHTML="♥ FAVOURITED";
-
-}
-
-saveFavourites();
-
-}
-
-function updateFavouriteCount(){
-
-document.getElementById("favCount")
-.textContent=favourites.length;
-
-}
-
-function updateFavouriteButtons(){
-
-document
-.querySelectorAll(".favourite")
-.forEach(function(button){
-
-const name=button.dataset.fav;
-
-if(isFavourite(name)){
-
-button.classList.add("active");
-button.innerHTML="♥ FAVOURITED";
-
-}else{
-
-button.classList.remove("active");
-button.innerHTML="♡ FAVOURITE";
-
-}
-
-});
-
-}
-
-function updateFavouritePanel(){
-
-const container=
-document.getElementById("favouriteItems");
-
-if(favourites.length===0){
-
-container.innerHTML=`
-<div class="fav-empty">
-Your favourites are empty.<br>
-Add your favourite fragrance here.
-</div>
-`;
-
-return;
-
-}
-
-container.innerHTML="";
-
-favourites.forEach(function(item,index){
-
-container.innerHTML+=`
-
-<div class="favourite-item">
-
-<img
-src="${item.image}"
-alt="${item.name}">
-
-<div>
-
-<h4>${item.name}</h4>
-
-<p>${item.price}</p>
-
-</div>
-
-<button
-class="remove"
-onclick="removeFavourite(${index})">
-×
-</button>
-
-</div>
-`;
-
-});
-
-}
-
-function removeFavourite(index){
-
-favourites.splice(index,1);
-
-saveFavourites();
-
-updateFavouritePanel();
-
-}
-
-function openFavourites(){
-
-updateFavouritePanel();
-
-document
-.getElementById("favouritePanel")
-.classList.add("open");
-
-}
-
-function closeFavourites(){
-
-document
-.getElementById("favouritePanel")
-.classList.remove("open");
-
-}
-
-updateFavouriteCount();
-
-updateFavouriteButtons();
 
 
 /* =====================================================
@@ -2342,36 +2313,37 @@ updateFavouriteButtons();
 
 function searchProducts(){
 
-const query=
+const query =
 document.getElementById("search")
 .value
 .toLowerCase()
 .trim();
 
-const currentFilter=
+const currentFilter =
 window.activeFilter || "all";
+
 
 document
 .querySelectorAll(".product")
 .forEach(function(product){
 
-const category=
+const category =
 product.dataset.category;
 
-const text=
+const text =
 product.innerText.toLowerCase();
 
-const matchCategory=
+const categoryMatch =
 currentFilter==="all" ||
 category===currentFilter;
 
-const matchSearch=
+const searchMatch =
 !query ||
 text.includes(query);
 
 product.classList.toggle(
 "hidden",
-!(matchCategory && matchSearch)
+!(categoryMatch && searchMatch)
 );
 
 });
@@ -2379,11 +2351,12 @@ product.classList.toggle(
 }
 
 
+window.activeFilter="all";
+
+
 /* =====================================================
    FILTER
 ===================================================== */
-
-window.activeFilter="all";
 
 function filterProducts(category,button){
 
@@ -2392,7 +2365,9 @@ window.activeFilter=category;
 document
 .querySelectorAll(".filter")
 .forEach(function(btn){
+
 btn.classList.remove("active");
+
 });
 
 button.classList.add("active");
@@ -2429,6 +2404,7 @@ document.getElementById("detailDescription")
 document.getElementById("detailImage")
 .src=image;
 
+
 document.getElementById("detailBagButton")
 .onclick=function(){
 
@@ -2442,11 +2418,13 @@ closeDetails();
 
 };
 
+
 document
 .getElementById("detailsModal")
 .classList.add("show");
 
 }
+
 
 function closeDetails(){
 
@@ -2458,16 +2436,17 @@ document
 
 
 /* =====================================================
-   GIFT
+   GIFT OFFER
 ===================================================== */
 
-let offerUsed=
+let offerUsed =
 localStorage.getItem("vishayuOfferUsed")==="true";
 
-let currentDiscount=
+let currentDiscount =
 parseInt(
 localStorage.getItem("vishayuDiscount")
 ) || 0;
+
 
 function openGift(){
 
@@ -2481,24 +2460,29 @@ return;
 
 }
 
-currentDiscount=
+
+currentDiscount =
 Math.random()<0.5 ? 20 : 50;
 
+
 document.getElementById("discountText")
-.textContent=
+.textContent =
 currentDiscount+"% OFF";
 
+
 document.getElementById("offerCode")
-.textContent=
+.textContent =
 currentDiscount===50
 ? "VISHAYU50"
 : "VISHAYU20";
+
 
 document
 .getElementById("offerPopup")
 .classList.add("show");
 
 }
+
 
 function closeGift(){
 
@@ -2508,11 +2492,10 @@ document
 
 }
 
+
 function applyOffer(){
 
-if(currentDiscount===0){
-return;
-}
+if(!currentDiscount)return;
 
 offerUsed=true;
 
@@ -2541,9 +2524,10 @@ closeGift();
 
 let selectedPayment="COD";
 
+
 function checkout(){
 
-if(bag.length===0){
+if(!bag.length){
 
 alert(
 "Please add a fragrance to your bag first."
@@ -2563,6 +2547,7 @@ document
 
 }
 
+
 function closeCheckout(){
 
 document
@@ -2571,6 +2556,7 @@ document
 
 }
 
+
 function selectPayment(method,button){
 
 selectedPayment=method;
@@ -2578,7 +2564,9 @@ selectedPayment=method;
 document
 .querySelectorAll(".payment-option")
 .forEach(function(item){
+
 item.classList.remove("active");
+
 });
 
 button.classList.add("active");
@@ -2592,17 +2580,17 @@ method==="UPI"
 
 }
 
+
 function updateCheckout(){
 
 let subtotal=0;
 
 bag.forEach(function(item){
 
-subtotal += parseInt(
-item.price.replace(/[₹,]/g,"")
-);
+subtotal += getAmount(item.price);
 
 });
+
 
 let discount=0;
 
@@ -2611,21 +2599,34 @@ offerUsed &&
 currentDiscount>0
 ){
 
-discount=
+discount =
 Math.round(
 subtotal*currentDiscount/100
 );
 
 }
 
-let finalTotal=
+
+let finalTotal =
 subtotal-discount;
+
 
 document.getElementById("checkoutItems")
 .textContent=bag.length;
 
+
+document.getElementById("checkoutSubtotal")
+.textContent =
+"₹"+subtotal.toLocaleString("en-IN");
+
+
+document.getElementById("checkoutDiscount")
+.textContent =
+"-₹"+discount.toLocaleString("en-IN");
+
+
 document.getElementById("checkoutTotal")
-.textContent=
+.textContent =
 "₹"+finalTotal.toLocaleString("en-IN");
 
 }
@@ -2637,27 +2638,27 @@ document.getElementById("checkoutTotal")
 
 function placeOrder(){
 
-const name=
+const name =
 document.getElementById("customerName")
 .value.trim();
 
-const phone=
+const phone =
 document.getElementById("customerPhone")
 .value.trim();
 
-const email=
+const email =
 document.getElementById("customerEmail")
 .value.trim();
 
-const address=
+const address =
 document.getElementById("customerAddress")
 .value.trim();
 
-const city=
+const city =
 document.getElementById("customerCity")
 .value.trim();
 
-const pin=
+const pin =
 document.getElementById("customerPin")
 .value.trim();
 
@@ -2680,67 +2681,28 @@ return;
 }
 
 
+/* BASIC MOBILE VALIDATION */
+
+if(
+phone.replace(/\D/g,"").length < 10
+){
+
+alert(
+"Please enter a valid mobile number."
+);
+
+return;
+
+}
+
+
+/* ORDER TOTAL */
+
 let subtotal=0;
-
-let message=
-"Hello Maison Vishayu,%0A%0A"+
-"NEW ORDER%0A%0A";
-
-
-message+=
-"Customer Name: "+
-encodeURIComponent(name)+
-"%0A";
-
-message+=
-"Mobile: "+
-encodeURIComponent(phone)+
-"%0A";
-
-message+=
-"Email: "+
-encodeURIComponent(email)+
-"%0A";
-
-message+=
-"Address: "+
-encodeURIComponent(address)+
-"%0A";
-
-message+=
-"City: "+
-encodeURIComponent(city)+
-"%0A";
-
-message+=
-"PIN: "+
-encodeURIComponent(pin)+
-"%0A";
-
-message+=
-"Payment: "+
-encodeURIComponent(selectedPayment)+
-"%0A%0A";
-
-message+=
-"ORDER ITEMS:%0A";
-
 
 bag.forEach(function(item){
 
-const amount=
-parseInt(
-item.price.replace(/[₹,]/g,"")
-);
-
-subtotal+=amount;
-
-message+=
-"• "+
-encodeURIComponent(item.name)+
-" - "+
-encodeURIComponent(item.price)+
-"%0A";
+subtotal += getAmount(item.price);
 
 });
 
@@ -2752,38 +2714,107 @@ offerUsed &&
 currentDiscount>0
 ){
 
-discount=
+discount =
 Math.round(
 subtotal*currentDiscount/100
 );
 
-message+=
-"%0ADiscount ("+
+}
+
+
+let finalTotal =
+subtotal-discount;
+
+
+/* WHATSAPP MESSAGE */
+
+let message =
+"Hello Maison Vishayu,\n\n"+
+"NEW ORDER\n\n";
+
+
+message +=
+"Customer Name: "+name+"\n";
+
+message +=
+"Mobile: "+phone+"\n";
+
+message +=
+"Email: "+email+"\n";
+
+message +=
+"Address: "+address+"\n";
+
+message +=
+"City: "+city+"\n";
+
+message +=
+"PIN: "+pin+"\n";
+
+message +=
+"Payment: "+
+(selectedPayment==="UPI"
+?"UPI"
+:"Cash on Delivery")+
+"\n\n";
+
+
+message +=
+"ORDER ITEMS:\n";
+
+
+bag.forEach(function(item){
+
+message +=
+"• "+item.name+
+" - "+item.price+
+"\n";
+
+});
+
+
+message +=
+"\nSubtotal: ₹"+
+subtotal.toLocaleString("en-IN");
+
+
+if(discount>0){
+
+message +=
+"\nDiscount ("+
 currentDiscount+
 "%): -₹"+
 discount.toLocaleString("en-IN");
 
 }
 
-let finalTotal=
-subtotal-discount;
 
-message+=
-"%0A%0ATotal: ₹"+
+message +=
+"\nTotal: ₹"+
 finalTotal.toLocaleString("en-IN");
+
 
 if(selectedPayment==="UPI"){
 
-message+=
-"%0AUPI ID: 8889072340";
+message +=
+"\nUPI ID: 8889072340@ybl";
 
 }
 
-message+=
-"%0A%0APlease confirm my order.";
+
+message +=
+"\n\nPlease confirm my order.";
+
+
+/* OPEN WHATSAPP */
+
+const whatsappURL =
+"https://wa.me/918889072340?text="+
+encodeURIComponent(message);
+
 
 window.open(
-"https://wa.me/918889072340?text="+message,
+whatsappURL,
 "_blank"
 );
 
@@ -2801,10 +2832,13 @@ document
 function(e){
 
 if(e.target===this){
+
 closeDetails();
+
 }
 
 });
+
 
 document
 .getElementById("offerPopup")
@@ -2813,10 +2847,13 @@ document
 function(e){
 
 if(e.target===this){
+
 closeGift();
+
 }
 
 });
+
 
 document
 .getElementById("checkoutOverlay")
@@ -2825,10 +2862,39 @@ document
 function(e){
 
 if(e.target===this){
+
 closeCheckout();
+
 }
 
 });
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+if(e.key==="Escape"){
+
+closeDetails();
+closeGift();
+closeCheckout();
+closeBag();
+
+}
+
+});
+
+
+/* =====================================================
+   INITIAL SEARCH/FILTER STATE
+===================================================== */
+
+searchProducts();
 
 </script>
 
