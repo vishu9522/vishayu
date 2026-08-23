@@ -29,279 +29,6 @@ button,input,select,textarea{
 }
 
 /* =====================================================
-   WELCOME DOOR
-===================================================== */
-
-#welcome{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  background:#efe5d3;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  transition:opacity .8s ease,visibility .8s ease;
-}
-
-#welcome.hide{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-}
-
-.welcome-light{
-  position:absolute;
-  width:360px;
-  height:360px;
-  border-radius:50%;
-  background:radial-gradient(
-    circle,
-    rgba(255,249,225,.95) 0%,
-    rgba(220,187,116,.35) 35%,
-    transparent 70%
-  );
-  opacity:.8;
-  filter:blur(10px);
-}
-
-.door-frame{
-  width:min(82vw,470px);
-  height:min(78vh,650px);
-  position:relative;
-  display:flex;
-  perspective:1800px;
-  border:8px solid #c49b52;
-  background:#9b743a;
-  box-shadow:
-    0 35px 100px rgba(55,39,17,.3),
-    0 0 0 2px rgba(255,255,255,.5),
-    inset 0 0 35px rgba(45,28,8,.25);
-}
-
-.door-frame:before{
-  content:"";
-  position:absolute;
-  inset:-22px;
-  border:1px solid rgba(160,120,52,.45);
-  pointer-events:none;
-}
-
-.door{
-  width:50%;
-  height:100%;
-  position:relative;
-  z-index:3;
-  background:
-    linear-gradient(
-      90deg,
-      #5a3d1d 0%,
-      #8a6330 8%,
-      #b58a4c 18%,
-      #79552a 30%,
-      #a77d3e 45%,
-      #67461f 60%,
-      #ad8447 76%,
-      #704d25 90%,
-      #4c3217 100%
-    );
-  border:2px solid #4b3219;
-  transition:
-    transform 1.8s cubic-bezier(.77,0,.18,1);
-  transform-style:preserve-3d;
-}
-
-.door-left{
-  transform-origin:left center;
-}
-
-.door-right{
-  transform-origin:right center;
-}
-
-.door::before{
-  content:"";
-  position:absolute;
-  inset:28px 18px;
-  border:1px solid rgba(239,211,151,.65);
-  box-shadow:
-    inset 0 0 25px rgba(30,18,5,.35),
-    0 0 0 7px rgba(70,44,16,.15);
-}
-
-.door::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:50%;
-  width:2px;
-  height:75%;
-  background:rgba(255,224,156,.25);
-  transform:translate(-50%,-50%);
-}
-
-.door-logo{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:82px;
-  height:82px;
-  border:2px solid #e8ca83;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#f7dfaa;
-  font-size:25px;
-  letter-spacing:2px;
-  background:rgba(30,18,7,.38);
-  box-shadow:
-    0 0 25px rgba(235,199,119,.12),
-    inset 0 0 20px rgba(255,230,170,.08);
-}
-
-/* Rose bottle behind doors */
-
-.door-bottle{
-  position:absolute;
-  z-index:2;
-  width:180px;
-  height:300px;
-  object-fit:contain;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-47%) scale(.7);
-  opacity:0;
-  filter:
-    drop-shadow(0 25px 25px rgba(40,25,8,.4))
-    drop-shadow(0 0 18px rgba(220,173,79,.25));
-  transition:
-    opacity .8s ease .75s,
-    transform 1.1s ease .75s;
-}
-
-#welcome.open .door-bottle{
-  opacity:1;
-  transform:translate(-50%,-47%) scale(1);
-}
-
-#welcome.open .door-left{
-  transform:rotateY(-105deg);
-}
-
-#welcome.open .door-right{
-  transform:rotateY(105deg);
-}
-
-/* Spray */
-
-.spray{
-  position:absolute;
-  z-index:4;
-  left:50%;
-  top:43%;
-  width:260px;
-  height:180px;
-  transform:translate(-18%,-50%);
-  pointer-events:none;
-  opacity:0;
-}
-
-#welcome.open .spray{
-  opacity:1;
-  transition:opacity .2s ease 1.05s;
-}
-
-.mist{
-  position:absolute;
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  background:rgba(255,248,222,.82);
-  box-shadow:0 0 10px rgba(255,236,177,.9);
-  animation:sprayMist 1.8s ease-out infinite;
-}
-
-.m1{left:18%;top:48%;animation-delay:.1s}
-.m2{left:27%;top:43%;animation-delay:.25s}
-.m3{left:36%;top:50%;animation-delay:.4s}
-.m4{left:45%;top:38%;animation-delay:.55s}
-.m5{left:54%;top:47%;animation-delay:.7s}
-.m6{left:63%;top:34%;animation-delay:.85s}
-.m7{left:73%;top:42%;animation-delay:1s}
-.m8{left:82%;top:29%;animation-delay:1.15s}
-.m9{left:91%;top:38%;animation-delay:1.3s}
-
-@keyframes sprayMist{
-  0%{
-    opacity:0;
-    transform:translate(0,0) scale(.3);
-  }
-  20%{
-    opacity:1;
-  }
-  100%{
-    opacity:0;
-    transform:translate(45px,-18px) scale(1.5);
-  }
-}
-
-.welcome-content{
-  position:absolute;
-  z-index:10;
-  top:8%;
-  text-align:center;
-  color:#fff;
-  pointer-events:none;
-  text-shadow:0 2px 18px rgba(0,0,0,.5);
-  transition:opacity .5s;
-}
-
-#welcome.open .welcome-content{
-  opacity:0;
-}
-
-.welcome-content .mini{
-  font-size:11px;
-  letter-spacing:5px;
-  margin-bottom:14px;
-}
-
-.welcome-content h1{
-  font-size:clamp(28px,7vw,66px);
-  letter-spacing:6px;
-  margin-bottom:10px;
-  font-weight:normal;
-}
-
-.welcome-content p{
-  font-size:11px;
-  letter-spacing:4px;
-}
-
-.enter-btn{
-  position:absolute;
-  bottom:-70px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:20;
-  border:1px solid #c99f58;
-  background:#3c2914;
-  color:#fff;
-  padding:15px 30px;
-  letter-spacing:3px;
-  font-size:10px;
-  cursor:pointer;
-  box-shadow:0 12px 30px rgba(50,30,8,.25);
-  transition:.3s;
-}
-
-.enter-btn:hover{
-  background:#a9854b;
-}
-
-/* =====================================================
    HEADER
 ===================================================== */
 
@@ -309,7 +36,7 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(250,247,240,.94);
+  background:rgba(250,247,240,.96);
   backdrop-filter:blur(18px);
   border-bottom:1px solid #dfd2b9;
 }
@@ -392,6 +119,7 @@ header{
   align-items:center;
   justify-content:center;
   position:relative;
+  font-size:19px;
 }
 
 .count{
@@ -566,6 +294,8 @@ header{
   min-height:250px;
   object-fit:cover;
   display:block;
+  position:relative;
+  z-index:2;
 }
 
 .banner-fallback{
@@ -579,6 +309,7 @@ header{
     linear-gradient(135deg,#eee4d2,#d8c39c);
   color:#4d3b21;
   text-align:center;
+  z-index:1;
 }
 
 .banner-fallback small{
@@ -702,26 +433,6 @@ header{
 
 .product:hover .product-image img{
   transform:scale(1.04);
-}
-
-.fav{
-  position:absolute;
-  right:15px;
-  top:15px;
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  border:1px solid #dac9a9;
-  background:rgba(255,253,248,.9);
-  color:#7d6540;
-  font-size:20px;
-  cursor:pointer;
-  z-index:3;
-}
-
-.fav.saved{
-  color:#a77735;
-  background:#f6ecd8;
 }
 
 .badge{
@@ -1427,18 +1138,6 @@ footer a{
     font-size:30px;
   }
 
-  .door-frame{
-    height:65vh;
-  }
-
-  .welcome-content h1{
-    letter-spacing:3px;
-  }
-
-  .welcome-content{
-    top:5%;
-  }
-
   .form-grid{
     grid-template-columns:1fr;
   }
@@ -1457,56 +1156,6 @@ footer a{
 <body>
 
 <!-- =====================================================
-     WELCOME
-===================================================== -->
-
-<div id="welcome">
-
-  <div class="welcome-light"></div>
-
-  <div class="welcome-content">
-    <div class="mini">THE HOUSE OF FRAGRANCE</div>
-    <h1>WELCOME TO VISHAYU</h1>
-    <p>LUXURY ITRA • TIMELESS ESSENCE</p>
-  </div>
-
-  <div class="door-frame">
-
-    <img
-      class="door-bottle"
-      src="vishayu-rose.png"
-      alt="Vishayu Rose"
-    >
-
-    <div class="spray">
-      <span class="mist m1"></span>
-      <span class="mist m2"></span>
-      <span class="mist m3"></span>
-      <span class="mist m4"></span>
-      <span class="mist m5"></span>
-      <span class="mist m6"></span>
-      <span class="mist m7"></span>
-      <span class="mist m8"></span>
-      <span class="mist m9"></span>
-    </div>
-
-    <div class="door door-left">
-      <div class="door-logo">MV</div>
-    </div>
-
-    <div class="door door-right">
-      <div class="door-logo">MV</div>
-    </div>
-
-    <button class="enter-btn" onclick="enterVishayu()">
-      ENTER VISHAYU
-    </button>
-
-  </div>
-</div>
-
-
-<!-- =====================================================
      HEADER
 ===================================================== -->
 
@@ -1514,36 +1163,33 @@ footer a{
 
 <nav class="nav">
 
-  <a href="#home" class="logo">
-    <div class="logo-mark">MV</div>
+<a href="#home" class="logo">
 
-    <div class="logo-text">
-      MAISON VISHAYU
-      <small>LUXURY ITRA & PARFUMS</small>
-    </div>
-  </a>
+<div class="logo-mark">MV</div>
 
-  <div class="nav-links">
-    <a href="#home">HOME</a>
-    <a href="#collection">COLLECTION</a>
-    <a href="#story">OUR STORY</a>
-    <a href="#reviews">WHAT THEY SAY</a>
-    <a href="#contact">CONTACT</a>
-  </div>
+<div class="logo-text">
+MAISON VISHAYU
+<small>LUXURY ITRA & PARFUMS</small>
+</div>
 
-  <div class="nav-actions">
+</a>
 
-    <button class="icon-btn" onclick="openFavourites()">
-      ♡
-      <span class="count" id="favCount">0</span>
-    </button>
+<div class="nav-links">
+<a href="#home">HOME</a>
+<a href="#collection">COLLECTION</a>
+<a href="#story">OUR STORY</a>
+<a href="#reviews">WHAT THEY SAY</a>
+<a href="#contact">CONTACT</a>
+</div>
 
-    <button class="icon-btn" onclick="openBag()">
-      🛍
-      <span class="count" id="bagCount">0</span>
-    </button>
+<div class="nav-actions">
 
-  </div>
+<button class="icon-btn" onclick="openBag()">
+🛍
+<span class="count" id="bagCount">0</span>
+</button>
+
+</div>
 
 </nav>
 
@@ -1556,13 +1202,13 @@ footer a{
 
 <div class="search-wrap">
 
-  <input
-    type="search"
-    id="search"
-    class="search"
-    placeholder="Search your fragrance..."
-    oninput="searchProducts()"
-  >
+<input
+type="search"
+id="search"
+class="search"
+placeholder="Search your fragrance..."
+oninput="searchProducts()"
+>
 
 </div>
 
@@ -1573,47 +1219,49 @@ footer a{
 
 <section class="hero" id="home">
 
-  <div class="hero-copy">
+<div class="hero-copy">
 
-    <div class="eyebrow">THE ART OF FRAGRANCE</div>
+<div class="eyebrow">
+THE ART OF FRAGRANCE
+</div>
 
-    <h1>
-      Luxury Itra.<br>
-      <span>Timeless Essence.</span>
-    </h1>
+<h1>
+Luxury Itra.<br>
+<span>Timeless Essence.</span>
+</h1>
 
-    <p>
-      Discover the signature world of Maison Vishayu —
-      handcrafted fragrances inspired by timeless Indian
-      perfumery and refined for the modern soul.
-    </p>
+<p>
+Discover the signature world of Maison Vishayu —
+handcrafted fragrances inspired by timeless Indian
+perfumery and refined for the modern soul.
+</p>
 
-    <div class="hero-buttons">
+<div class="hero-buttons">
 
-      <a href="#collection" class="btn">
-        EXPLORE COLLECTION
-      </a>
+<a href="#collection" class="btn">
+EXPLORE COLLECTION
+</a>
 
-      <button class="btn light" onclick="openGift()">
-        OPEN GIFT BOX
-      </button>
+<button class="btn light" onclick="openGift()">
+OPEN GIFT BOX
+</button>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
-  <div class="hero-visual">
+<div class="hero-visual">
 
-    <div class="hero-circle">
+<div class="hero-circle">
 
-      <img
-        src="vishayu-bottle.png"
-        alt="Maison Vishayu"
-      >
+<img
+src="vishayu-bottle.png"
+alt="Maison Vishayu"
+>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -1624,21 +1272,26 @@ footer a{
 
 <section class="banner">
 
-  <div class="banner-box">
+<div class="banner-box">
 
-    <img
-      src="vishayu-banner.png"
-      alt="Maison Vishayu"
-      onerror="this.style.display='none';"
-    >
+<img
+src="vishayu-banner.png"
+alt="Maison Vishayu"
+onload="this.nextElementSibling.style.display='none';"
+onerror="this.style.display='none';"
+>
 
-    <div class="banner-fallback">
-      <small>MAISON VISHAYU</small>
-      <h2>THE ART OF FRAGRANCE</h2>
-      <p>Luxury Itra • Timeless Essence</p>
-    </div>
+<div class="banner-fallback">
 
-  </div>
+<small>MAISON VISHAYU</small>
+
+<h2>THE ART OF FRAGRANCE</h2>
+
+<p>Luxury Itra • Timeless Essence</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1649,73 +1302,83 @@ footer a{
 
 <section class="section" id="collection">
 
-  <div class="section-head">
+<div class="section-head">
 
-    <div class="kicker">SIGNATURE COLLECTION</div>
+<div class="kicker">
+SIGNATURE COLLECTION
+</div>
 
-    <h2>Find Your Essence</h2>
+<h2>Find Your Essence</h2>
 
-    <p>
-      Six distinctive fragrances. Six different personalities.
-    </p>
+<p>
+Six distinctive fragrances. Six different personalities.
+</p>
 
-  </div>
-
-  <div class="filters">
-
-    <button class="filter active"
-      onclick="filterProducts('all',this)">
-      ALL
-    </button>
-
-    <button class="filter"
-      onclick="filterProducts('oud',this)">
-      OUD
-    </button>
-
-    <button class="filter"
-      onclick="filterProducts('musk',this)">
-      MUSK
-    </button>
-
-    <button class="filter"
-      onclick="filterProducts('rose',this)">
-      ROSE
-    </button>
-
-    <button class="filter"
-      onclick="filterProducts('sandal',this)">
-      SANDAL
-    </button>
-
-  </div>
+</div>
 
 
-  <div class="products" id="productGrid">
+<div class="filters">
+
+<button
+class="filter active"
+onclick="filterProducts('all',this)">
+ALL
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('oud',this)">
+OUD
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('musk',this)">
+MUSK
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('rose',this)">
+ROSE
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('sandal',this)">
+SANDAL
+</button>
+
+</div>
+
+
+<div class="products" id="productGrid">
 
 
 <!-- ROYAL OUD -->
 
-<article class="product"
- data-category="oud"
- data-name="ROYAL OUD">
+<article
+class="product"
+data-category="oud"
+data-name="ROYAL OUD">
 
 <div class="product-image">
 
-<span class="badge">FREE DELIVERY</span>
+<span class="badge">
+FREE DELIVERY
+</span>
 
-<button class="fav"
- onclick="toggleFavourite(this,'ROYAL OUD')">
-♡
-</button>
-
-<img src="vishayu-oud.png" alt="Royal Oud">
+<img
+src="vishayu-oud.png"
+alt="Royal Oud">
 
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>ROYAL OUD</h3>
 
@@ -1724,11 +1387,14 @@ Deep, warm and regal oud with an unmistakable
 luxurious character.
 </p>
 
-<div class="price">₹1,499</div>
+<div class="price">
+₹1,499
+</div>
 
 <div class="product-actions">
 
-<button class="action"
+<button
+class="action"
 onclick="showDetails(
 'ROYAL OUD',
 'TRADITIONAL ITRA',
@@ -1739,7 +1405,8 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button class="action primary"
+<button
+class="action primary"
 onclick="addToBag(
 'ROYAL OUD',
 '₹1,499',
@@ -1749,32 +1416,36 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- IMPERIAL MUSK -->
 
-<article class="product"
- data-category="musk"
- data-name="IMPERIAL MUSK">
+<article
+class="product"
+data-category="musk"
+data-name="IMPERIAL MUSK">
 
 <div class="product-image">
 
-<span class="badge">FREE DELIVERY</span>
+<span class="badge">
+FREE DELIVERY
+</span>
 
-<button class="fav"
- onclick="toggleFavourite(this,'IMPERIAL MUSK')">
-♡
-</button>
-
-<img src="vishayu-musk.png" alt="Imperial Musk">
+<img
+src="vishayu-musk.png"
+alt="Imperial Musk">
 
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>IMPERIAL MUSK</h3>
 
@@ -1783,11 +1454,14 @@ Smooth, sensual musk crafted for an elegant
 and unforgettable presence.
 </p>
 
-<div class="price">₹1,399</div>
+<div class="price">
+₹1,399
+</div>
 
 <div class="product-actions">
 
-<button class="action"
+<button
+class="action"
 onclick="showDetails(
 'IMPERIAL MUSK',
 'TRADITIONAL ITRA',
@@ -1798,7 +1472,8 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button class="action primary"
+<button
+class="action primary"
 onclick="addToBag(
 'IMPERIAL MUSK',
 '₹1,399',
@@ -1808,32 +1483,36 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- VELVET ROSE -->
 
-<article class="product"
- data-category="rose"
- data-name="VELVET ROSE">
+<article
+class="product"
+data-category="rose"
+data-name="VELVET ROSE">
 
 <div class="product-image">
 
-<span class="badge">FREE DELIVERY</span>
+<span class="badge">
+FREE DELIVERY
+</span>
 
-<button class="fav"
- onclick="toggleFavourite(this,'VELVET ROSE')">
-♡
-</button>
-
-<img src="vishayu-rose.png" alt="Velvet Rose">
+<img
+src="vishayu-rose.png"
+alt="Velvet Rose">
 
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>VELVET ROSE</h3>
 
@@ -1842,11 +1521,14 @@ A refined rose essence with a soft, graceful
 and sophisticated personality.
 </p>
 
-<div class="price">₹1,299</div>
+<div class="price">
+₹1,299
+</div>
 
 <div class="product-actions">
 
-<button class="action"
+<button
+class="action"
 onclick="showDetails(
 'VELVET ROSE',
 'TRADITIONAL ITRA',
@@ -1857,7 +1539,8 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button class="action primary"
+<button
+class="action primary"
 onclick="addToBag(
 'VELVET ROSE',
 '₹1,299',
@@ -1867,32 +1550,36 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- ROYAL SANDAL -->
 
-<article class="product"
- data-category="sandal"
- data-name="ROYAL SANDAL">
+<article
+class="product"
+data-category="sandal"
+data-name="ROYAL SANDAL">
 
 <div class="product-image">
 
-<span class="badge">FREE DELIVERY</span>
+<span class="badge">
+FREE DELIVERY
+</span>
 
-<button class="fav"
- onclick="toggleFavourite(this,'ROYAL SANDAL')">
-♡
-</button>
-
-<img src="royal-sandal.png" alt="Royal Sandal">
+<img
+src="royal-sandal.png"
+alt="Royal Sandal">
 
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>ROYAL SANDAL</h3>
 
@@ -1901,11 +1588,14 @@ Creamy sandalwood warmth with a timeless,
 calm and luxurious finish.
 </p>
 
-<div class="price">₹1,299</div>
+<div class="price">
+₹1,299
+</div>
 
 <div class="product-actions">
 
-<button class="action"
+<button
+class="action"
 onclick="showDetails(
 'ROYAL SANDAL',
 'TRADITIONAL ITRA',
@@ -1916,7 +1606,8 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button class="action primary"
+<button
+class="action primary"
 onclick="addToBag(
 'ROYAL SANDAL',
 '₹1,299',
@@ -1926,32 +1617,36 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- MITTI ROYALE -->
 
-<article class="product"
- data-category="earthy"
- data-name="MITTI ROYALE">
+<article
+class="product"
+data-category="mitti"
+data-name="MITTI ROYALE">
 
 <div class="product-image">
 
-<span class="badge">FREE DELIVERY</span>
+<span class="badge">
+FREE DELIVERY
+</span>
 
-<button class="fav"
- onclick="toggleFavourite(this,'MITTI ROYALE')">
-♡
-</button>
-
-<img src="mitti-royale.png" alt="Mitti Royale">
+<img
+src="mitti-royale.png"
+alt="Mitti Royale">
 
 </div>
 
 <div class="product-info">
 
-<span class="category">TRADITIONAL ITRA</span>
+<span class="category">
+TRADITIONAL ITRA
+</span>
 
 <h3>MITTI ROYALE</h3>
 
@@ -1960,11 +1655,14 @@ The nostalgic aroma of rain-soaked earth,
 transformed into a refined royal essence.
 </p>
 
-<div class="price">₹999</div>
+<div class="price">
+₹999
+</div>
 
 <div class="product-actions">
 
-<button class="action"
+<button
+class="action"
 onclick="showDetails(
 'MITTI ROYALE',
 'TRADITIONAL ITRA',
@@ -1975,7 +1673,8 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button class="action primary"
+<button
+class="action primary"
 onclick="addToBag(
 'MITTI ROYALE',
 '₹999',
@@ -1985,32 +1684,36 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 
 <!-- NOIR SHAMAMA -->
 
-<article class="product"
- data-category="oud"
- data-name="NOIR SHAMAMA">
+<article
+class="product"
+data-category="oud"
+data-name="NOIR SHAMAMA">
 
 <div class="product-image">
 
-<span class="badge">FREE DELIVERY</span>
+<span class="badge">
+FREE DELIVERY
+</span>
 
-<button class="fav"
- onclick="toggleFavourite(this,'NOIR SHAMAMA')">
-♡
-</button>
-
-<img src="vishayu-noir.png" alt="Noir Shamama">
+<img
+src="vishayu-noir.png"
+alt="Noir Shamama">
 
 </div>
 
 <div class="product-info">
 
-<span class="category">ROYAL ITRA</span>
+<span class="category">
+ROYAL ITRA
+</span>
 
 <h3>NOIR SHAMAMA</h3>
 
@@ -2019,11 +1722,14 @@ Dark, mysterious and richly layered royal
 Shamama made for a distinctive signature.
 </p>
 
-<div class="price">₹1,599</div>
+<div class="price">
+₹1,599
+</div>
 
 <div class="product-actions">
 
-<button class="action"
+<button
+class="action"
 onclick="showDetails(
 'NOIR SHAMAMA',
 'ROYAL ITRA',
@@ -2034,7 +1740,8 @@ onclick="showDetails(
 DETAILS
 </button>
 
-<button class="action primary"
+<button
+class="action primary"
 onclick="addToBag(
 'NOIR SHAMAMA',
 '₹1,599',
@@ -2044,7 +1751,9 @@ ADD TO BAG
 </button>
 
 </div>
+
 </div>
+
 </article>
 
 </div>
@@ -2052,14 +1761,16 @@ ADD TO BAG
 
 
 <!-- =====================================================
-     HOUSE
+     STORY
 ===================================================== -->
 
 <section class="section house" id="story">
 
 <div class="section-head">
 
-<div class="kicker">THE HOUSE OF VISHAYU</div>
+<div class="kicker">
+THE HOUSE OF VISHAYU
+</div>
 
 <h2>Our Philosophy</h2>
 
@@ -2093,6 +1804,7 @@ contemporary luxury experience.
 </div>
 
 </div>
+
 </section>
 
 
@@ -2104,7 +1816,9 @@ contemporary luxury experience.
 
 <div class="section-head">
 
-<div class="kicker">WHAT THEY SAY</div>
+<div class="kicker">
+WHAT THEY SAY
+</div>
 
 <h2>Words From Our Patrons</h2>
 
@@ -2113,33 +1827,60 @@ contemporary luxury experience.
 <div class="reviews">
 
 <div class="review">
-<div class="stars">★★★★★</div>
+
+<div class="stars">
+★★★★★
+</div>
+
 <p>
 “A beautiful fragrance experience. The oud has such
 a rich and premium character.”
 </p>
-<strong>— VISHAYU PATRON</strong>
+
+<strong>
+— VISHAYU PATRON
+</strong>
+
 </div>
 
+
 <div class="review">
-<div class="stars">★★★★★</div>
+
+<div class="stars">
+★★★★★
+</div>
+
 <p>
 “The presentation feels elegant and the fragrance
 lasts beautifully.”
 </p>
-<strong>— VISHAYU PATRON</strong>
+
+<strong>
+— VISHAYU PATRON
+</strong>
+
 </div>
 
+
 <div class="review">
-<div class="stars">★★★★★</div>
+
+<div class="stars">
+★★★★★
+</div>
+
 <p>
 “A modern take on traditional Indian itra.
 Truly feels special.”
 </p>
-<strong>— VISHAYU PATRON</strong>
+
+<strong>
+— VISHAYU PATRON
+</strong>
+
 </div>
 
 </div>
+
 </section>
 
 
@@ -2149,7 +1890,9 @@ Truly feels special.”
 
 <section class="section gift-section">
 
-<div class="gift-box" onclick="openGift()">
+<div
+class="gift-box"
+onclick="openGift()">
 
 <div class="gift-lid"></div>
 
@@ -2159,13 +1902,17 @@ Truly feels special.”
 
 </div>
 
-<h2>A Gift Awaits You</h2>
+<h2>
+A Gift Awaits You
+</h2>
 
 <p>
 Open the Maison Vishayu gift box for a surprise.
 </p>
 
-<button class="btn" onclick="openGift()">
+<button
+class="btn"
+onclick="openGift()">
 OPEN GIFT BOX
 </button>
 
@@ -2182,7 +1929,9 @@ OPEN GIFT BOX
 
 <div>
 
-<h3>MAISON VISHAYU</h3>
+<h3>
+MAISON VISHAYU
+</h3>
 
 <p>
 Luxury Itra. Timeless Essence.<br>
@@ -2191,9 +1940,12 @@ The Art of Fragrance.
 
 </div>
 
+
 <div>
 
-<h3>EXPLORE</h3>
+<h3>
+EXPLORE
+</h3>
 
 <p>
 <a href="#home">Home</a><br>
@@ -2204,9 +1956,12 @@ The Art of Fragrance.
 
 </div>
 
+
 <div>
 
-<h3>CONTACT</h3>
+<h3>
+CONTACT
+</h3>
 
 <p>
 WhatsApp: 8889072340<br>
@@ -2216,6 +1971,7 @@ Email: Contact Maison Vishayu
 </div>
 
 </div>
+
 
 <div class="copyright">
 © 2026 MAISON VISHAYU. ALL RIGHTS RESERVED.
@@ -2228,69 +1984,116 @@ Email: Contact Maison Vishayu
      BAG PANEL
 ===================================================== -->
 
-<div class="panel" id="bagPanel">
+<div
+class="panel"
+id="bagPanel">
 
 <div class="panel-head">
 
-<h2>MY BAG</h2>
+<h2>
+MY BAG
+</h2>
 
-<button class="close" onclick="closeBag()">×</button>
+<button
+class="close"
+onclick="closeBag()">
+×
+</button>
 
 </div>
 
-<div class="bag-items" id="bagItems"></div>
+
+<div
+class="bag-items"
+id="bagItems">
+</div>
+
 
 <div class="bag-bottom">
 
 <div class="total">
-<span>Total</span>
-<strong id="bagTotal">₹0</strong>
+
+<span>
+Total
+</span>
+
+<strong id="bagTotal">
+₹0
+</strong>
+
 </div>
 
 <button
 class="btn"
 style="width:100%;"
 onclick="checkout()">
+
 PROCEED TO ORDER
+
 </button>
 
 </div>
+
 </div>
 
 
 <!-- =====================================================
-     DETAILS
+     DETAILS MODAL
 ===================================================== -->
 
-<div class="modal" id="detailsModal">
+<div
+class="modal"
+id="detailsModal">
 
 <div class="modal-box">
 
-<button class="modal-close" onclick="closeDetails()">×</button>
+<button
+class="modal-close"
+onclick="closeDetails()">
+×
+</button>
 
 <div class="modal-img">
-<img id="detailImage" src="" alt="">
+
+<img
+id="detailImage"
+src=""
+alt="">
+
 </div>
+
 
 <div class="modal-info">
 
-<span class="category" id="detailCategory"></span>
+<span
+class="category"
+id="detailCategory">
+</span>
 
-<h2 id="detailName"></h2>
+<h2 id="detailName">
+</h2>
 
-<div class="modal-price" id="detailPrice"></div>
+<div
+class="modal-price"
+id="detailPrice">
+</div>
 
-<p id="detailDescription"></p>
+<p
+id="detailDescription">
+</p>
 
 <br>
 
-<button class="btn" id="detailBagButton">
+<button
+class="btn"
+id="detailBagButton">
 ADD TO BAG
 </button>
 
 </div>
 
 </div>
+
 </div>
 
 
@@ -2298,29 +2101,44 @@ ADD TO BAG
      GIFT OFFER
 ===================================================== -->
 
-<div class="offer" id="offerPopup">
+<div
+class="offer"
+id="offerPopup">
 
 <div class="offer-card">
 
-<button class="modal-close" onclick="closeGift()">×</button>
+<button
+class="modal-close"
+onclick="closeGift()">
+×
+</button>
 
-<div class="kicker">A GIFT FROM VISHAYU</div>
+<div class="kicker">
+A GIFT FROM VISHAYU
+</div>
 
-<h2 id="discountText">20% OFF</h2>
+<h2 id="discountText">
+20% OFF
+</h2>
 
 <p>
 Congratulations. Your mystery gift has been revealed.
 </p>
 
-<div class="offer-code" id="offerCode">
+<div
+class="offer-code"
+id="offerCode">
 VISHAYU20
 </div>
 
-<button class="btn" onclick="applyOffer()">
+<button
+class="btn"
+onclick="applyOffer()">
 APPLY OFFER
 </button>
 
 </div>
+
 </div>
 
 
@@ -2328,55 +2146,118 @@ APPLY OFFER
      CHECKOUT
 ===================================================== -->
 
-<div class="checkout-overlay" id="checkoutOverlay">
+<div
+class="checkout-overlay"
+id="checkoutOverlay">
 
 <div class="checkout-box">
 
-<button class="modal-close" onclick="closeCheckout()">×</button>
+<button
+class="modal-close"
+onclick="closeCheckout()">
+×
+</button>
 
-<div class="kicker">MAISON VISHAYU</div>
+<div class="kicker">
+MAISON VISHAYU
+</div>
 
-<h2>Complete Your Order</h2>
+<h2>
+Complete Your Order
+</h2>
 
 <p class="checkout-sub">
 Please fill your delivery details before placing the order.
 </p>
 
+
 <div class="form-grid">
 
 <div class="form-group">
-<label>FULL NAME</label>
-<input id="customerName" type="text" placeholder="Your name">
+
+<label>
+FULL NAME
+</label>
+
+<input
+id="customerName"
+type="text"
+placeholder="Your name">
+
 </div>
+
 
 <div class="form-group">
-<label>MOBILE NUMBER</label>
-<input id="customerPhone" type="tel" placeholder="Your mobile number">
+
+<label>
+MOBILE NUMBER
+</label>
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="Your mobile number">
+
 </div>
 
+
 <div class="form-group full">
-<label>EMAIL ADDRESS</label>
-<input id="customerEmail" type="email" placeholder="Your email address">
+
+<label>
+EMAIL ADDRESS
+</label>
+
+<input
+id="customerEmail"
+type="email"
+placeholder="Your email address">
+
 <div class="email-note">
 Your order information will be prepared using this email.
 </div>
+
 </div>
+
 
 <div class="form-group full">
-<label>FULL DELIVERY ADDRESS</label>
+
+<label>
+FULL DELIVERY ADDRESS
+</label>
+
 <textarea
 id="customerAddress"
-placeholder="House / Flat, Street, Area, Landmark"></textarea>
+placeholder="House / Flat, Street, Area, Landmark">
+</textarea>
+
 </div>
 
-<div class="form-group">
-<label>CITY</label>
-<input id="customerCity" type="text" placeholder="City">
-</div>
 
 <div class="form-group">
-<label>PIN CODE</label>
-<input id="customerPin" type="text" placeholder="PIN Code">
+
+<label>
+CITY
+</label>
+
+<input
+id="customerCity"
+type="text"
+placeholder="City">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+PIN CODE
+</label>
+
+<input
+id="customerPin"
+type="text"
+placeholder="PIN Code">
+
 </div>
 
 </div>
@@ -2404,10 +2285,15 @@ UPI
 
 </div>
 
-<div class="upi-box" id="upiBox">
+
+<div
+class="upi-box"
+id="upiBox">
 
 UPI ID:
-<strong>8889072340</strong>
+<strong>
+8889072340
+</strong>
 
 <br><br>
 
@@ -2422,240 +2308,192 @@ The final order will still be sent through WhatsApp.
 <div class="order-summary">
 
 <div class="summary-row">
-<span>Items</span>
-<strong id="checkoutItems">0</strong>
+
+<span>
+Items
+</span>
+
+<strong id="checkoutItems">
+0
+</strong>
+
 </div>
+
 
 <div class="summary-row summary-total">
-<span>Total</span>
-<strong id="checkoutTotal">₹0</strong>
+
+<span>
+Total
+</span>
+
+<strong id="checkoutTotal">
+₹0
+</strong>
+
 </div>
 
 </div>
+
 
 <button
 class="btn"
 style="width:100%;"
 onclick="placeOrder()">
+
 PLACE ORDER ON WHATSAPP
+
 </button>
 
 </div>
+
 </div>
 
 
 <script>
 
 /* =====================================================
-   WELCOME DOOR
-===================================================== */
-
-let doorOpened=false;
-
-function enterVishayu(){
-
-  if(doorOpened) return;
-
-  doorOpened=true;
-
-  const welcome=document.getElementById("welcome");
-
-  welcome.classList.add("open");
-
-  setTimeout(function(){
-
-    welcome.classList.add("hide");
-
-  },4000);
-
-}
-
-
-/* =====================================================
    BAG
 ===================================================== */
 
-let bag=
+let bag =
 JSON.parse(localStorage.getItem("vishayuBag")) || [];
 
 function saveBag(){
 
-  localStorage.setItem(
-    "vishayuBag",
-    JSON.stringify(bag)
-  );
-
-  updateBag();
-
-}
-
-function addToBag(name,price,image){
-
-  bag.push({
-    name:name,
-    price:price,
-    image:image
-  });
-
-  saveBag();
-
-  openBag();
-
-}
-
-function updateBag(){
-
-  document.getElementById("bagCount").textContent=
-    bag.length;
-
-  const container=
-    document.getElementById("bagItems");
-
-  if(bag.length===0){
-
-    container.innerHTML=`
-      <p style="
-        text-align:center;
-        color:#87785f;
-        margin-top:50px;
-      ">
-        Your bag is empty.
-      </p>
-    `;
-
-  }else{
-
-    container.innerHTML="";
-
-    bag.forEach(function(item,index){
-
-      container.innerHTML+=`
-
-        <div class="bag-item">
-
-          <img
-            src="${item.image}"
-            alt="${item.name}"
-          >
-
-          <div>
-            <h4>${item.name}</h4>
-            <p>${item.price}</p>
-          </div>
-
-          <button
-            class="remove"
-            onclick="removeFromBag(${index})">
-            ×
-          </button>
-
-        </div>
-
-      `;
-
-    });
-
-  }
-
-  let total=0;
-
-  bag.forEach(function(item){
-
-    total += parseInt(
-      item.price.replace(/[₹,]/g,"")
-    );
-
-  });
-
-  document.getElementById("bagTotal").textContent=
-    "₹"+total.toLocaleString("en-IN");
-
-}
-
-function removeFromBag(index){
-
-  bag.splice(index,1);
-
-  saveBag();
-
-}
-
-function openBag(){
-
-  document
-    .getElementById("bagPanel")
-    .classList.add("open");
-
-}
-
-function closeBag(){
-
-  document
-    .getElementById("bagPanel")
-    .classList.remove("open");
-
-}
+localStorage.setItem(
+"vishayuBag",
+JSON.stringify(bag)
+);
 
 updateBag();
 
+}
 
-/* =====================================================
-   FAVOURITES
-===================================================== */
 
-let favourites=
-JSON.parse(
-  localStorage.getItem("vishayuFavourites")
-) || [];
+function addToBag(name,price,image){
 
-function toggleFavourite(button,name){
+bag.push({
+name:name,
+price:price,
+image:image
+});
 
-  if(favourites.includes(name)){
+saveBag();
 
-    favourites=
-      favourites.filter(item=>item!==name);
-
-    button.classList.remove("saved");
-    button.innerHTML="♡";
-
-  }else{
-
-    favourites.push(name);
-
-    button.classList.add("saved");
-    button.innerHTML="♥";
-
-  }
-
-  localStorage.setItem(
-    "vishayuFavourites",
-    JSON.stringify(favourites)
-  );
-
-  document.getElementById("favCount").textContent=
-    favourites.length;
+openBag();
 
 }
 
-document.getElementById("favCount").textContent=
-  favourites.length;
 
-function openFavourites(){
+function updateBag(){
 
-  if(favourites.length===0){
+document.getElementById("bagCount")
+.textContent=bag.length;
 
-    alert("Your Favourite list is empty.");
+const container=
+document.getElementById("bagItems");
 
-  }else{
 
-    alert(
-      "Your Favourites:\n\n"+
-      favourites.join("\n")
-    );
+if(bag.length===0){
 
-  }
+container.innerHTML=`
+
+<p style="
+text-align:center;
+color:#87785f;
+margin-top:50px;
+">
+Your bag is empty.
+</p>
+
+`;
+
+}else{
+
+container.innerHTML="";
+
+bag.forEach(function(item,index){
+
+container.innerHTML+=`
+
+<div class="bag-item">
+
+<img
+src="${item.image}"
+alt="${item.name}">
+
+<div>
+
+<h4>
+${item.name}
+</h4>
+
+<p>
+${item.price}
+</p>
+
+</div>
+
+<button
+class="remove"
+onclick="removeFromBag(${index})">
+×
+</button>
+
+</div>
+
+`;
+
+});
 
 }
+
+
+let total=0;
+
+bag.forEach(function(item){
+
+total += parseInt(
+item.price.replace(/[₹,]/g,"")
+);
+
+});
+
+document.getElementById("bagTotal")
+.textContent=
+"₹"+total.toLocaleString("en-IN");
+
+}
+
+
+function removeFromBag(index){
+
+bag.splice(index,1);
+
+saveBag();
+
+}
+
+
+function openBag(){
+
+document
+.getElementById("bagPanel")
+.classList.add("open");
+
+}
+
+
+function closeBag(){
+
+document
+.getElementById("bagPanel")
+.classList.remove("open");
+
+}
+
+
+updateBag();
 
 
 /* =====================================================
@@ -2664,35 +2502,40 @@ function openFavourites(){
 
 function searchProducts(){
 
-  const query=
-    document.getElementById("search")
-    .value
-    .toLowerCase()
-    .trim();
+const query=
+document.getElementById("search")
+.value
+.toLowerCase()
+.trim();
 
-  document.querySelectorAll(".product")
-    .forEach(function(product){
+const currentFilter=
+window.activeFilter || "all";
 
-      const name=
-        product.dataset.name.toLowerCase();
 
-      const category=
-        product.dataset.category.toLowerCase();
+document
+.querySelectorAll(".product")
+.forEach(function(product){
 
-      const text=
-        product.innerText.toLowerCase();
+const category=
+product.dataset.category;
 
-      const found=
-        name.includes(query) ||
-        category.includes(query) ||
-        text.includes(query);
+const text=
+product.innerText.toLowerCase();
 
-      product.classList.toggle(
-        "hidden",
-        !found
-      );
+const matchCategory=
+currentFilter==="all" ||
+category===currentFilter;
 
-    });
+const matchSearch=
+!query ||
+text.includes(query);
+
+product.classList.toggle(
+"hidden",
+!(matchCategory && matchSearch)
+);
+
+});
 
 }
 
@@ -2701,45 +2544,24 @@ function searchProducts(){
    FILTER
 ===================================================== */
 
-let activeFilter="all";
+window.activeFilter="all";
+
 
 function filterProducts(category,button){
 
-  activeFilter=category;
+window.activeFilter=category;
 
-  document.querySelectorAll(".filter")
-    .forEach(function(btn){
-      btn.classList.remove("active");
-    });
+document
+.querySelectorAll(".filter")
+.forEach(function(btn){
 
-  button.classList.add("active");
+btn.classList.remove("active");
 
-  const query=
-    document.getElementById("search")
-    .value
-    .toLowerCase()
-    .trim();
+});
 
-  document.querySelectorAll(".product")
-    .forEach(function(product){
+button.classList.add("active");
 
-      const matchCategory=
-        category==="all" ||
-        product.dataset.category===category;
-
-      const text=
-        product.innerText.toLowerCase();
-
-      const matchSearch=
-        !query ||
-        text.includes(query);
-
-      product.classList.toggle(
-        "hidden",
-        !(matchCategory && matchSearch)
-      );
-
-    });
+searchProducts();
 
 }
 
@@ -2749,47 +2571,55 @@ function filterProducts(category,button){
 ===================================================== */
 
 function showDetails(
-  name,
-  category,
-  price,
-  image,
-  description
+name,
+category,
+price,
+image,
+description
 ){
 
-  document.getElementById("detailName")
-    .textContent=name;
+document.getElementById("detailName")
+.textContent=name;
 
-  document.getElementById("detailCategory")
-    .textContent=category;
+document.getElementById("detailCategory")
+.textContent=category;
 
-  document.getElementById("detailPrice")
-    .textContent=price;
+document.getElementById("detailPrice")
+.textContent=price;
 
-  document.getElementById("detailDescription")
-    .textContent=description;
+document.getElementById("detailDescription")
+.textContent=description;
 
-  document.getElementById("detailImage")
-    .src=image;
+document.getElementById("detailImage")
+.src=image;
 
-  document.getElementById("detailBagButton")
-    .onclick=function(){
 
-      addToBag(name,price,image);
-      closeDetails();
+document.getElementById("detailBagButton")
+.onclick=function(){
 
-    };
+addToBag(
+name,
+price,
+image
+);
 
-  document
-    .getElementById("detailsModal")
-    .classList.add("show");
+closeDetails();
+
+};
+
+
+document
+.getElementById("detailsModal")
+.classList.add("show");
 
 }
 
+
 function closeDetails(){
 
-  document
-    .getElementById("detailsModal")
-    .classList.remove("show");
+document
+.getElementById("detailsModal")
+.classList.remove("show");
 
 }
 
@@ -2801,58 +2631,72 @@ function closeDetails(){
 let offerUsed=
 localStorage.getItem("vishayuOfferUsed")==="true";
 
+let currentDiscount=0;
+
+
 function openGift(){
 
-  if(offerUsed){
+if(offerUsed){
 
-    alert(
-      "Your Vishayu mystery gift has already been revealed."
-    );
+alert(
+"Your Vishayu mystery gift has already been revealed."
+);
 
-    return;
-
-  }
-
-  const discount=
-    Math.random()<0.5 ? 20 : 50;
-
-  document.getElementById("discountText")
-    .textContent=discount+"% OFF";
-
-  document.getElementById("offerCode")
-    .textContent=
-      discount===50
-      ? "VISHAYU50"
-      : "VISHAYU20";
-
-  document
-    .getElementById("offerPopup")
-    .classList.add("show");
+return;
 
 }
+
+
+currentDiscount=
+Math.random()<0.5 ? 20 : 50;
+
+
+document.getElementById("discountText")
+.textContent=
+currentDiscount+"% OFF";
+
+
+document.getElementById("offerCode")
+.textContent=
+currentDiscount===50
+? "VISHAYU50"
+: "VISHAYU20";
+
+
+document
+.getElementById("offerPopup")
+.classList.add("show");
+
+}
+
 
 function closeGift(){
 
-  document
-    .getElementById("offerPopup")
-    .classList.remove("show");
+document
+.getElementById("offerPopup")
+.classList.remove("show");
 
 }
 
+
 function applyOffer(){
 
-  offerUsed=true;
+if(currentDiscount===0){
+return;
+}
 
-  localStorage.setItem(
-    "vishayuOfferUsed",
-    "true"
-  );
+offerUsed=true;
 
-  alert(
-    "Offer saved! Your discount will be applied to your order."
-  );
+localStorage.setItem(
+"vishayuOfferUsed",
+"true"
+);
 
-  closeGift();
+alert(
+"Offer saved! Your discount will be applied to your order."
+);
+
+closeGift();
 
 }
 
@@ -2863,205 +2707,268 @@ function applyOffer(){
 
 let selectedPayment="COD";
 
+
 function checkout(){
 
-  if(bag.length===0){
+if(bag.length===0){
 
-    alert(
-      "Please add a fragrance to your bag first."
-    );
+alert(
+"Please add a fragrance to your bag first."
+);
 
-    return;
-
-  }
-
-  updateCheckout();
-
-  closeBag();
-
-  document
-    .getElementById("checkoutOverlay")
-    .classList.add("show");
+return;
 
 }
+
+
+updateCheckout();
+
+closeBag();
+
+document
+.getElementById("checkoutOverlay")
+.classList.add("show");
+
+}
+
 
 function closeCheckout(){
 
-  document
-    .getElementById("checkoutOverlay")
-    .classList.remove("show");
+document
+.getElementById("checkoutOverlay")
+.classList.remove("show");
 
 }
+
 
 function selectPayment(method,button){
 
-  selectedPayment=method;
+selectedPayment=method;
 
-  document.querySelectorAll(".payment-option")
-    .forEach(function(item){
-      item.classList.remove("active");
-    });
+document
+.querySelectorAll(".payment-option")
+.forEach(function(item){
 
-  button.classList.add("active");
+item.classList.remove("active");
 
-  document
-    .getElementById("upiBox")
-    .classList.toggle(
-      "show",
-      method==="UPI"
-    );
+});
+
+button.classList.add("active");
+
+
+document
+.getElementById("upiBox")
+.classList.toggle(
+"show",
+method==="UPI"
+);
 
 }
+
 
 function updateCheckout(){
 
-  let total=0;
+let subtotal=0;
 
-  bag.forEach(function(item){
+bag.forEach(function(item){
 
-    total += parseInt(
-      item.price.replace(/[₹,]/g,"")
-    );
+subtotal += parseInt(
+item.price.replace(/[₹,]/g,"")
+);
 
-  });
+});
 
-  document.getElementById("checkoutItems")
-    .textContent=bag.length;
 
-  document.getElementById("checkoutTotal")
-    .textContent=
-      "₹"+total.toLocaleString("en-IN");
+let discount=0;
+
+if(
+offerUsed &&
+currentDiscount>0
+){
+
+discount=
+Math.round(
+subtotal*currentDiscount/100
+);
 
 }
 
+
+let finalTotal=
+subtotal-discount;
+
+
+document.getElementById("checkoutItems")
+.textContent=bag.length;
+
+
+document.getElementById("checkoutTotal")
+.textContent=
+"₹"+finalTotal.toLocaleString("en-IN");
+
+}
+
+
+/* =====================================================
+   PLACE ORDER
+===================================================== */
+
 function placeOrder(){
 
-  const name=
-    document.getElementById("customerName")
-    .value.trim();
+const name=
+document.getElementById("customerName")
+.value.trim();
 
-  const phone=
-    document.getElementById("customerPhone")
-    .value.trim();
+const phone=
+document.getElementById("customerPhone")
+.value.trim();
 
-  const email=
-    document.getElementById("customerEmail")
-    .value.trim();
+const email=
+document.getElementById("customerEmail")
+.value.trim();
 
-  const address=
-    document.getElementById("customerAddress")
-    .value.trim();
+const address=
+document.getElementById("customerAddress")
+.value.trim();
 
-  const city=
-    document.getElementById("customerCity")
-    .value.trim();
+const city=
+document.getElementById("customerCity")
+.value.trim();
 
-  const pin=
-    document.getElementById("customerPin")
-    .value.trim();
-
-
-  if(
-    !name ||
-    !phone ||
-    !email ||
-    !address ||
-    !city ||
-    !pin
-  ){
-
-    alert(
-      "Please fill all delivery details."
-    );
-
-    return;
-
-  }
+const pin=
+document.getElementById("customerPin")
+.value.trim();
 
 
-  let total=0;
+if(
+!name ||
+!phone ||
+!email ||
+!address ||
+!city ||
+!pin
+){
 
-  let message=
-    "Hello Maison Vishayu,%0A%0A"+
-    "NEW ORDER%0A%0A";
+alert(
+"Please fill all delivery details."
+);
 
-  message+=
-    "Customer Name: "+
-    encodeURIComponent(name)+
-    "%0A";
+return;
 
-  message+=
-    "Mobile: "+
-    encodeURIComponent(phone)+
-    "%0A";
-
-  message+=
-    "Email: "+
-    encodeURIComponent(email)+
-    "%0A";
-
-  message+=
-    "Address: "+
-    encodeURIComponent(address)+
-    "%0A";
-
-  message+=
-    "City: "+
-    encodeURIComponent(city)+
-    "%0A";
-
-  message+=
-    "PIN: "+
-    encodeURIComponent(pin)+
-    "%0A";
-
-  message+=
-    "Payment: "+
-    encodeURIComponent(selectedPayment)+
-    "%0A%0A";
-
-  message+=
-    "ORDER ITEMS:%0A";
+}
 
 
-  bag.forEach(function(item){
+let subtotal=0;
 
-    const amount=
-      parseInt(
-        item.price.replace(/[₹,]/g,"")
-      );
-
-    total+=amount;
-
-    message+=
-      "• "+
-      encodeURIComponent(item.name)+
-      " - "+
-      encodeURIComponent(item.price)+
-      "%0A";
-
-  });
+let message=
+"Hello Maison Vishayu,%0A%0A"+
+"NEW ORDER%0A%0A";
 
 
-  message+=
-    "%0ATotal: ₹"+
-    total.toLocaleString("en-IN");
+message+=
+"Customer Name: "+
+encodeURIComponent(name)+
+"%0A";
 
-  if(selectedPayment==="UPI"){
+message+=
+"Mobile: "+
+encodeURIComponent(phone)+
+"%0A";
 
-    message+=
-      "%0AUPI ID: 8889072340";
+message+=
+"Email: "+
+encodeURIComponent(email)+
+"%0A";
 
-  }
+message+=
+"Address: "+
+encodeURIComponent(address)+
+"%0A";
 
-  message+=
-    "%0A%0APlease confirm my order.";
+message+=
+"City: "+
+encodeURIComponent(city)+
+"%0A";
+
+message+=
+"PIN: "+
+encodeURIComponent(pin)+
+"%0A";
+
+message+=
+"Payment: "+
+encodeURIComponent(selectedPayment)+
+"%0A%0A";
+
+message+=
+"ORDER ITEMS:%0A";
 
 
-  window.open(
-    "https://wa.me/918889072340?text="+message,
-    "_blank"
-  );
+bag.forEach(function(item){
+
+const amount=
+parseInt(
+item.price.replace(/[₹,]/g,"")
+);
+
+subtotal+=amount;
+
+message+=
+"• "+
+encodeURIComponent(item.name)+
+" - "+
+encodeURIComponent(item.price)+
+"%0A";
+
+});
+
+
+let discount=0;
+
+if(
+offerUsed &&
+currentDiscount>0
+){
+
+discount=
+Math.round(
+subtotal*currentDiscount/100
+);
+
+message+=
+"%0ADiscount ("+
+currentDiscount+
+"%): -₹"+
+discount.toLocaleString("en-IN");
+
+}
+
+
+let finalTotal=
+subtotal-discount;
+
+
+message+=
+"%0A%0ATotal: ₹"+
+finalTotal.toLocaleString("en-IN");
+
+
+if(selectedPayment==="UPI"){
+
+message+=
+"%0AUPI ID: 8889072340";
+
+}
+
+
+message+=
+"%0A%0APlease confirm my order.";
+
+
+window.open(
+"https://wa.me/918889072340?text="+message,
+"_blank"
+);
 
 }
 
@@ -3071,59 +2978,42 @@ function placeOrder(){
 ===================================================== */
 
 document
-  .getElementById("detailsModal")
-  .addEventListener("click",function(e){
+.getElementById("detailsModal")
+.addEventListener(
+"click",
+function(e){
 
-    if(e.target===this){
-      closeDetails();
-    }
+if(e.target===this){
+closeDetails();
+}
 
-  });
+});
+
 
 document
-  .getElementById("offerPopup")
-  .addEventListener("click",function(e){
+.getElementById("offerPopup")
+.addEventListener(
+"click",
+function(e){
 
-    if(e.target===this){
-      closeGift();
-    }
+if(e.target===this){
+closeGift();
+}
 
-  });
+});
+
 
 document
-  .getElementById("checkoutOverlay")
-  .addEventListener("click",function(e){
+.getElementById("checkoutOverlay")
+.addEventListener(
+"click",
+function(e){
 
-    if(e.target===this){
-      closeCheckout();
-    }
+if(e.target===this){
+closeCheckout();
+}
 
-  });
-
-
-/* =====================================================
-   RESTORE FAVOURITE HEARTS
-===================================================== */
-
-document
-  .querySelectorAll(".fav")
-  .forEach(function(button){
-
-    const name=
-      button.getAttribute("onclick")
-      .match(/'([^']+)'/);
-
-    if(
-      name &&
-      favourites.includes(name[1])
-    ){
-
-      button.classList.add("saved");
-      button.innerHTML="♥";
-
-    }
-
-  });
+});
 
 </script>
 
